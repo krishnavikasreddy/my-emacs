@@ -1,0 +1,70 @@
+ls
+cd ..
+ls
+ls -l
+cd ~/projects/
+ls
+ls
+clear
+grunt server
+ls
+cat package.json 
+ls
+npm install
+ls
+cd node_modules/
+ls
+cd ..
+ls
+clear
+grunt server
+ls
+cd angular
+ls
+cd src
+ls
+ls
+ls
+cd ..
+;s
+cd ..
+ls
+rm -rf angular/
+l
+ls
+mkdir angular
+cd angular/
+ls
+bower init
+ls
+ls
+mkdir app
+cd app
+ls
+touch index.html
+mkdir js
+ls
+index.html  js
+cd ..
+ls
+cd bower_components/
+ls
+cd angular2-build/
+ls
+angular2.js          package.json       test_lib.dev.jcd .s
+cd ..
+cd ..
+ls
+cd app
+ls
+cd js
+touch index.j
+ls
+rename index.j index.js
+rename index.js index.j
+cd ../..
+ls
+cd bower_components/
+ls
+cd angular-bootstrap/
+ls

@@ -1,0 +1,31 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Jan 14 00:07:36 2017
+;; Desktop file format version 208
+;; Emacs version 25.1.1
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (22649 45592 131418 350000) (desktop . "208") "krishna@Vikas" nil nil ((((font-backend xft x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#eeeeec") (background-color . "#2e3436") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 10) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#fce94f") (sticky) (environment) (frameset--id . "316A-F17C-21EA-837D") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0.0") (explicit-name) (maximized) (user-size . t) (visibility . t) (height . 40) (width . 148) (left . 0) (top . 25)) ((min-height . 8) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 9) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 136) (min-pixel-width . 90) (min-pixel-height-ignore . 68) (min-pixel-width-ignore . 81) (min-pixel-height-safe . 34) (min-pixel-width-safe . 18)) vc (pixel-width . 1366) (pixel-height . 677) (total-width . 151) (total-height . 40) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 1366) (pixel-height . 337) (total-width . 151) (total-height . 20) (normal-height . 0.5) (normal-width . 1.0) (buffer ".emacs" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 3) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 1366) (pixel-height . 340) (total-width . 151) (total-height . 20) (normal-height . 0.5) (normal-width . 1.0) (buffer "*Backtrace*" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 31) (start . 1)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("magit" "highlight-ind" "highlight-indent" "highlight-in" "sr-speed" "server" "ra" "raw_" "password" "raw" "Type" "Tyepe" "NOT" "Plot" "{" "r"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs" "~/Documents/notes/markets/Commodities/oil/oil.org" "~/.emacs" "~/.emacs.d/" "~/.emacs" "~/Desktop/test/mitnik-protocol/" "~/Desktop/test/mitnik-protocol/src/attack2.py" "~/Desktop/test/mitnik-protocol/src/server.py" "~/Desktop/test/mitnik-protocol/src/client.py" "~/Desktop/test/mitnik-protocol/src/attack.py" "~/Desktop/test/mitnik-protocol/src/client.py" "~/Desktop/stat-report.odf" "~/Desktop/stat-report.org" "~/Desktop/test/mitnik-protocol/src/server.py" "~/Desktop/test/mitnik-protocol/src/client.py" "~/Documents/projects/R/hw9/form.org" "~/Documents/notes/markets/Commodities/oil/" "~/Documents/notes/netsec/vul.org" "~/Documents/notes/markets/Commodities/oil/" "~/Documents/notes/stats/chapter10/notes.org" "~/Documents/notes/stats/chapter10" "~/Documents/notes/" "~/Documents/notes/netsec/" "~/Documents/notes/netsec" "~/Documents/notes/" "~/Documents/projects/R/hw8/#hw8.org#" "~/Documents/projects/R/hw8/hw8.org" "~/Documents/projects/NetSec/notes-midterm.org" "~/Documents/projects/NetSec/lab2.org" "~/Documents/projects/NetSec/lab4.org" "~/Documents/projects/NetSec/lab2.org" "~/Documents/projects/NetSec/lab11.org" "~/Documents/notes/stats/proposal.org" "~/Documents/notes/stats/stats2.org" "~/Documents/notes/stats/" "~/Documents/notes/stats" "~/Documents/notes" "~/Documents/" "~/Documents/projects/C/" "~/Documents/projects/" "~/Documents/projects/R/" "~/.emacs.d/" "~/Documents/projects/R/" "~/.emacs" "~/Documents/projects/R/" "~/.emacs" "~/Documents/projects/R/" "~/Documents/projects/R" "~/Documents/projects/" "~/.emacs.d/" "~/.emacs" "~/Documents/Schedule.org" "~/Documents/vikas/thoughts.org" "~/Documents/vikas" "~/Documents/" "~/.emacs.d/" "~/.emacs" "~/projects/hello-2.10/src/system.h" "~/projects/hello-2.10/src/hello.c" "~/Documents/Schedule.org" "~/.emacs" "~/Documents/projects/NetSec/Assign1/ChatServer.py" "~/Documents/projects/" "~/Documents/projects/NetSec/" "~/Documents/projects/bash/" "~/Arch/NetSec/" "~/" "~/Documents/notes/NetSec/" "~/Documents/projects/c/basicc/networks/" "~/Documents/projects/python/" "~/.emacs" "~/" "~/Documents/projects/python/" "~/Documents/projects/shell scripts/" "~/Documents/notes/" "~/Documents/projects/c/" "~/Documents/projects/R/" "~/Documents/projects/R/Assign1/" "~/Documents/projects/js/vikas.js" "~/Documents/projects/js/catchMyNotes/" "~/v.Rmd" "~/Documents/projects/R/" "~/v.Rmd" "~/.emacs" "~/v.Rmd" "~/" "~/.emacs.d/" "~/r.md" "~/v.Rmd" "~/Documents/projects/R/Assign1/" "~/Documents/projects/R" "~/Documents/projects/R/" "~/.emacs" "~/Documents/projects/R/" "~/Documents/notes/NetSec/TODO.org" "~/Documents/notes/NetSec" "~/" "~/Documents/notes/markets/" "~/.emacs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/krishna/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(visual-line-mode linum-mode global-auto-revert-mode auto-complete-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
