@@ -1,4 +1,5 @@
 ;; This is a line to understand the complexities of branching
+;; new branch and new things ahooo
 (setq horizontal-scroll-bar-mode 'disabled)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
