@@ -27,7 +27,7 @@
      (ess-R-fl-keyword:F&T)
      (ess-R-fl-keyword:%op%))))
  '(org-agenda-files (quote ("~/Documents/Schedule.org")))
- '(org-emphasis-alist
+ '(org-emphasis-alisty
    (quote
     (("*" bold)
      ("/" italic)
