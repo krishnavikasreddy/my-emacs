@@ -9,7 +9,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-enabled-themes (quote (misterioso)))
  '(ess-R-font-lock-keywords
    (quote
     ((ess-R-fl-keyword:modifiers . t)
@@ -40,10 +40,7 @@
      ("~" org-code verbatim)
      ("+"
       (:strike-through t)))))
- '(org-hide-emphasis-markers t)
- '(package-selected-packages
-   (quote
-    (magit highlight-indent-guides sr-speedbar ess twittering-mode pos-tip polymode org markdown-mode jedi))))
+ '(org-hide-emphasis-markers t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -397,7 +394,6 @@ scroll-down-aggressively 0.01)
 (global-set-key (kbd "s-s") 'speedbar)
 (global-set-key (kbd "C-0") 'delete-window)
 
-
 ;;---python jedi
 
 (setq ac-auto-start 0)
@@ -419,3 +415,10 @@ scroll-down-aggressively 0.01)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 (setq highlight-indent-guides-character ?\.)
+
+
+
+
+
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)

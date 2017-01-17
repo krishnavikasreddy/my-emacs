@@ -2,12 +2,12 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sat Jan 14 00:07:36 2017
+;; Created Mon Jan 16 11:11:50 2017
 ;; Desktop file format version 208
 ;; Emacs version 25.1.1
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (22649 45592 131418 350000) (desktop . "208") "krishna@Vikas" nil nil ((((font-backend xft x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-17-*-*-*-m-0-iso10646-1") (font-parameter . "Ubuntu Mono 13") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#eeeeec") (background-color . "#2e3436") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 9) (right-fringe . 9) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 10) (scroll-bar-height . 0) (alpha) (fullscreen . maximized) (display-type . color) (background-mode . dark) (cursor-color . "#fce94f") (sticky) (environment) (frameset--id . "316A-F17C-21EA-837D") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . ":0.0") (explicit-name) (maximized) (user-size . t) (visibility . t) (height . 40) (width . 148) (left . 0) (top . 25)) ((min-height . 8) (min-width . 10) (min-height-ignore . 4) (min-width-ignore . 9) (min-height-safe . 2) (min-width-safe . 2) (min-pixel-height . 136) (min-pixel-width . 90) (min-pixel-height-ignore . 68) (min-pixel-width-ignore . 81) (min-pixel-height-safe . 34) (min-pixel-width-safe . 18)) vc (pixel-width . 1366) (pixel-height . 677) (total-width . 151) (total-height . 40) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 1366) (pixel-height . 337) (total-width . 151) (total-height . 20) (normal-height . 0.5) (normal-width . 1.0) (buffer ".emacs" (selected) (hscroll . 0) (fringes 9 9 nil) (margins 3) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 1) (start . 1))) (leaf (last . t) (pixel-width . 1366) (pixel-height . 340) (total-width . 151) (total-height . 20) (normal-height . 0.5) (normal-width . 1.0) (buffer "*Backtrace*" (selected . t) (hscroll . 0) (fringes 9 9 nil) (margins 2) (scroll-bars nil 2 t nil 0 t) (vscroll . 0) (dedicated) (point . 31) (start . 1)))))])
+(setq desktop-saved-frameset [frameset 1 (22652 61638 852991 0) (desktop . "208") "kminnamareddy@kminnamareddy-macmini.cogitohealth.net" nil nil ((((font-backend mac-ct) (font . "-*-Monaco-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars . right) (horizontal-scroll-bars) (foreground-color . "#e1e1e0") (background-color . "#2d3743") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (alpha) (tool-bar-lines . 0) (title) (menu-bar-lines . 1) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 15) (scroll-bar-height . 0) (fullscreen) (display-type . color) (background-mode . dark) (cursor-color . "#415160") (environment) (frameset--id . "A413-BEDF-0124-DF34") (frameset--mini t . t) (height . 36) (width . 80) (modeline . t) (minibuffer . t) (unsplittable) (left + -1248) (top . 149) (icon-name) (visibility . t) (display . "Mac") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 10) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 64) (min-pixel-width . 70) (min-pixel-height-ignore . 32) (min-pixel-width-ignore . 70) (min-pixel-height-safe . 16) (min-pixel-width-safe . 14)) leaf (pixel-width . 591) (pixel-height . 560) (total-width . 84) (total-height . 35) (normal-height . 1.0) (normal-width . 1.0) (buffer ".emacs" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 3 t nil 0 t) (vscroll . 0) (dedicated) (point . 11149) (start . 10639))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
@@ -18,14 +18,14 @@
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/krishna/.emacs"
+  "/Users/kminnamareddy/.emacs"
   ".emacs"
   'emacs-lisp-mode
   '(visual-line-mode linum-mode global-auto-revert-mode auto-complete-mode)
-  1
-  '(nil nil)
+  11149
+  '(11145 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix) (truncate-lines))
-  '((mark-ring nil)))
+  '((mark-ring (11145 11051 11116 4085 3226 4085 10639 10639 11116 11116 11116 11051 11145 11147 11147 11147))))
 
