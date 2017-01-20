@@ -435,3 +435,6 @@ scroll-down-aggressively 0.01)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (setq highlight-indent-guides-method 'character)
 (setq highlight-indent-guides-character ?\.)
+
+;; backup files to .emacs-backup
+(setq backup-directory-alist `(("." . "~/.emacs-backup")))
