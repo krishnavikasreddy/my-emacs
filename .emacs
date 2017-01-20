@@ -1,3 +1,5 @@
+;; this is to test a new branch in the git pull
+(setq horizontal-scroll-bar-mode 'disabled)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
