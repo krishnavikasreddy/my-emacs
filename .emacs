@@ -444,3 +444,6 @@ scroll-down-aggressively 0.01)
 
 ;;set js indent level to 2
 (setq js-indent-line 2)
+
+;;keybinding for magit-status
+(global-set-key (kbd "C-x g") 'magit-status)
