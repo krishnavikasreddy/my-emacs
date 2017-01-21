@@ -1,5 +1,6 @@
 ;; this is to test a new branch in the git pull
-(setq horizontal-scroll-bar-mode 'disabled)
+(set-face-attribute 'default nil :height 105)
+(setq-default line-spacing 2)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -210,6 +211,8 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; Smooth Scrolling
 ;; scroll one line at a time (less "jumpy" than defaults)
+;;(horizontal-scroll-bar-mode -1)
+(scroll-bar-mode 1)
 (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
@@ -438,3 +441,6 @@ scroll-down-aggressively 0.01)
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
+
+;;set js indent level to 2
+(setq js-indent-line 2)
