@@ -75,7 +75,7 @@
 
 
 ;key shortcuts
-(global-set-key [(C-f5)] 'compile)
+(global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
 
 ;; save and compile
@@ -447,3 +447,4 @@ scroll-down-aggressively 0.01)
 
 ;;keybinding for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
+(setq org-src-fontify-natively t)
