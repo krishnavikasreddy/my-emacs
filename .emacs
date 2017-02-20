@@ -1,6 +1,7 @@
-;; this is to test a new branch in the git pull
 (set-face-attribute 'default nil :height 105)
 (setq-default line-spacing 2)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,6 +27,8 @@
      (ess-fl-keyword:=)
      (ess-R-fl-keyword:F&T)
      (ess-R-fl-keyword:%op%))))
+ '(indent-tabs-mode nil)
+ '(js-indent-level 2)
  '(org-agenda-files (quote ("~/Documents/Schedule.org")))
  '(org-emphasis-alist
    (quote
@@ -45,19 +48,15 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (magit highlight-indent-guides sr-speedbar ess twittering-mode pos-tip polymode org markdown-mode jedi))))
+    (magit highlight-indent-guides sr-speedbar ess twittering-mode pos-tip polymode org markdown-mode jedi)))
+ '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#2d3743" :foreground "#e1e1e0" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(ac-selection-face ((t nil)))
  '(ediff-even-diff-A ((t (:background "dark salmon"))))
  '(ediff-even-diff-Ancestor ((t (:background "orange red"))))
  '(ediff-even-diff-B ((t (:background "dark cyan"))))
@@ -65,14 +64,16 @@
  '(ediff-odd-diff-A ((t (:background "purple4"))))
  '(ediff-odd-diff-Ancestor ((t (:background "tan4"))))
  '(ediff-odd-diff-B ((t (:background "firebrick4"))))
- '(ediff-odd-diff-C ((t (:background "PeachPuff4")))))
+ '(ediff-odd-diff-C ((t (:background "PeachPuff4"))))
+ '(show-paren-match ((t (:background "gray0")))))
+
+
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
 
 ;line numbers
 (global-linum-mode 1)
-
 
 ;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
@@ -389,6 +390,8 @@ scroll-down-aggressively 0.01)
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
+;;;jsx mode
+(add-to-list 'auto-mode-alist '("\\.jsx" . js-mode))
 
 ;;; Auto-Complete-Mode
 
@@ -421,8 +424,8 @@ scroll-down-aggressively 0.01)
 
 (setq ac-auto-start 2)
 (setq ac-auto-show-menu 0)
-(setq ac-delay 0)
-(setq ac-quick-help-delay 0)
+(setq ac-delay 2)
+(setq ac-quick-help-delay 2)
 (setq ac-quick-help-prefer-postip 1)
 
 
@@ -435,16 +438,22 @@ scroll-down-aggressively 0.01)
 (setq ess-help-own-frame t)
 
 ;; indentation guide
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?\.)
+;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+;; (setq highlight-indent-guides-method 'character)
+;; (setq highlight-indent-guides-character ?\.)
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
 
 ;;set js indent level to 2
-(setq js-indent-line 2)
+(setq-default indent-tabs-mode nil)
+(setq js-indent-level 2)
+
+
 
 ;;keybinding for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
 (setq org-src-fontify-natively t)
+
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(ido-mode 1)
