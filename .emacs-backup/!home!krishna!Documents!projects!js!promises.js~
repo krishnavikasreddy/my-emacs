@@ -1,0 +1,3 @@
+let vikas = () => {
+    return Promise.resolve("").then(() => { return "hello"})
+}

@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+int size_array(int *,size_t size);
+struct point {
+  int x;
+  int y;
+};
+
+int main(int argc, char* argv[]){
+  int a =10;
+  int *j = &a;
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

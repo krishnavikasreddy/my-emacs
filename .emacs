@@ -13,22 +13,10 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (misterioso)))
- '(ess-R-font-lock-keywords
-   (quote
-    ((ess-R-fl-keyword:modifiers . t)
-     (ess-R-fl-keyword:fun-defs . t)
-     (ess-R-fl-keyword:keywords . t)
-     (ess-R-fl-keyword:assign-ops . t)
-     (ess-R-fl-keyword:constants . t)
-     (ess-fl-keyword:fun-calls . t)
-     (ess-fl-keyword:numbers . t)
-     (ess-fl-keyword:operators . t)
-     (ess-fl-keyword:delimiters)
-     (ess-fl-keyword:=)
-     (ess-R-fl-keyword:F&T)
-     (ess-R-fl-keyword:%op%))))
+ '(global-linum-mode t)
  '(indent-tabs-mode nil)
- '(js-indent-level 2)
+ '(js-indent-level 2 t)
+ '(linum-eager nil)
  '(org-agenda-files (quote ("~/Documents/Schedule.org")))
  '(org-emphasis-alist
    (quote
@@ -46,10 +34,8 @@
      ("+"
       (:strike-through t)))))
  '(org-hide-emphasis-markers t)
- '(package-selected-packages
-   (quote
-    (magit highlight-indent-guides sr-speedbar ess twittering-mode pos-tip polymode org markdown-mode jedi)))
- '(standard-indent 2))
+ '(standard-indent 2)
+ '(timeclock-mode-line-display t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -65,17 +51,19 @@
  '(ediff-odd-diff-Ancestor ((t (:background "tan4"))))
  '(ediff-odd-diff-B ((t (:background "firebrick4"))))
  '(ediff-odd-diff-C ((t (:background "PeachPuff4"))))
- '(show-paren-match ((t (:background "gray0")))))
+ '(mode-line ((t (:background "white" :foreground "black"))))
+ '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
+ '(show-paren-match ((t (:background "grey10")))))
 
 
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
 
-;line numbers
+                                        ;line numbers
 (global-linum-mode 1)
 
-;key shortcuts
+                                        ;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
 
@@ -92,16 +80,12 @@
 ;;set the file name as buffer
 (setq frame-title-format "%b")
 
-;;HOOKS
-(setq jedi:complete-on-dot t)
 (add-hook 'python-mode-hook
           (lambda ()
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
-			(setq python-indent-offset 4)
+            (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-	    (jedi:setup)
-		(setq jedi:setup-keys t)
 	    ))
 
 
@@ -119,8 +103,6 @@
 (setq org-startup-with-inline-images t)
 
 
-;;Line numbers
-(global-visual-line-mode t)
 
 
 ;;-------------------------------------------
@@ -136,7 +118,7 @@ same directory as the org-buffer and insert a link to this file."
           (concat (file-name-nondirectory (buffer-file-name))
                   "_"
                   (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
- (call-process "import" nil nil nil filename)
+  (call-process "import" nil nil nil filename)
   (insert (concat "[[./" filename "]]"))
   (org-display-inline-images))
 (global-set-key (kbd "M-p") 'my-org-screenshot)
@@ -179,9 +161,9 @@ same directory as the org-buffer and insert a link to this file."
 (defun vikas ()
   (interactive)
   (save-excursion
-   (setq char-in (search-backward "<" nil t))
-  (forward-char 1)
-  (setq mystr (thing-at-point 'symbol)))
+    (setq char-in (search-backward "<" nil t))
+    (forward-char 1)
+    (setq mystr (thing-at-point 'symbol)))
   (save-excursion
     (setq char-not-in (search-backward "/" nil t)))
   (if (equal char-in nil) (setq char-in -1))
@@ -194,7 +176,7 @@ same directory as the org-buffer and insert a link to this file."
 	(indent-according-to-mode)
 	(forward-line -1)
 	(indent-according-to-mode)
-      )))
+        )))
 
 
 (defun add-key-close()
@@ -219,15 +201,15 @@ same directory as the org-buffer and insert a link to this file."
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq scroll-margin 1
-scroll-conservatively 0
-scroll-up-aggressively 0.01
-scroll-down-aggressively 0.01)
+      scroll-conservatively 0
+      scroll-up-aggressively 0.01
+      scroll-down-aggressively 0.01)
 
 (setq redisplay-dont-pause t
-  scroll-margin 1
-  scroll-step 1
-  scroll-conservatively 10000
-  scroll-preserve-screen-position 1)
+      scroll-margin 1
+      scroll-step 1
+      scroll-conservatively 10000
+      scroll-preserve-screen-position 1)
 
 
 ;; refresh files as it is changed in the disk
@@ -242,7 +224,7 @@ scroll-down-aggressively 0.01)
 	(delete-region (+ end-s 3) end-e)
 	(insert "h")
 	)
-  ))
+    ))
 
 (defun auto-change-html (change-beg change-end prev-len)
   (if (not (equal cur-w 'nil))
@@ -253,43 +235,43 @@ scroll-down-aggressively 0.01)
 	    (setq end-s (car (cdr cur-w)))
 	    (setq end-e (cdr (cdr cur-w)))
 
-  (if (and (<= (point) start-e) (> (point) start-s))
-    (save-excursion
-      (goto-char (+ start-s 1))
-      (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-      (if (= prev-len 1)
-      (progn
-	(delete-region (+ end-s 1) (- end-e 2))
-	(goto-char (+ end-s 1))
-	(insert cur-w)
-	)
-     (progn
-	(delete-region (+ end-s 3) end-e)
-	(goto-char (+ end-s 3))
-	(insert cur-w)
-	)
-      )
-      ))
-    (if (and (< (point) end-e) (> (point) end-s))
-    (progn
-      (setq cur-w (hl-tags-context))
-      (setq start-s (car (car cur-w)))
-      (setq start-e (cdr (car cur-w)))
-      (setq end-s (car (cdr cur-w)))
-      (setq end-e (cdr (cdr cur-w)))
+            (if (and (<= (point) start-e) (> (point) start-s))
+                (save-excursion
+                  (goto-char (+ start-s 1))
+                  (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
+                  (if (= prev-len 1)
+                      (progn
+                        (delete-region (+ end-s 1) (- end-e 2))
+                        (goto-char (+ end-s 1))
+                        (insert cur-w)
+                        )
+                    (progn
+                      (delete-region (+ end-s 3) end-e)
+                      (goto-char (+ end-s 3))
+                      (insert cur-w)
+                      )
+                    )
+                  ))
+            (if (and (< (point) end-e) (> (point) end-s))
+                (progn
+                  (setq cur-w (hl-tags-context))
+                  (setq start-s (car (car cur-w)))
+                  (setq start-e (cdr (car cur-w)))
+                  (setq end-s (car (cdr cur-w)))
+                  (setq end-e (cdr (cdr cur-w)))
 
-	(save-excursion
-	  (goto-char (+ end-s 2))
-	  (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-	  (delete-region (+ start-s 1) (- start-e 1))
-	  (goto-char (+ start-s 1))
-	  (insert cur-w)
-	  ))
-      )))))
+                  (save-excursion
+                    (goto-char (+ end-s 2))
+                    (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
+                    (delete-region (+ start-s 1) (- start-e 1))
+                    (goto-char (+ start-s 1))
+                    (insert cur-w)
+                    ))
+              )))))
 
 
 (defun auto-change-html-before-change (begin end)
- (setq cur-w (hl-tags-context)))
+  (setq cur-w (hl-tags-context)))
 
 (setq inhibit-modification-hooks nil)
 ;;(add-hook 'after-change-functions 'test-hook)
@@ -305,11 +287,11 @@ scroll-down-aggressively 0.01)
 (put 'dired-find-alternate-file 'disabled nil)
 
 (add-hook 'dired-mode-hook
- (lambda ()
-  (define-key dired-mode-map (kbd "^")
-    (lambda () (interactive) (find-alternate-file "..")))
-  ; was dired-up-directory
- ))
+          (lambda ()
+            (define-key dired-mode-map (kbd "^")
+              (lambda () (interactive) (find-alternate-file "..")))
+                                        ; was dired-up-directory
+            ))
 ;;------------------------------------------
 ;;hideshow  code toggling
 (eval-after-load "hideshow" '(define-key hs-minor-mode-map (kbd "C-c C-c") 'hs-toggle-hiding))
@@ -336,15 +318,15 @@ scroll-down-aggressively 0.01)
 
 (defun vikas-export-org (regex c)
   (goto-line 0)
-	    (while (re-search-forward regex nil t)
-	      (goto-char (match-beginning 0))
-	      (delete-forward-char 1)
-	      (insert (concat "{{{" c "( "))
-	      (goto-char (+ (match-end 0) 5))
-	      (delete-backward-char 1)
-	      (insert " )}}}")
-	      )
-	    )
+  (while (re-search-forward regex nil t)
+    (goto-char (match-beginning 0))
+    (delete-forward-char 1)
+    (insert (concat "{{{" c "( "))
+    (goto-char (+ (match-end 0) 5))
+    (delete-backward-char 1)
+    (insert " )}}}")
+    )
+  )
 
 
 
@@ -393,12 +375,6 @@ scroll-down-aggressively 0.01)
 ;;;jsx mode
 (add-to-list 'auto-mode-alist '("\\.jsx" . js-mode))
 
-;;; Auto-Complete-Mode
-
-(package-initialize)
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20160827.649/dict")
-(ac-config-default)
 
 (global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
 
@@ -419,28 +395,6 @@ scroll-down-aggressively 0.01)
 (global-set-key (kbd "C-0") 'delete-window)
 
 
-;;---python jedi
-
-
-(setq ac-auto-start 2)
-(setq ac-auto-show-menu 0)
-(setq ac-delay 2)
-(setq ac-quick-help-delay 2)
-(setq ac-quick-help-prefer-postip 1)
-
-
-(setq jedi:get-in-function-call-delay 0)
-(setq jedi:doc-mode t)
-(setq jedi:complete-on-dot t)
-;;(org-agenda nil "n")
-
-
-(setq ess-help-own-frame t)
-
-;; indentation guide
-;; (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;; (setq highlight-indent-guides-method 'character)
-;; (setq highlight-indent-guides-character ?\.)
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
@@ -457,3 +411,35 @@ scroll-down-aggressively 0.01)
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (ido-mode 1)
+(setq-default
+ mode-line-format
+ (list
+  " "'(:eval (propertize (format-time-string "%I:%M:%p") 'face '(:foreground "dark red" :weight bold)))
+  " "'(:eval (propertize "%b"
+                         'face '(:weight bold :background "blue" :foreground "white")
+                         'help-echo (buffer-file-name)))
+  " "'(:eval
+       (if vc-mode
+           (propertize (concat "Git:"(vc-state (buffer-file-name (current-buffer))))
+                       'face '(:foreground "grey0" :weight bold :background "orange"))
+         ))
+  " "'(:eval
+       (if vc-mode
+           (propertize (concat "Git:"(vc-working-revision (buffer-file-name (current-buffer))))
+                       'face '(:foreground "grey0" :weight bold :background "orange"))
+         ))
+  " "'(:eval (propertize "%m" 'face '(:foreground "dark green" :weight bold) 'help-echo buffer-file-coding-system))
+  " "'(:eval
+       (cond
+        (buffer-read-only
+         (propertize "READ ONLY"
+                     'face '(:foreground "red" :weight bold :background "black")
+                     'help-echo "buffer is read-only"))
+        ((buffer-modified-p)
+         (propertize "MODIFIED"
+                     'face '(:foreground "white" :weight bold :background "red")
+                     'help-echo "buffer modified.")) 
+        
+        )
+       )
+  ))

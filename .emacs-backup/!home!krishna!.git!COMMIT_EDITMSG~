@@ -1,0 +1,69 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .emacs
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/core.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/handler.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/py3compat.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/server.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/epc/utils.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/_compatibility.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/classes.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/helpers.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/interpreter.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/keywords.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/api/usages.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/cache.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/common.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/debug.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/analysis.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/cache.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/compiled/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/compiled/fake.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/docstrings.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/dynamic.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/finder.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/flow_analysis.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/helpers.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/imports.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/iterable.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/param.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/precedence.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/recursion.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/representation.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/stdlib.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/evaluate/sys_path.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/fast.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/pgen2/__init__.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/pgen2/grammar.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/pgen2/parse.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/pgen2/pgen.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/token.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/tokenize.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/tree.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/parser/user_context.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jedi/settings.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/jediepcserver.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site-packages/sexpdata.pyc
+#	modified:   .emacs.d/.python-environments/default/lib/python2.7/site.pyc
+#	modified:   .emacs.d/ac-comphist.dat
+#
+# Untracked files:
+#	.emacs-backup/
+#	.emacs.d/.emacs.desktop.lock
+#	.emacs.d/auto-save-list/.saves-14927-Vikas~
+#	.emacs.d/auto-save-list/.saves-32131-Vikas~
+#	.emacs.desktop.lock
+#	.gitignore
+#	VirtualBox VMs/
+#	open/
+#

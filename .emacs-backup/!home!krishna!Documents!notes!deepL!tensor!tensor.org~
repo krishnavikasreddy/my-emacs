@@ -1,0 +1,69 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/home/krishna/Documents/bootstrap.css" />
+#+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
+
+#+MACRO: r @@html:<span class="text-danger">@@$1@@html:</span>@@
+#+MACRO: g @@html:<span class="text-success">@@$1@@html:</span>@@
+#+MACRO: y @@html:<span class="text-warning">@@$1@@html:</span>@@
+
+* Introduction
+** Tensor Has Properties
+- Tensor Ranks, Shapes, and Types
+- A tensor has a static type and dynamic dimensions.
+- Only tensors may be passed between nodes in the computation graph.
+- *Rank*
+  - In the TensorFlow system, tensors are described by a unit of dimensionality known as rank.
+  - Tensor rank is not the same as matrix rank. Tensor rank (sometimes referred to as order or degree or n-dimension)
+  - Think rank as a dimension like is it 1-D(vector), or a 2-D(Matrix) and so on
+- *Shape*
+  - This is related how the dimension is, For example a matrix can take the shape of 2*2 or 3*2 and so on
+- *Data types*
+  - tf.float32, tf.float64, tf.int16 ... check tensorflow.com
+** How the program gets executed?
+*** Overview
+- TensorFlow is a programming system in which you represent computations as graphs. Nodes in the graph are called ops (short for operations).
+- An op takes zero or more Tensors, performs some computation, and produces zero or more Tensors.
+- a Tensor is a typed multi-dimensional array. For example, you can represent a mini-batch of images as a 4-D array of floating point numbers
+- TensorFlow graph is a description of computations. To compute anything, a graph must be launched in a Session.
+- A Session places the graph ops onto Devices, such as CPUs or GPUs, and provides methods to execute them.
+- These methods return tensors produced by ops as numpy ndarray objects in Python, and as tensorflow::Tensor instances in C and C++.
+*** The computation graph
+- TensorFlow programs are usually structured into a construction phase, that assembles a graph, and an execution phase
+- common to create a graph to represent and train a neural network in the construction phase, and then repeatedly execute a set of training ops in the graph in the execution phase.
+*** Building the graph
+- TensorFlow Python library has a default graph to which ops constructors add nodes.
+- [[./tensor.org_20170122_175032_4559E9j.png]]
+- default graph now has three nodes: two constant() ops and one matmul() op.
+- actually multiply the matrices, and get the result of the multiplication, you must launch the graph in a session.
+*** Launching the graph in a session
+- To launch a graph, create a Session object. Without arguments the session constructor launches the default graph.
+
+#+begin_src python
+# Launch the default graph.
+sess = tf.Session()
+
+# To run the matmul op we call the session 'run()' method, passing 'product'
+# which represents the output of the matmul op.  This indicates to the call
+# that we want to get the output of the matmul op back.
+#
+# All inputs needed by the op are run automatically by the session.  They
+# typically are run in parallel.
+#
+# The call 'run(product)' thus causes the execution of three ops in the
+# graph: the two constants and matmul.
+#
+# The output of the matmul is returned in 'result' as a numpy `ndarray` object.
+result = sess.run(product)
+print(result)
+# ==> [[ 12.]]
+
+# Close the Session when we're done.
+sess.close()
+#+end_src
+
+- Sessions should be closed to release resources.
+- TensorFlow implementation translates the graph definition into executable operations
+- Interactive Usage
+- For ease of use in interactive Python environments, such as IPython you can instead use the InteractiveSession class, and the Tensor.eval() and Operation.run() methods. This avoids having to keep a variable holding the session.
+- Tensors
+- use a tensor data structure to represent all data -- only tensors are passed between operations in the computation graph.
+- A tensor has a static type, a rank, and a shape.

@@ -1,0 +1,28 @@
+javascript:(function(){console.clear(); var vikas=document.getElementsByClassName("highly-content-text"); var outputVikas=""; for(var vikasNote of vikas){ outputVikas=outputVikas+"- "+vikasNote.innerText+"\n"; } console.log(outputVikas); })();
+
+javascript:(function(){
+    console.clear();
+    document.querySelector("#highly-navbar-summary-button").click();
+    var vikas=document.getElementsByClassName("highly-content-text");
+    var outputVikas="";
+    for(var vikasNote of vikas){
+	outputVikas=outputVikas+"- "+vikasNote.innerText+"\n";
+    }
+    let elementPre =  document.createElement("pre");
+    elementPre.setAttribute("id","vikas-notes");
+    elementPre.innerText = outputVikas;
+    document.body.appendChild(elementPre);
+
+    let range = document.createRange();
+    range.selectNode(elementPre);
+    window.getSelection().addRange(range);
+
+    try {  
+	var successful = document.execCommand('copy');  
+	var msg = successful ? 'successful' : 'unsuccessful';  
+	console.log('Copy email command was ' + msg);  
+    } catch(err) {  
+	console.log('Oops, unable to copy');  
+    }
+    window.getSelection().removeAllRanges();
+})();
