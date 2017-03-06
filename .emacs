@@ -13,6 +13,7 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (misterioso)))
+ '(ecb-options-version "2.50")
  '(global-linum-mode t)
  '(indent-tabs-mode nil)
  '(js-indent-level 2 t)
@@ -419,10 +420,8 @@ same directory as the org-buffer and insert a link to this file."
                          'face '(:weight bold :background "blue" :foreground "white")
                          'help-echo (buffer-file-name)))
   " "'(:eval
-       (if vc-mode
-           (propertize (concat "Git:"(vc-state (buffer-file-name (current-buffer))))
-                       'face '(:foreground "grey0" :weight bold :background "orange"))
-         ))
+       (if (which-function)
+       (propertize (which-function) 'face '(:foreground "red" :background "black" :weight bold))))
   " "'(:eval
        (if vc-mode
            (propertize (concat "Git:"(vc-working-revision (buffer-file-name (current-buffer))))
@@ -443,3 +442,5 @@ same directory as the org-buffer and insert a link to this file."
         )
        )
   ))
+
+(setq tags-table-list '("~/.emacs-tags"))
