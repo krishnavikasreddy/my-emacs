@@ -19,6 +19,10 @@
  "/home/krishna/dev/node/"
  "/home/krishna/"
  "/home/krishna/dev/catchMyNotes/"
+<<<<<<< HEAD
+=======
+ "/home/krishna/dev/node/"
+>>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
  "/home/krishna/dev/catchMyNotes/src/"
  "/home/krishna/projects/nano-2.7.0/src/"
  "/home/krishna/projects/nano-2.7.0/"
@@ -40,12 +44,20 @@
  ".eslintrc"
  "vikas.jsx"
  "vikas.js"
+<<<<<<< HEAD
+=======
+ "app.js"
+>>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
  "global.c"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+<<<<<<< HEAD
  ("/home/krishna/" (22723 26765 649828 49000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
+=======
+ ("/home/krishna/" (22723 21682 459729 646000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
+>>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
 
  ("/home/krishna/dev/catchMyNotes/src/" (22720 49639 769007 693000) ".eslintrc" "../" "index.js" "./")
 
