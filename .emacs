@@ -1,23 +1,20 @@
 (set-face-attribute 'default nil :height 105)
 (setq-default line-spacing 2)
-
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(Man-notify-method (quote newframe))
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (misterioso)))
  '(ecb-options-version "2.50")
- '(global-linum-mode t)
  '(indent-tabs-mode nil)
- '(js-indent-level 2 t)
+ '(js-indent-level 2)
  '(linum-eager nil)
+ '(man-notify-method (quote newframe))
  '(org-agenda-files (quote ("~/Documents/Schedule.org")))
  '(org-emphasis-alist
    (quote
@@ -42,8 +39,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(ac-selection-face ((t nil)))
+ '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(ac-selection-face ((t (:background "black" :foreground "white"))))
  '(ediff-even-diff-A ((t (:background "dark salmon"))))
  '(ediff-even-diff-Ancestor ((t (:background "orange red"))))
  '(ediff-even-diff-B ((t (:background "dark cyan"))))
@@ -52,19 +49,17 @@
  '(ediff-odd-diff-Ancestor ((t (:background "tan4"))))
  '(ediff-odd-diff-B ((t (:background "firebrick4"))))
  '(ediff-odd-diff-C ((t (:background "PeachPuff4"))))
+ '(linum ((t (:inherit (shadow default) :foreground "yellow"))))
  '(mode-line ((t (:background "white" :foreground "black"))))
  '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
  '(show-paren-match ((t (:background "grey10")))))
 
-
-
 ;;dont display startup message
 (setq inhibit-startup-message t)
-
-                                        ;line numbers
+;;line numbers
 (global-linum-mode 1)
 
-                                        ;key shortcuts
+;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
 
@@ -98,12 +93,10 @@
 	    ))
 
 ;; this is for the disappearence of the top menu bar
-(tool-bar-mode -1)
+(if window-system '(tool-bar-mode -1))
 
 ;;ORG-MODE variables
 (setq org-startup-with-inline-images t)
-
-
 
 
 ;;-------------------------------------------
@@ -151,47 +144,7 @@ same directory as the org-buffer and insert a link to this file."
              '("melpa" . "https://melpa.org/packages/"))
 
 ;; all your custom scripts are stored in this path
-(add-to-list 'load-path "~/.emacs.d/lp/")
-
-;; adding html-tags mode this is to identify the tags pair automatically
-(require 'hl-tags-mode)
-(add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
-(add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
-
-
-(defun vikas ()
-  (interactive)
-  (save-excursion
-    (setq char-in (search-backward "<" nil t))
-    (forward-char 1)
-    (setq mystr (thing-at-point 'symbol)))
-  (save-excursion
-    (setq char-not-in (search-backward "/" nil t)))
-  (if (equal char-in nil) (setq char-in -1))
-  (if (equal char-not-in nil) (setq char-not-in -1))
-  (if (> char-in char-not-in)
-      (progn
-
-	(newline-and-indent)
-	(insert (concat "\n</" mystr ">"))
-	(indent-according-to-mode)
-	(forward-line -1)
-	(indent-according-to-mode)
-        )))
-
-
-(defun add-key-close()
-  (local-set-key (kbd "C-.") 'vikas))
-
-(add-hook 'sgml-mode-hook 'add-key-close)
-
-
-
-
-;;typescript mode
-(require 'typescript)
-(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
-
+;; (add-to-list 'load-path "~/.emacs.d/lp/")
 
 ;; Smooth Scrolling
 ;; scroll one line at a time (less "jumpy" than defaults)
@@ -215,75 +168,6 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; refresh files as it is changed in the disk
 (global-auto-revert-mode t)
-
-(defun test-hook (change-beg change-end prev-len)
-  (if (and (> change-beg start-s) (<= change-end start-e))
-      (save-excursion
-	(goto-char start-s)
-	(setq-local cur-w (thing-at-point 'word))
-	(goto-char (+ end-s 3))
-	(delete-region (+ end-s 3) end-e)
-	(insert "h")
-	)
-    ))
-
-(defun auto-change-html (change-beg change-end prev-len)
-  (if (not (equal cur-w 'nil))
-      (if (not (equal (car cur-w) (cdr cur-w)))
-	  (progn
-	    (setq start-s (car (car cur-w)))
-	    (setq start-e (cdr (car cur-w)))
-	    (setq end-s (car (cdr cur-w)))
-	    (setq end-e (cdr (cdr cur-w)))
-
-            (if (and (<= (point) start-e) (> (point) start-s))
-                (save-excursion
-                  (goto-char (+ start-s 1))
-                  (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-                  (if (= prev-len 1)
-                      (progn
-                        (delete-region (+ end-s 1) (- end-e 2))
-                        (goto-char (+ end-s 1))
-                        (insert cur-w)
-                        )
-                    (progn
-                      (delete-region (+ end-s 3) end-e)
-                      (goto-char (+ end-s 3))
-                      (insert cur-w)
-                      )
-                    )
-                  ))
-            (if (and (< (point) end-e) (> (point) end-s))
-                (progn
-                  (setq cur-w (hl-tags-context))
-                  (setq start-s (car (car cur-w)))
-                  (setq start-e (cdr (car cur-w)))
-                  (setq end-s (car (cdr cur-w)))
-                  (setq end-e (cdr (cdr cur-w)))
-
-                  (save-excursion
-                    (goto-char (+ end-s 2))
-                    (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-                    (delete-region (+ start-s 1) (- start-e 1))
-                    (goto-char (+ start-s 1))
-                    (insert cur-w)
-                    ))
-              )))))
-
-
-(defun auto-change-html-before-change (begin end)
-  (setq cur-w (hl-tags-context)))
-
-(setq inhibit-modification-hooks nil)
-;;(add-hook 'after-change-functions 'test-hook)
-
-
-;; (add-hook 'sgml-mode-hook
-;;           (lambda ()
-;; 	    (add-hook 'after-change-functions 'auto-change-html nil 'make-it-local)
-;; 	    (add-hook 'before-change-functions 'auto-change-html-before-change nil 'make-it-local)
-;; 	    ))
-
 
 (put 'dired-find-alternate-file 'disabled nil)
 
@@ -353,10 +237,6 @@ same directory as the org-buffer and insert a link to this file."
   )
 
 
-;;-----------
-;; php-mode
-(require 'php-mode);
-
 ;;twittering-mode
 (setq twittering-use-master-password t)
 (setq twittering-icon-mode t)
@@ -374,7 +254,7 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 ;;;jsx mode
-(add-to-list 'auto-mode-alist '("\\.jsx" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?" . js2-mode))
 
 
 (global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
@@ -395,8 +275,6 @@ same directory as the org-buffer and insert a link to this file."
 (global-set-key (kbd "s-s") 'speedbar)
 (global-set-key (kbd "C-0") 'delete-window)
 
-
-
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
 
@@ -404,13 +282,10 @@ same directory as the org-buffer and insert a link to this file."
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
 
-
-
 ;;keybinding for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
 (setq org-src-fontify-natively t)
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
 (ido-mode 1)
 (setq-default
  mode-line-format
@@ -419,14 +294,7 @@ same directory as the org-buffer and insert a link to this file."
   " "'(:eval (propertize "%b"
                          'face '(:weight bold :background "blue" :foreground "white")
                          'help-echo (buffer-file-name)))
-  " "'(:eval
-       (if (which-function)
-       (propertize (which-function) 'face '(:foreground "red" :background "black" :weight bold))))
-  " "'(:eval
-       (if vc-mode
-           (propertize (concat "Git:"(vc-working-revision (buffer-file-name (current-buffer))))
-                       'face '(:foreground "grey0" :weight bold :background "orange"))
-         ))
+  '(vc-mode vc-mode)
   " "'(:eval (propertize "%m" 'face '(:foreground "dark green" :weight bold) 'help-echo buffer-file-coding-system))
   " "'(:eval
        (cond
@@ -442,5 +310,51 @@ same directory as the org-buffer and insert a link to this file."
         )
        )
   ))
+;;; Auto-Complete-Mode
 
-(setq tags-table-list '("~/.emacs-tags"))
+(package-initialize)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20170124.1845/dict")
+(ac-config-default)
+(global-auto-complete-mode t)
+(setq ac-auto-show-menu    0.2)
+(setq ac-delay             0.2)
+(setq ac-menu-height       20)
+(setq ac-auto-start t)
+(setq ac-show-menu-immediately-on-auto-complete t)
+(setq ac-quick-help-delay 0.5)
+(ac-linum-workaround)
+
+(global-flycheck-mode 1)
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
+
+;;use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'js2-mode)
+
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
+
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+          '(json-jsonlist)))
+
+;; use local eslint from node_modules before global
+;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
