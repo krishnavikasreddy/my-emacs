@@ -2,51 +2,78 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/krishna/dev/catchMyNotes/" . "src/")
+ ("/home/krishna/.emacs.d/elpa/" . "flycheck-20170308.532/")
+ ("/home/krishna/.emacs.d/" . "elpa/")
+ ("/home/krishna/projects/" . "nano-2.7.0/")
  ("/home/krishna/Documents/projects/deep/" . "deppClass/")
  ("/home/krishna/Documents/" . "projects/")
  ("/home/krishna/Documents/projects/" . "deep/")
  ("/home/" . "krishna/")
  ("/home/krishna/dev/" . "node/")
- ("/home/krishna/" . "Documents/")
+ ("/home/krishna/" . "dev/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/krishna/dev/node/"
  "/home/krishna/"
+ "/home/krishna/dev/catchMyNotes/"
+ "/home/krishna/dev/catchMyNotes/src/"
+ "/home/krishna/projects/nano-2.7.0/src/"
+ "/home/krishna/projects/nano-2.7.0/"
  "/home/krishna/Documents/projects/deep/tensor/"
  "/home/krishna/Documents/projects/deep/deppClass/"
  "/home/krishna/Documents/projects/deep/"
  "/home/krishna/Documents/projects/C/"
  "/home/krishna/dev/node/src/"
- "/home/krishna/dev/node/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "app.js"
  ".emacs"
- "tensor.py"
- "deep.py"
- "neural.py"
- "makefile"
- "main.c"
- "main.h"
- "App.jsx"
+ "vikas.j"
  "package.json"
+ "index.js"
+ "webpack.config.js"
+ ".eslintrc"
+ "vikas.jsx"
+ "vikas.js"
+ "global.c"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/krishna/" (22715 9490 751167 350000) "open/" ".atom/" ".sudo_as_admin_successful" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".mozilla/" "kr.key" "test" ".npm/" "R/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".emacs.desktop.lock" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" "#.emacs#" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
+ ("/home/krishna/" (22723 26765 649828 49000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
 
- ("/home/krishna/Documents/projects/deep/tensor/" (22715 3231 147852 429000) ".#tensor.py" "tensor.py" "../" "#tensor.py#" "./")
+ ("/home/krishna/dev/catchMyNotes/src/" (22720 49639 769007 693000) ".eslintrc" "../" "index.js" "./")
+
+ ("/home/krishna/dev/catchMyNotes/" (22720 50382 823567 623000) "webpack.config.js" "src/" "package.json" "../" "index.js" "node_modules/" "./")
+
+ ("/home/krishna/.emacs.d/elpa/flycheck-20170308.532/" (22720 46529 849115 768000) "flycheck-ert.el" "flycheck-ert.elc" "flycheck-autoloads.el" "flycheck-buttercup.el" "flycheck.elc" "flycheck.el" "../" "flycheck-pkg.el" "./")
+
+ ("/home/krishna/.emacs.d/elpa/" (22720 46375 974701 659000) "archives/" "gnupg/" "0blayout-readme.txt" "seq-2.19/" "ac-js2-readme.txt" "skewer-mode-20170122.938/" "auto-complete-20170124.1845/" "let-alist-1.0.5/" "js2-mode-20170221.1636/" "popup-20160709.729/" "dash-20170207.2056/" "ac-js2-20140906.442/" "auto-complete-readme.txt" "async-20170219.942/" "org-20170210.signed" "simple-httpd-20170125.1910/" "magit-20170308.146/" "seq-2.19.signed" "with-editor-20170111.609/" "exec-path-from-shell-20170304.1309/" "flycheck-readme.txt" "let-alist-1.0.5.signed" "magit-readme.txt" "epl-20150517.433/" "git-commit-20170308.146/" "../" "flycheck-20170308.532/" "exec-path-from-shell-readme.txt" "pkg-info-20150517.443/" "org-20170210/" "magit-popup-20170308.146/" "ecb-readme.txt" "ecb-20160101.933/" "./")
+
+ ("/home/krishna/.emacs.d/" (22720 46561 65605 43000) "ido.last" "url/" "minnamareddy-theme.el~" "eshell/" "elpa/" ".python-environments/" "auto-save-list/" "ac-comphist.dat" "newsticker/" "../" "lp/" "minnamareddy-theme.el" "abbrev_defs" "./")
+
+ ("/home/krishna/dev/node/" (22720 41105 582419 445000) "webpack.config.js" "index.html" "src/" "app.js" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
+
+ ("/home/krishna/Documents/projects/deep/tensor/" (22715 3686 308495 717000) "tensor.py" "../" "#tensor.py#" "./")
+
+ ("/home/krishna/projects/nano-2.7.0/" (22715 42147 886308 215000) "nano.spec" "GSYMS" "config.sub" "po/" "nano.spec.in" "config.rpath" "GPATH" "GRTAGS" "src/" "COPYING" "Makefile.in" "m4/" "configure.ac" "config.guess" "AUTHORS" "compile" "ABOUT-NLS" "THANKS" "ChangeLog" "TODO" "COPYING.DOC" "README.GIT" "BROWSE" "NEWS" "doc/" "depcomp" "install-sh" "IMPROVEMENTS" "ChangeLog.pre-2.1" "mkinstalldirs" "config.h.in" "README" "missing" "../" "GTAGS" "Makefile.am" "aclocal.m4" "configure" "./" "INSTALL")
+
+ ("/home/krishna/projects/nano-2.7.0/src/" (22715 38344 71819 564000) "rcfile.c" "chars.c" "proto.h" "help.c" "files.c" "Makefile.in" "nano.h" "browser.c" "winio.c" "text.c" "nano.c" "search.c" "move.c" "utils.c" "../" "cut.c" "global.c" "Makefile.am" "color.c" "prompt.c" "./")
+
+ ("/home/krishna/dev/" (22720 38833 234187 775000) "node/" "bash/" "../" "google-images" "catchMyNotes/" "deepL/" "./")
+
+ ("/home/krishna/projects/" (22659 46702 183972 674000) "john-1.8.0/" "okular/" "aircrack-ng-1.2-rc4/" "passCrack/" "tor-browser_en-US/" "hello-2.10/" "nano-2.7.0/" "../" "./")
 
  ("/home/krishna/Documents/projects/deep/" (22714 6768 903217 10000) "tensor/" "deppClass/" "neural.py" "../" "./")
 
  ("/home/krishna/Documents/projects/deep/deppClass/" (22711 28272 673500 485000) "../" "deep.py" "./")
 
  ("/home/krishna/Documents/projects/" (22710 6323 495730 268000) "bash/" "R/" "js/" "python/" "vikas.sh~" "vikas.sh" "C/" "#vikas.sh#" "../" "deep/" "githooks/" "NetSec/" "./")
-
- ("/home/krishna/dev/node/" (22699 22937 349303 532000) "webpack.config.js" "index.html" "src/" "app.js" "#app.js#" "#package.json#" "app.js_20170218_190808_3038789Z.png" "package.json" "../" "node_modules/" "build/" "./")
 
  ("/home/krishna/dev/node/src/" (22696 62103 899355 472000) "App.js" "../" "./")
 
@@ -57,8 +84,6 @@
  ("/home/krishna/Documents/" (22672 6910 166878 888000) "notes/" "bootstrap.css" "Schedule.org" "Schedule.org~" "../" "projects/" "vikas/" "./")
 
  ("/home/" (22531 39386 186506 726000) "krishna/" "../" "./")
-
- ("/home/krishna/dev/" (22695 53752 491033 353000) "node/" "bash/" "../" "google-images" "deepL/" "./")
 
  ("/home/krishna/Documents/notes/myNotes/Maths/Differentiation/" (22693 238 375263 942000) "Diff.org_20170214_194540_12084Yre.png" "Diff.org_20170211_161951_12084XqX.png" "Diff.org_20170214_201911_12084_Jx.png" "Diff.org_20170211_170755_12084-Pe.png" "Diff.org_20170214_192743_12084xMM.png" "Diff.org_20170214_210949_12084_Ql.png" "Diff.org_20170214_211450_12084Mbr.png" "Diff.org_20170211_160224_120849OX.png" "Diff.org_20170215_195432_12084Y5G.png" "Diff.org~" "Diff.org_20170211_161024_12084-B2.png" "Diff.org_20170214_193050_12084-WS.png" "Diff.org_20170211_160139_12084wER.png" "Diff.org_20170211_163354_12084LTw.png" "Diff.org_20170214_205225_12084-dG.png" "Diff.org_20170214_193604_12084LhY.png" "Diff.org_20170211_161009_12084x3v.png" "Diff.org_20170214_210612_12084yGf.png" "Diff.org_20170214_190614_12084y42.png" "Diff.org" "Diff.org_20160630_180842_25651fgL.png" "Diff.org_20170215_195449_12084lDN.png" "Diff.org_20170211_171334_12084Ykq.png" "Diff.org_20170214_210050_12084YyS.png" "Diff.org_20160630_174611_25651G4p.png" "Diff.org_20170214_211900_12084Zlx.png" "Diff.org_20160630_175851_25651gM2.png" "Diff.org_20160630_175002_25651TCw.png" "Diff.org_20170214_210148_12084l8Y.png" "Diff.org_20170211_170521_12084xFY.png" "Diff.org_20170214_203739_12084xTA.png" "Diff.org_20160630_180619_25651SWF.png" "Diff.org_20170211_165455_12084KnF.png" "Diff.org_20170214_205511_12084LoM.png" "Diff.org_20170214_194609_12084l1k.png" "Diff.org_20170214_192026_12084kCG.png" "Diff.org_20160630_173059_256515tj.png" "Diff.org_20170215_185413_12084LvA.png" "Diff.org_20170211_163016_12084-Iq.png" "../" "Diff.org_20170211_170432_12084k7R.png" "Diff.org_20170211_161154_12084wLF.png" "Diff.org_20170211_170235_12084XxL.png" "Diff.html" "Diff.org_20170211_160740_12084Xjj.png" "Diff.org_20170211_162210_12084x-j.png" "Diff.org_20170211_160237_12084KZd.png" "Diff.org_20170214_201607_12084y_q.png" "Diff.org_20170211_170822_12084Lak.png" "Diff.org_20170211_161547_12084KgR.png" "Diff.org_20170211_163459_12084Yd2.png" "./" "Diff.org_20170211_161434_120849VL.png")
 )
