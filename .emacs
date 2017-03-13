@@ -11,8 +11,6 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (misterioso)))
  '(ecb-options-version "2.50")
- '(indent-tabs-mode nil)
- '(js-indent-level 2)
  '(linum-eager nil)
  '(man-notify-method (quote newframe))
  '(org-agenda-files (quote ("~/Documents/Schedule.org")))
@@ -32,7 +30,6 @@
      ("+"
       (:strike-through t)))))
  '(org-hide-emphasis-markers t)
- '(standard-indent 2)
  '(timeclock-mode-line-display t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -97,7 +94,8 @@
 ;;ORG-MODE variables
 (setq org-startup-with-inline-images t)
 
-
+;; tabs - spaces
+(setq-default indent-tabs-mode nil)
 ;;-------------------------------------------
 ;; this is for taking screen shot
 (defun my-org-screenshot ()
@@ -170,7 +168,7 @@ same directory as the org-buffer and insert a link to this file."
 
 (add-hook 'dired-mode-hook
           (lambda ()
-            (define-key dired-mode-map (kbd "^")
+            (define-key dired-mode-map [backspace]
               (lambda () (interactive) (find-alternate-file "..")))
                                         ; was dired-up-directory
             ))
@@ -258,6 +256,9 @@ same directory as the org-buffer and insert a link to this file."
 (setq js2-mode-show-strict-warnings nil)
 (setq js2-use-font-lock-faces t)
 (setq js2-highlight-level 3)
+(setq js2-basic-offset 2)
+
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 (global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
 
@@ -281,7 +282,6 @@ same directory as the org-buffer and insert a link to this file."
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
 
 ;;set js indent level to 2
-(setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
 
 ;;keybinding for magit-status
@@ -289,6 +289,8 @@ same directory as the org-buffer and insert a link to this file."
 (setq org-src-fontify-natively t)
 
 (ido-mode 1)
+(setq ido-default-file-method 'selected-window)
+
 (setq-default
  mode-line-format
  (list
@@ -313,7 +315,6 @@ same directory as the org-buffer and insert a link to this file."
        )
   ))
 ;;; Auto-Complete-Mode
-
 (package-initialize)
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20170124.1845/dict")
@@ -327,14 +328,22 @@ same directory as the org-buffer and insert a link to this file."
 (setq ac-quick-help-delay 0.5)
 (ac-linum-workaround)
 
+;; set the split to horizontal rather than vertical
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
+
+;; open buffer list on mouse-3 button
+(global-set-key [down-mouse-3] 'mouse-buffer-menu)
+
 (global-flycheck-mode 1)
 ;; turn on flychecking globally
-(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'prog-mode-hook #'global-flycheck-mode)
+
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-    '(javascript-jshint)))
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint)))
 
 ;;use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
@@ -344,8 +353,8 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; disable json-jsonlist checking for json files
 (setq-default flycheck-disabled-checkers
-  (append flycheck-disabled-checkers
-          '(json-jsonlist)))
+              (append flycheck-disabled-checkers
+                      '(json-jsonlist)))
 
 ;; use local eslint from node_modules before global
 ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
@@ -359,4 +368,3 @@ same directory as the org-buffer and insert a link to this file."
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-
