@@ -2,66 +2,85 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/krishna/dev/catchMyNotes/src/" . "configs/")
+ ("/home/krishna/Documents/notes/markets/Commodities/" . "oil/")
+ ("/home/krishna/Documents/notes/markets/" . "Commodities/")
+ ("/home/krishna/Documents/notes/" . "markets/")
  ("/home/krishna/dev/catchMyNotes/" . "src/")
  ("/home/krishna/.emacs.d/elpa/" . "flycheck-20170308.532/")
  ("/home/krishna/.emacs.d/" . "elpa/")
  ("/home/krishna/projects/" . "nano-2.7.0/")
- ("/home/krishna/Documents/projects/deep/" . "deppClass/")
+ ("/home/krishna/Documents/projects/deep/" . "tensor/")
  ("/home/krishna/Documents/" . "projects/")
  ("/home/krishna/Documents/projects/" . "deep/")
  ("/home/" . "krishna/")
- ("/home/krishna/dev/" . "node/")
- ("/home/krishna/" . "dev/")
+ ("/home/krishna/dev/" . "catchMyNotes/")
+ ("/home/krishna/" . "Documents/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/krishna/dev/node/"
  "/home/krishna/"
- "/home/krishna/dev/catchMyNotes/"
-<<<<<<< HEAD
-=======
- "/home/krishna/dev/node/"
->>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
+ "/home/krishna/Documents/projects/deep/"
+ "/home/krishna/Documents/"
+ "/home/krishna/Documents/projects/deep/tensor/"
  "/home/krishna/dev/catchMyNotes/src/"
+ "/home/krishna/Documents/notes/markets/Commodities/oil/"
+ "/home/krishna/dev/test/"
+ "/home/krishna/dev/catchMyNotes/"
+ "/home/krishna/dev/node/"
  "/home/krishna/projects/nano-2.7.0/src/"
  "/home/krishna/projects/nano-2.7.0/"
- "/home/krishna/Documents/projects/deep/tensor/"
  "/home/krishna/Documents/projects/deep/deppClass/"
- "/home/krishna/Documents/projects/deep/"
  "/home/krishna/Documents/projects/C/"
  "/home/krishna/dev/node/src/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "app.js"
  ".emacs"
- "vikas.j"
- "package.json"
- "index.js"
- "webpack.config.js"
- ".eslintrc"
- "vikas.jsx"
+ "neural.py"
+ "Schedule.org"
  "vikas.js"
-<<<<<<< HEAD
-=======
- "app.js"
->>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
- "global.c"
+ "vikas.sh"
+ "tensor.py"
+ "index.js"
+ "Note.js"
+ "NotesContainer.js"
+ "TODO.org"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
-<<<<<<< HEAD
- ("/home/krishna/" (22723 26765 649828 49000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
-=======
+ ("/home/krishna/" (22735 4311 846564 331000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" "eclipse/" ".xscreensaver" ".node_repl_history" ".xinputrc" ".tooling/" ".bash_logout" ".tern-port" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" ".p2/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".oracle_jre_usage/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".eclipse/" ".Xdefaults" "Arch/" ".swt/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" "workspace/" "#.emacs#" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
+
+ ("/home/krishna/Documents/projects/deep/" (22735 3299 536383 901000) "tensor/" "deppClass/" "neural.py" "../" ".#neural.py" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/" (22733 54413 284022 526000) "TODO.org" "Note.js" "NotesContainer.js" ".eslintrc" "../" "index.js" "configs/" "./")
+
+ ("/home/krishna/Documents/projects/deep/tensor/" (22734 63723 583720 626000) "tensor.py" "../" "./")
+
+ ("/home/krishna/Documents/notes/markets/Commodities/oil/" (22732 35594 894198 3000) "oil.org_20160810_173304_26297ygU.png" "oil.org_20170121_155309_14655nmT.png" "oil.org_20170121_155231_14655acN.png" "oil.html" "oil.org_20170121_163710_17679KHb.png" "oil.org_20170121_171522_17679xlt.png" "oil.org_20170121_164911_17679XRh.png" "oil.org_20170121_163501_1767998U.png" "oil.org_20160810_180338_26297_qa.png" "oil.org_20160915_114804_29160GUE.png" "oil.org_20170121_172159_17679w5C.png" "oil.org_20161202_214949_32711V8J.png" "oil.org_20170121_163203_17679wyO.png" "oil.org_20170121_171500_17679kbn.png" "oil.org_20161201_205152_29498Ldq.png" "oil.org_20160918_141444_28251GiP.png" "../" "oil.org" "oil.org_20170121_171545_17679-vz.png" "./")
+
+ ("/home/krishna/.emacs-backup/" (22731 11909 519403 88000) "!home!krishna!.profile~" "!home!krishna!dev!catchMyNotes!index.html~" "!home!krishna!Documents!notes!myNotes!linux!OS!os.org~" "!home!krishna!dev!catchMyNotes!src!NotesContainer.js~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.org~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.html~" "!home!krishna!.emacs.d!elpa!magit-popup-20170214.347!magit-popup-autoloads.el~" "!home!krishna!dev!node!app.js~" "!home!krishna!.emacs.d!elpa!skewer-mode-20170122.938!skewer-mode-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!index.js~" "!home!krishna!.emacs.d!elpa!magit-popup-20170308.146!magit-popup-autoloads.el~" "!home!krishna!dev!node!package.json~" "!home!krishna!Documents!notes!deepL!tensor!deep!deep.org~" "!home!krishna!.emacs.d!elpa!git-commit-20170308.146!git-commit-autoloads.el~" "!home!krishna!dev!node!webpack.config.js~" "!home!krishna!Documents!projects!bash!practice.sh~" "!home!krishna!Documents!projects!deep!deppClass!deep.py~" "!home!krishna!dev!catchMyNotes!src!.eslintrc~" "!home!krishna!Documents!notes!deepL!tensor!tensor.org~" "!home!krishna!Documents!notes!markets!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!notes!markets !Commodities!oil!oil.html~" "!home!krishna!.emacs.d!elpa!async-20170219.942!async-autoloads.el~" "!home!krishna!Documents!projects!deep!tensor!tensor.py~" "!home!krishna!.emacs.d!elpa!popup-20160709.729!popup-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!configs!notes.js~" "!home!krishna!.emacs.d!elpa!simple-httpd-20170125.1910!simple-httpd-autoloads.el~" "!home!krishna!Documents!notes!markets !.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!org-20170210!org-loaddefs.el~" "!home!krishna!.bashrc~" "!home!krishna!Documents!notes!myNotes!Maths!Differentiation!Diff.html~" "!home!krishna!dev!node!src!App.jsx~" "!home!krishna!.emacs.d!elpa!flycheck-20170117.1430!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!with-editor-20170111.609!with-editor-autoloads.el~" "!home!krishna!Documents!projects!C!main.c~" "!home!krishna!dev!catchMyNotes!src!Note.js~" "!home!krishna!.emacs.d!elpa!git-commit-20170214.347!git-commit-autoloads.el~" "!home!krishna!.emacs.d!elpa!exec-path-from-shell-20170304.1309!exec-path-from-shell-autoloads.el~" "!home!krishna!.emacs.d!elpa!flycheck-20170308.532!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!org-20170210!org-autoloads.el~" "!home!krishna!Documents!notes!deepL!tensor!tensor.html~" "!home!krishna!Documents!projects!deep!neural.py~" "!home!krishna!Documents!projects!githooks!.git!hooks!pre-push~" "!home!krishna!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!projects!js!promises.js~" "!home!krishna!.emacs.d!elpa!js2-mode-20170221.1636!js2-mode-autoloads.el~" "!home!krishna!Documents!projects!bash!images.sh~" "!home!krishna!dev!catchMyNotes!.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!pkg-info-20150517.443!pkg-info-autoloads.el~" "!home!krishna!.emacs~" "!home!krishna!.emacs.d!elpa!magit-20170119.1803!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!ac-js2-20140906.442!ac-js2-autoloads.el~" "!home!krishna!.emacs.d!elpa!htmlize-20161211.1019!htmlize-autoloads.el~" "!home!krishna!dev!catchMyNotes!app.js~" "!home!krishna!.emacs.d!elpa!seq-2.19!seq-autoloads.el~" "!home!krishna!Documents!projects!js!test.js~" "!home!krishna!.emacs.d!elpa!flycheck-20170223.247!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!auto-complete-20170124.1845!auto-complete-autoloads.el~" "!home!krishna!dev!catchMyNotes!webpack.config.js~" "!home!krishna!.gitconfig~" "!home!krishna!.emacs.d!ido.last~" "!home!krishna!dev!bash!images.sh~" "!home!krishna!dev!catchMyNotes!package.json~" "!home!krishna!.emacs.d!elpa!epl-20150517.433!epl-autoloads.el~" "!home!krishna!.emacs.d!elpa!magit-20170308.146!magit-autoloads.el~" "!home!krishna!dev!node!src!App.js~" "!home!krishna!.emacs.d!elpa!ecb-20160101.933!ecb-autoloads.el~" "!home!krishna!Documents!projects!C!makefile~" "!home!krishna!dev!test!vikas~" "!home!krishna!.emacs.d!elpa!let-alist-1.0.5!let-alist-autoloads.el~" "!home!krishna!dev!catchMyNotes!index.js~" "!home!krishna!dev!node!index.html~" "!home!krishna!.emacs.d!elpa!magit-20170302.309!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!dash-20170207.2056!dash-autoloads.el~" "../" "./")
+
+ ("/home/krishna/dev/" (22727 17361 490599 427000) "node/" "bash/" "../" "google-images" "catchMyNotes/" "deepL/" "./")
+
+ ("/home/krishna/dev/catchMyNotes/" (22727 28063 266833 896000) "webpack.config.js" "index.html" "src/" ".gitignore" "package.json" "../" "npm-debug.log" "node_modules/" ".git/" "build/" "./")
+
+ ("/home/krishna/dev/test/" (22727 13144 258605 479000) "../" "vikas" "./")
+
+ ("/home/krishna/dev/node/" (22724 34491 243602 82000) "webpack.config.js" "index.html" "src/" "app.js" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/configs/" (22724 39398 154425 350000) "notes.js" "../" "./")
+
+ ("/home/krishna/Documents/notes/markets/Commodities/" (22657 31652 273998 404000) "../" "metals/" "./" "oil/")
+
+ ("/home/krishna/Documents/notes/markets/" (22657 31535 817944 790000) "Eco/" "Dollar/" "India/" "world/" "Commodities/" "Europe/" "japan/" "reminders/" "../" ".git/" "us/" "Instruments/" "./")
+
+ ("/home/krishna/Documents/notes/" (22682 36948 937129 37000) "myNotes/" "README.md" "bootstrap.css" "../" "markets/" "my-notes-temp/" "deepL/" "./")
+
  ("/home/krishna/" (22723 21682 459729 646000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
->>>>>>> b850609ca5b0a980ca7f426992dbc544596add7a
-
- ("/home/krishna/dev/catchMyNotes/src/" (22720 49639 769007 693000) ".eslintrc" "../" "index.js" "./")
-
- ("/home/krishna/dev/catchMyNotes/" (22720 50382 823567 623000) "webpack.config.js" "src/" "package.json" "../" "index.js" "node_modules/" "./")
 
  ("/home/krishna/.emacs.d/elpa/flycheck-20170308.532/" (22720 46529 849115 768000) "flycheck-ert.el" "flycheck-ert.elc" "flycheck-autoloads.el" "flycheck-buttercup.el" "flycheck.elc" "flycheck.el" "../" "flycheck-pkg.el" "./")
 
@@ -69,19 +88,11 @@
 
  ("/home/krishna/.emacs.d/" (22720 46561 65605 43000) "ido.last" "url/" "minnamareddy-theme.el~" "eshell/" "elpa/" ".python-environments/" "auto-save-list/" "ac-comphist.dat" "newsticker/" "../" "lp/" "minnamareddy-theme.el" "abbrev_defs" "./")
 
- ("/home/krishna/dev/node/" (22720 41105 582419 445000) "webpack.config.js" "index.html" "src/" "app.js" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
-
- ("/home/krishna/Documents/projects/deep/tensor/" (22715 3686 308495 717000) "tensor.py" "../" "#tensor.py#" "./")
-
  ("/home/krishna/projects/nano-2.7.0/" (22715 42147 886308 215000) "nano.spec" "GSYMS" "config.sub" "po/" "nano.spec.in" "config.rpath" "GPATH" "GRTAGS" "src/" "COPYING" "Makefile.in" "m4/" "configure.ac" "config.guess" "AUTHORS" "compile" "ABOUT-NLS" "THANKS" "ChangeLog" "TODO" "COPYING.DOC" "README.GIT" "BROWSE" "NEWS" "doc/" "depcomp" "install-sh" "IMPROVEMENTS" "ChangeLog.pre-2.1" "mkinstalldirs" "config.h.in" "README" "missing" "../" "GTAGS" "Makefile.am" "aclocal.m4" "configure" "./" "INSTALL")
 
  ("/home/krishna/projects/nano-2.7.0/src/" (22715 38344 71819 564000) "rcfile.c" "chars.c" "proto.h" "help.c" "files.c" "Makefile.in" "nano.h" "browser.c" "winio.c" "text.c" "nano.c" "search.c" "move.c" "utils.c" "../" "cut.c" "global.c" "Makefile.am" "color.c" "prompt.c" "./")
 
- ("/home/krishna/dev/" (22720 38833 234187 775000) "node/" "bash/" "../" "google-images" "catchMyNotes/" "deepL/" "./")
-
  ("/home/krishna/projects/" (22659 46702 183972 674000) "john-1.8.0/" "okular/" "aircrack-ng-1.2-rc4/" "passCrack/" "tor-browser_en-US/" "hello-2.10/" "nano-2.7.0/" "../" "./")
-
- ("/home/krishna/Documents/projects/deep/" (22714 6768 903217 10000) "tensor/" "deppClass/" "neural.py" "../" "./")
 
  ("/home/krishna/Documents/projects/deep/deppClass/" (22711 28272 673500 485000) "../" "deep.py" "./")
 

@@ -1,3 +1,4 @@
+(package-initialize)
 (set-face-attribute 'default nil :height 105)
 (setq-default line-spacing 2)
 (custom-set-variables
@@ -9,9 +10,21 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
+ '(company-idle-delay 0)
+ '(company-minimum-prefix-length 1)
+ '(company-quickhelp-color-background "black")
+ '(company-quickhelp-color-foreground "white")
+ '(company-quickhelp-delay 0)
+ '(company-quickhelp-max-lines 0)
+ '(company-quickhelp-mode t)
+ '(company-quickhelp-use-propertized-text t)
+ '(company-tooltip-align-annotations t)
+ '(company-tooltip-idle-delay 0)
+ '(company-tooltip-minimum 6)
+ '(company-tooltip-minimum-width 40)
  '(custom-enabled-themes (quote (misterioso)))
  '(ecb-options-version "2.50")
- '(linum-eager nil)
+ '(global-company-mode t)
  '(man-notify-method (quote newframe))
  '(org-agenda-files
    (quote
@@ -39,7 +52,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(ac-selection-face ((t (:background "black" :foreground "white"))))
+ '(company-scrollbar-bg ((t (:background "black"))))
+ '(company-scrollbar-fg ((t (:foreground "black"))))
+ '(company-tooltip ((t (:background "dark slate gray" :foreground "white"))))
  '(ediff-even-diff-A ((t (:background "dark salmon"))))
  '(ediff-even-diff-Ancestor ((t (:background "orange red"))))
  '(ediff-even-diff-B ((t (:background "dark cyan"))))
@@ -83,11 +98,13 @@
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 	    ))
 
-
+(add-to-list 'load-path "~/projects/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
 (add-hook 'js-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
 		 (concat "node " buffer-file-name))
+            (tern-mode t)
 	    ))
 
 ;; this is for the disappearence of the top menu bar
@@ -315,24 +332,12 @@ same directory as the org-buffer and insert a link to this file."
         ((buffer-modified-p)
          (propertize "MODIFIED"
                      'face '(:foreground "white" :weight bold :background "red")
-                     'help-echo "buffer modified.")) 
-        
+                     'help-echo "buffer modified."))
+
         )
        )
   ))
-;;; Auto-Complete-Mode
-(package-initialize)
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20170124.1845/dict")
-(ac-config-default)
-(global-auto-complete-mode t)
-(setq ac-auto-show-menu    0.2)
-(setq ac-delay             0.2)
-(setq ac-menu-height       20)
-(setq ac-auto-start t)
-(setq ac-show-menu-immediately-on-auto-complete t)
-(setq ac-quick-help-delay 0.5)
-(ac-linum-workaround)
+
 
 ;; ;; set the split to horizontal rather than vertical
 ;; (setq split-height-threshold nil)
@@ -376,4 +381,6 @@ same directory as the org-buffer and insert a link to this file."
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-
+(setq linum-supress-updates t)
+(global-company-mode 1)
+(add-to-list 'company-backends '(company-tern company-shell company-jedi))
