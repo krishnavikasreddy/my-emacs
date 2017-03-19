@@ -13,7 +13,9 @@
  '(ecb-options-version "2.50")
  '(linum-eager nil)
  '(man-notify-method (quote newframe))
- '(org-agenda-files (quote ("~/Documents/Schedule.org")))
+ '(org-agenda-files
+   (quote
+    ("~/dev/catchMyNotes/src/TODO.org" "~/Documents/Schedule.org")))
  '(org-emphasis-alist
    (quote
     (("*" bold)
@@ -21,11 +23,11 @@
      ("!"
       (:foreground "red"))
      ("%"
-      (:foreground "green"))
+      (:Foreground "Green"))
      ("?"
-      (:foreground "yellow"))
-     ("_" underline)
-     ("=" org-verbatim verbatim)
+      (:Foreground "Yellow"))
+     ("_" Underline)
+     ("=" Org-verbatim verbatim)
      ("~" org-code verbatim)
      ("+"
       (:strike-through t)))))
@@ -118,7 +120,7 @@ same directory as the org-buffer and insert a link to this file."
 (setq debug-on-error t)
 
 ;; to open previous configuration
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 
 
@@ -194,8 +196,21 @@ same directory as the org-buffer and insert a link to this file."
 					      (color-red "%")))
   )
 
+;; add macros to the org file while opening so as to not to copy every time
+(defun add-macros-to-org ()
+  (unless (file-exists-p (buffer-file-name (current-buffer)))
+    (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='/home/krishna/Documents/bootstrap.css' />
+#+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
+
+#+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
+#+MACRO: g @@html:<span class='text-success'>@@$1@@html:</span>@@
+#+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@
+
+")))
+
 (add-hook 'org-mode-hook (lambda ()
-                           '(define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
+                          (add-macros-to-org)
+                          '(define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
 			   (flyspell-mode 1)))
 
 (defun vikas-export-org (regex c)
@@ -250,15 +265,6 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
-;;;jsx mode
-(add-to-list 'auto-mode-alist '("\\.jsx?" . js2-jsx-mode))
-(setq js2-mode-show-parse-errors nil)
-(setq js2-mode-show-strict-warnings nil)
-(setq js2-use-font-lock-faces t)
-(setq js2-highlight-level 3)
-(setq js2-basic-offset 2)
-
-(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 (global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
 
@@ -294,7 +300,7 @@ same directory as the org-buffer and insert a link to this file."
 (setq-default
  mode-line-format
  (list
-  " "'(:eval (propertize (format-time-string "%I:%M:%p") 'face '(:foreground "dark red" :weight bold)))
+  " "'(:eval (propertize (format-time-string "%I:%M:%p") 'face '(:foreground "red" :weight bold)))
   " "'(:eval (propertize "%b"
                          'face '(:weight bold :background "blue" :foreground "white")
                          'help-echo (buffer-file-name)))
@@ -328,13 +334,12 @@ same directory as the org-buffer and insert a link to this file."
 (setq ac-quick-help-delay 0.5)
 (ac-linum-workaround)
 
-;; set the split to horizontal rather than vertical
-(setq split-height-threshold nil)
-(setq split-width-threshold 0)
+;; ;; set the split to horizontal rather than vertical
+;; (setq split-height-threshold nil)
+;; (setq split-width-threshold 0)
 
 ;; open buffer list on mouse-3 button
 (global-set-key [down-mouse-3] 'mouse-buffer-menu)
-
 (global-flycheck-mode 1)
 ;; turn on flychecking globally
 (add-hook 'prog-mode-hook #'global-flycheck-mode)
@@ -347,6 +352,9 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'js2-mode)
+
+;;enable sub-word mode
+(global-subword-mode 1)
 
 ;; customize flycheck temp file prefix
 (setq-default flycheck-temp-prefix ".flycheck")
@@ -368,3 +376,4 @@ same directory as the org-buffer and insert a link to this file."
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
