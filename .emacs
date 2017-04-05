@@ -1,4 +1,5 @@
 (package-initialize)
+(semantic-mode 1)
 (set-face-attribute 'default nil :height 105)
 (setq-default line-spacing 2)
 (custom-set-variables
@@ -6,24 +7,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(company-idle-delay 0)
- '(company-minimum-prefix-length 1)
- '(company-quickhelp-color-background "black")
- '(company-quickhelp-color-foreground "white")
- '(company-quickhelp-delay 0)
- '(company-quickhelp-max-lines 0)
- '(company-quickhelp-mode t)
- '(company-quickhelp-use-propertized-text t)
+ '(company-minimum-prefix-length 2)
+ '(company-tern-meta-as-single-line t)
  '(company-tooltip-align-annotations t)
  '(company-tooltip-idle-delay 0)
  '(company-tooltip-minimum 6)
  '(company-tooltip-minimum-width 40)
- '(custom-enabled-themes (quote (misterioso)))
+ '(custom-enabled-themes nil)
  '(ecb-options-version "2.50")
+ '(ecb-source-path (quote (("/" "/"))))
  '(global-company-mode t)
  '(man-notify-method (quote newframe))
  '(org-agenda-files
@@ -45,31 +38,34 @@
      ("+"
       (:strike-through t)))))
  '(org-hide-emphasis-markers t)
- '(timeclock-mode-line-display t))
+ '(package-selected-packages
+   (quote
+    (web-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
+ '(show-trailing-whitespace t)
+ '(web-mode-code-indent-offset 2)
+ '(web-mode-enable-auto-pairing t)
+ '(web-mode-markup-indent-offset 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(company-scrollbar-bg ((t (:background "black"))))
- '(company-scrollbar-fg ((t (:foreground "black"))))
- '(company-tooltip ((t (:background "dark slate gray" :foreground "white"))))
- '(ediff-even-diff-A ((t (:background "dark salmon"))))
- '(ediff-even-diff-Ancestor ((t (:background "orange red"))))
- '(ediff-even-diff-B ((t (:background "dark cyan"))))
- '(ediff-even-diff-C ((t (:background "blue4"))))
- '(ediff-odd-diff-A ((t (:background "purple4"))))
- '(ediff-odd-diff-Ancestor ((t (:background "tan4"))))
- '(ediff-odd-diff-B ((t (:background "firebrick4"))))
- '(ediff-odd-diff-C ((t (:background "PeachPuff4"))))
- '(linum ((t (:inherit (shadow default) :foreground "yellow"))))
  '(mode-line ((t (:background "white" :foreground "black"))))
  '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
- '(show-paren-match ((t (:background "grey10")))))
+ '(show-paren-match ((t (:inherit (quote region)))))
+ '(web-mode-block-face ((t (:background "gold"))))
+ '(web-mode-current-element-highlight-face ((t (:foreground "orange"))))
+ '(web-mode-html-attr-equal-face ((t (:inherit web-mode-html-attr-name-face :foreground "dark red"))))
+ '(web-mode-html-attr-name-face ((t (:foreground "dark violet"))))
+ '(web-mode-html-tag-bracket-face ((t (:foreground "olive drab"))))
+ '(web-mode-html-tag-custom-face ((t (:inherit web-mode-html-tag-face :foreground "orange red"))))
+ '(web-mode-html-tag-face ((t (:foreground "orange red"))))
+ '(web-mode-param-name-face ((t (:foreground "dim gray")))))
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
+
 ;;line numbers
 (global-linum-mode 1)
 
@@ -94,7 +90,9 @@
           (lambda ()
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
-            (setq python-indent-offset 4)
+            (anaconda-mode 1)
+            (anaconda-eldoc-mode 1)
+            (setq python-indent-offset 4);
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 	    ))
 
@@ -134,7 +132,7 @@ same directory as the org-buffer and insert a link to this file."
 
 
 ;;Display error messages-buffer
-(setq debug-on-error t)
+;;(setq debug-on-error t)
 
 ;; to open previous configuration
 ;; (desktop-save-mode 1)
@@ -148,6 +146,8 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;putiing auto pairs automatically
 (electric-pair-mode 1)
+(push '(?\' . ?\') electric-pair-pairs)
+(push '(?\' . ?\') electric-pair-text-pairs)
 ;;add <> in auto complete mode in sgml and nxml mode-line
 
 
@@ -228,7 +228,7 @@ same directory as the org-buffer and insert a link to this file."
 (add-hook 'org-mode-hook (lambda ()
                           (add-macros-to-org)
                           '(define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
-			   (flyspell-mode 1)))
+                          (flyspell-mode 1)))
 
 (defun vikas-export-org (regex c)
   (goto-line 0)
@@ -283,7 +283,7 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
 
-(global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
+(global-set-key  [f1] (lambda () (interactive) (man (current-word))))
 
 
 (global-set-key (kbd "s-k") 'kill-this-buffer)
@@ -303,17 +303,18 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 ;;set js indent level to 2
 (setq js-indent-level 2)
+
 
 ;;keybinding for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
 (setq org-src-fontify-natively t)
 
 (ido-mode 1)
-(setq ido-default-file-method 'selected-window)
-
+(if window-system
 (setq-default
  mode-line-format
  (list
@@ -336,7 +337,7 @@ same directory as the org-buffer and insert a link to this file."
 
         )
        )
-  ))
+  )))
 
 
 ;; ;; set the split to horizontal rather than vertical
@@ -356,7 +357,7 @@ same directory as the org-buffer and insert a link to this file."
                       '(javascript-jshint)))
 
 ;;use eslint with web-mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'js2-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;;enable sub-word mode
 (global-subword-mode 1)
@@ -379,8 +380,17 @@ same directory as the org-buffer and insert a link to this file."
                       (expand-file-name "node_modules/eslint/bin/eslint.js"
                                         root))))
     (when (and eslint (file-executable-p eslint))
-      (setq-local flycheck-javascript-eslint-executable eslint))))
+      (setq-local flycheck-javascript-eslint-executable eslint)))
+  )
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 (setq linum-supress-updates t)
 (global-company-mode 1)
-(add-to-list 'company-backends '(company-tern company-shell company-jedi))
+(setq company-dabbrev-downcase nil)
+(add-to-list 'company-backends '(company-tern company-shell company-anaconda company-c-headers))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-hook 'web-mode-hook '(lambda ()
+                            (tern-mode 1)))
+(add-hook 'tern-mode-hook '(lambda ()
+                             (define-key tern-mode-keymap (kbd "s-h") 'tern-highlight-refs)))
+
+(setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
