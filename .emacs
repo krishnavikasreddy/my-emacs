@@ -40,11 +40,8 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (web-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
- '(show-trailing-whitespace t)
- '(web-mode-code-indent-offset 2)
- '(web-mode-enable-auto-pairing t)
- '(web-mode-markup-indent-offset 2))
+    (rjsx-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
+ '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -53,15 +50,7 @@
  '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(mode-line ((t (:background "white" :foreground "black"))))
  '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
- '(show-paren-match ((t (:inherit (quote region)))))
- '(web-mode-block-face ((t (:background "gold"))))
- '(web-mode-current-element-highlight-face ((t (:foreground "orange"))))
- '(web-mode-html-attr-equal-face ((t (:inherit web-mode-html-attr-name-face :foreground "dark red"))))
- '(web-mode-html-attr-name-face ((t (:foreground "dark violet"))))
- '(web-mode-html-tag-bracket-face ((t (:foreground "olive drab"))))
- '(web-mode-html-tag-custom-face ((t (:inherit web-mode-html-tag-face :foreground "orange red"))))
- '(web-mode-html-tag-face ((t (:foreground "orange red"))))
- '(web-mode-param-name-face ((t (:foreground "dim gray")))))
+ '(show-paren-match ((t (:inherit (quote region))))))
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
@@ -356,8 +345,8 @@ same directory as the org-buffer and insert a link to this file."
               (append flycheck-disabled-checkers
                       '(javascript-jshint)))
 
-;;use eslint with web-mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'web-mode)
+;;use eslint with mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
 
 ;;enable sub-word mode
 (global-subword-mode 1)
@@ -383,14 +372,13 @@ same directory as the org-buffer and insert a link to this file."
       (setq-local flycheck-javascript-eslint-executable eslint)))
   )
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
 (setq linum-supress-updates t)
 (global-company-mode 1)
 (setq company-dabbrev-downcase nil)
 (add-to-list 'company-backends '(company-tern company-shell company-anaconda company-c-headers))
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
-(add-hook 'web-mode-hook '(lambda ()
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
+(add-hook 'rjsx-mode-hook '(lambda ()
                             (tern-mode 1)))
 (add-hook 'tern-mode-hook '(lambda ()
                              (define-key tern-mode-keymap (kbd "s-h") 'tern-highlight-refs)))
-
-(setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
