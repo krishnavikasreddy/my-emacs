@@ -14,10 +14,12 @@
  '(company-tooltip-idle-delay 0)
  '(company-tooltip-minimum 6)
  '(company-tooltip-minimum-width 40)
+ '(compilation-window-height 5)
  '(custom-enabled-themes nil)
  '(ecb-options-version "2.50")
  '(ecb-source-path (quote (("/" "/"))))
  '(global-company-mode t)
+ '(js2-strict-trailing-comma-warning nil)
  '(man-notify-method (quote newframe))
  '(org-agenda-files
    (quote
@@ -40,7 +42,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (rjsx-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
+    (company-php php-mode rjsx-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -375,10 +377,45 @@ same directory as the org-buffer and insert a link to this file."
 
 (setq linum-supress-updates t)
 (global-company-mode 1)
+
 (setq company-dabbrev-downcase nil)
 (add-to-list 'company-backends '(company-tern company-shell company-anaconda company-c-headers))
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
+
 (add-hook 'rjsx-mode-hook '(lambda ()
                             (tern-mode 1)))
 (add-hook 'tern-mode-hook '(lambda ()
                              (define-key tern-mode-keymap (kbd "s-h") 'tern-highlight-refs)))
+(put 'narrow-to-region 'disabled nil)
+
+(defun indent-close-tag-with-open (func &rest args)
+  (apply func args)
+  (save-excursion
+    (let
+        ((current-line (string-trim-left(buffer-substring
+                                         (line-beginning-position)
+                                         (line-end-position)))))
+      (if (string-equal (substring current-line 0 1) ">")
+          (progn
+            (goto-char (line-beginning-position))
+            (search-forward ">")
+            (goto-char (- (point) 1))
+            (delete-backward-char 2))
+
+        (if (string-equal (substring current-line 0 2) "/>")
+            (progn
+              (goto-char (line-beginning-position))
+              (search-forward "/>")
+              (goto-char (- (point) 2))
+              (delete-backward-char 2)))
+
+        )
+      )
+    ))
+(advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
+
+(add-hook 'php-mode-hook
+         '(lambda ()
+            (require 'company-php)
+            (company-mode t)
+            (add-to-list 'company-backends 'company-ac-php-backend )))
