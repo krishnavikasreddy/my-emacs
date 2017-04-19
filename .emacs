@@ -395,23 +395,25 @@ same directory as the org-buffer and insert a link to this file."
         ((current-line (string-trim-left(buffer-substring
                                          (line-beginning-position)
                                          (line-end-position)))))
-      (if (string-equal (substring current-line 0 1) ">")
-          (progn
-            (goto-char (line-beginning-position))
-            (search-forward ">")
-            (goto-char (- (point) 1))
-            (delete-backward-char 2))
+      (if (not (string-blank-p current-line))
+          (if (string-equal (substring current-line 0 1) ">")
+              (progn
+                (goto-char (line-beginning-position))
+                (search-forward ">")
+                (goto-char (- (point) 1))
+                (delete-backward-char 2))
 
-        (if (string-equal (substring current-line 0 2) "/>")
-            (progn
-              (goto-char (line-beginning-position))
-              (search-forward "/>")
-              (goto-char (- (point) 2))
-              (delete-backward-char 2)))
+            (if (string-equal (substring current-line 0 2) "/>")
+                (progn
+                  (goto-char (line-beginning-position))
+                  (search-forward "/>")
+                  (goto-char (- (point) 2))
+                  (delete-backward-char 2)))
 
-        )
-      )
+            )
+        ))
     ))
+
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 
 (add-hook 'php-mode-hook
