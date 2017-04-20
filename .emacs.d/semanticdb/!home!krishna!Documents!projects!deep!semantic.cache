@@ -1,0 +1,45 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("os" include nil nil [26 35])
+            ("tensorflow.examples.tutorials.mnist" include nil nil [37 95])
+            ("mnist" variable nil nil [97 149])
+            ("x" variable nil nil [169 212])
+            ("w" variable nil nil [213 249])
+            ("b" variable nil nil [250 281])
+            ("y" code nil nil [282 305])
+            ("y_" variable nil nil [335 377])
+            ("cross_entropy" variable nil nil [379 480])
+            ("train_step" variable nil nil [481 556])
+            ("session" variable nil nil [558 580])
+            ("session" code nil nil [582 624])
+            ("for" code nil nil [627 768])
+            ("correct_prediction" variable nil nil [769 835])
+            ("accuracy" variable nil nil [837 903])
+            ("print" code nil nil [904 1001]))          
+      :file "neural.py"
+      :pointmax 1002
+      :fsize 1001
+      :lastmodtime '(22747 41102 958999 987000)
+      :unmatched-syntax '((PRINT 904 . 909) ($EOI 1001 . 1001) (PRINT 904 . 909) ($EOI 1034 . 1034) (PRINT 904 . 909) ($EOI 1047 . 1047) (PRINT 904 . 909) ($EOI 1028 . 1028) (PRINT 904 . 909) ($EOI 1010 . 1010) (PRINT 904 . 909) ($EOI 1008 . 1008) (PRINT 904 . 909) ($EOI 1006 . 1006) (PRINT 904 . 909) ($EOI 969 . 969) (PRINT 904 . 909) ($EOI 970 . 970) (PRINT 904 . 909) ($EOI 968 . 968) (PRINT 904 . 909) ($EOI 965 . 965) (PRINT 904 . 909) ($EOI 956 . 956) (PRINT 904 . 909) ($EOI 950 . 950) (PRINT 904 . 909) ($EOI 949 . 949) (PRINT 904 . 909) ($EOI 948 . 948) (PRINT 904 . 909) ($EOI 944 . 944) (PRINT 904 . 909) ($EOI 947 . 947) (PRINT 904 . 909) ($EOI 943 . 943) (NAME 837 . 845) ($EOI 903 . 903) (NAME 837 . 845) ($EOI 901 . 901) (NAME 837 . 845) ($EOI 875 . 875) (NAME 837 . 845) ($EOI 873 . 873) (NAME 837 . 845) ($EOI 882 . 882) (NAME 837 . 845) ($EOI 882 . 882) (NAME 837 . 845) ($EOI 864 . 864) (NAME 837 . 845) ($EOI 848 . 848) (NAME 837 . 845) ($EOI 846 . 846)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("tensorflow" include nil nil [1 24])
+            ("tf" code nil nil [28 36])
+            ("print" code nil nil [37 65])
+            ("print" code nil nil [66 94]))          
+      :file "tensor_test.py"
+      :pointmax 95
+      :fsize 84
+      :lastmodtime '(22747 41459 406037 452000)
+      :unmatched-syntax '(($EOI 95 . 95))))
+  :file "!home!krishna!Documents!projects!deep!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

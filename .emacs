@@ -42,7 +42,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (company-php php-mode rjsx-mode simple-httpd python-environment pos-tip org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
+    (web-mode company-php rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
  '(show-trailing-whitespace t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -416,8 +416,9 @@ same directory as the org-buffer and insert a link to this file."
 
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 
-(add-hook 'php-mode-hook
+(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")))
+(add-hook 'web-mode-hook
          '(lambda ()
-            (require 'company-php)
-            (company-mode t)
             (add-to-list 'company-backends 'company-ac-php-backend )))

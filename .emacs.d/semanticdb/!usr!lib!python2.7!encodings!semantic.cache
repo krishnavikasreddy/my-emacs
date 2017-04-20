@@ -1,0 +1,34 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\" Encoding Aliases Support
+
+    This module is used by the encodings package search function to
+    map encodings names to module names.
+
+    Note that the search function normalizes the encoding names before
+    doing the lookup, so the mapping will have to map normalized
+    encoding names to module names.
+
+    Contents:
+
+        The following aliases dictionary contains mappings of all IANA
+        character set names for which the Python core library provides
+        codecs. In addition to these, a few Python specific codec
+        aliases have also been added.
+
+\"\"\"" code nil nil [1 579])
+            ("aliases" variable nil nil [580 14848]))          
+      :file "aliases.py"
+      :pointmax 14849
+      :fsize 14848
+      :lastmodtime '(22493 12834 0 0)
+      :unmatched-syntax nil))
+  :file "!usr!lib!python2.7!encodings!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

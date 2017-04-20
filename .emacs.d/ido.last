@@ -2,77 +2,240 @@
 
 ;; ----- ido-last-directory-list -----
 (
- ("/home/krishna/dev/catchMyNotes/src/" . "configs/")
+ ("/home/krishna/dev/test/wordpress/wp-content/themes/" . "twentyfifteen/")
+ ("/home/krishna/dev/test/wordpress/wp-content/" . "themes/")
+ ("/home/krishna/dev/test/wordpress/" . "wp-content/")
+ ("/home/krishna/dev/test/" . "wordpress/")
+ ("/home/krishna/dev/algos/" . "maimum_subarray/")
+ ("/etc/apache2/" . "sites-enabled/")
+ ("/var/www/" . "html/")
+ ("/var/" . "www/")
+ ("/home/krishna/dev/deepL/neural-networks-and-deep-learning/" . "src/")
+ ("/home/krishna/dev/deepL/" . "neural-networks-and-deep-learning/")
+ ("/home/krishna/dev/react/my-app/" . "src/")
+ ("/home/krishna/dev/react/" . "my-app/")
+ ("/etc/" . "apache2/")
+ ("/" . "var/")
+ ("/home/krishna/dev/node/" . "src/")
+ ("/home/krishna/Documents/projects/C/algos/" . "sorting/")
+ ("/home/krishna/Documents/projects/C/" . "algos/")
+ ("/home/krishna/Documents/notes/myNotes/" . "Algorithms/")
+ ("/home/krishna/Documents/notes/deepL/" . "tensor/")
+ ("/home/krishna/Documents/projects/python/" . "tf/")
+ ("/home/krishna/projects/tern/" . "emacs/")
+ ("/home/krishna/dev/catchMyNotes/src/" . "main/")
  ("/home/krishna/Documents/notes/markets/Commodities/" . "oil/")
  ("/home/krishna/Documents/notes/markets/" . "Commodities/")
- ("/home/krishna/Documents/notes/" . "markets/")
+ ("/home/krishna/Documents/notes/" . "myNotes/")
  ("/home/krishna/dev/catchMyNotes/" . "src/")
  ("/home/krishna/.emacs.d/elpa/" . "flycheck-20170308.532/")
  ("/home/krishna/.emacs.d/" . "elpa/")
- ("/home/krishna/projects/" . "nano-2.7.0/")
- ("/home/krishna/Documents/projects/deep/" . "tensor/")
+ ("/home/krishna/projects/" . "tern/")
+ ("/home/krishna/Documents/projects/deep/" . "deppClass/")
  ("/home/krishna/Documents/" . "projects/")
  ("/home/krishna/Documents/projects/" . "deep/")
  ("/home/" . "krishna/")
  ("/home/krishna/dev/" . "catchMyNotes/")
- ("/home/krishna/" . "Documents/")
+ ("/home/krishna/" . "dev/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/home/krishna/"
- "/home/krishna/Documents/projects/deep/"
- "/home/krishna/Documents/"
- "/home/krishna/Documents/projects/deep/tensor/"
- "/home/krishna/dev/catchMyNotes/src/"
- "/home/krishna/Documents/notes/markets/Commodities/oil/"
- "/home/krishna/dev/test/"
  "/home/krishna/dev/catchMyNotes/"
+ "/home/krishna/dev/test/wordpress/wp-content/themes/twentyfifteen/"
+ "/home/krishna/dev/test/wordpress/wp-content/themes/vikas/"
+ "/home/krishna/"
+ "/home/krishna/dev/test/wordpress/wp-content/themes/"
+ "/home/krishna/dev/catchMyNotes/src/"
+ "/home/krishna/dev/catchMyNotes/src/main/"
+ "/home/krishna/dev/catchMyNotes/src/utils/"
+ "/home/krishna/dev/catchMyNotes/src/follower/"
+ "/home/krishna/dev/react/my-app/src/"
+ "/home/krishna/dev/test/wordpress/"
+ "/home/krishna/dev/test/"
+ "/home/krishna/dev/catchMyNotes/src/configs/"
+ "/home/krishna/dev/algos/maimum_subarray/"
+ "/home/krishna/dev/"
+ "/etc/apache2/sites-enabled/"
+ "/etc/init.d/"
+ "/var/www/html/"
+ "/home/krishna/open/"
+ "/home/krishna/Documents/projects/deep/deppClass/"
+ "/home/krishna/Documents/projects/deep/tensor/"
+ "/home/krishna/dev/react/my-app/"
+ "/etc/apt/"
+ "/home/krishna/dev/node/src/"
  "/home/krishna/dev/node/"
+ "/home/krishna/Documents/projects/deep/"
+ "/home/krishna/Documents/projects/C/algos/sorting/"
+ "/home/krishna/Documents/projects/C/"
+ "/home/krishna/Documents/notes/myNotes/Algorithms/sorting/"
+ "/home/krishna/Documents/"
+ "/home/krishna/Documents/notes/deepL/tensor/"
+ "/home/krishna/projects/tern/emacs/"
+ "/home/krishna/Documents/projects/js/"
+ "/home/krishna/Documents/notes/markets/Commodities/oil/"
  "/home/krishna/projects/nano-2.7.0/src/"
  "/home/krishna/projects/nano-2.7.0/"
- "/home/krishna/Documents/projects/deep/deppClass/"
- "/home/krishna/Documents/projects/C/"
- "/home/krishna/dev/node/src/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "package.json"
+ "header.php"
+ "index.php"
  ".emacs"
- "neural.py"
- "Schedule.org"
- "vikas.js"
- "vikas.sh"
- "tensor.py"
- "index.js"
- "Note.js"
+ ".eslintrc"
  "NotesContainer.js"
- "TODO.org"
+ "NoteFollower.js"
+ "Note.js"
+ "webpack.config.js"
+ "index.js"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/krishna/" (22735 4311 846564 331000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" "eclipse/" ".xscreensaver" ".node_repl_history" ".xinputrc" ".tooling/" ".bash_logout" ".tern-port" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" ".p2/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".oracle_jre_usage/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".eclipse/" ".Xdefaults" "Arch/" ".swt/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" "workspace/" "#.emacs#" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
+ ("/home/krishna/dev/test/wordpress/wp-content/themes/twentyfifteen/" (22717 34719 0 0) "content.php" "image.php" "footer.php" "content-page.php" "search.php" "content-link.php" "header.php" "js/" "css/" "readme.txt" "screenshot.png" "archive.php" "style.css" "comments.php" "sidebar.php" "content-none.php" "genericons/" "inc/" "rtl.css" "index.php" "404.php" "../" "content-search.php" "functions.php" "single.php" "author-bio.php" "page.php" "./")
 
- ("/home/krishna/Documents/projects/deep/" (22735 3299 536383 901000) "tensor/" "deppClass/" "neural.py" "../" ".#neural.py" "./")
+ ("/home/krishna/dev/test/wordpress/wp-content/themes/vikas/" (22774 61481 748907 480000) "header.php" "style.css" "index.php" "../" "./")
 
- ("/home/krishna/dev/catchMyNotes/src/" (22733 54413 284022 526000) "TODO.org" "Note.js" "NotesContainer.js" ".eslintrc" "../" "index.js" "configs/" "./")
+ ("/home/krishna/dev/catchMyNotes/" (22774 49801 984802 752000) "webpack.config.js" "index.html" "src/" "nbproject/" ".eslintignore" ".gitignore" "package.json" "../" "index2.html" "npm-debug.log" "node_modules/" ".git/" "build/" "./")
 
- ("/home/krishna/Documents/projects/deep/tensor/" (22734 63723 583720 626000) "tensor.py" "../" "./")
+ ("/home/krishna/dev/catchMyNotes/src/main/" (22774 49517 153521 90000) ".tern-port" "Note.js" "NotesContainer.js" "../" "NoteFollower.js" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/" (22774 48828 897602 886000) "utils/" "TODO.org" "main/" "follower/" ".eslintrc" "../" "index.js" "configs/" "./")
+
+ ("/home/krishna/dev/test/wordpress/wp-content/themes/" (22773 42894 170703 110000) "twentyfifteen/" "twentysixteen/" "twentyseventeen/" "index.php" "../" "vikas/" "./")
+
+ ("/home/krishna/dev/test/wordpress/wp-content/" (22717 34718 0 0) "themes/" "plugins/" "index.php" "../" "./")
+
+ ("/home/krishna/" (22774 53598 394672 851000) ".gimp-2.8/" "open/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" ".java/" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" "vikas.html" ".xscreensaver" ".node_repl_history" ".xinputrc" ".tooling/" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".netbeans/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" ".p2/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".oracle_jre_usage/" ".profile" "id_rsa" ".netbeans-derby/" ".gradle/" "Templates/" ".ssh/" ".Rhistory" ".eclipse/" ".Xdefaults" "Arch/" ".swt/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".m2/" ".fltk/" "kr.crt" "ls" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".mysql_history" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".vscode/" ".local/" ".xchm" "workspace/" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" ".pylint.d/" "VirtualBox VMs/" ".gconf/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" "NetBeansProjects/" ".thunderbird/" ".bash_history" "./" ".gstreamer-0.10/")
+
+ ("/home/krishna/dev/react/my-app/src/" (22774 41972 802888 544000) "App.css" "App.js" "logo.svg" "index.css" "../" "index.js" "App.test.js" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/follower/" (22774 45570 880208 489000) "../" "ColorChanger.js" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/utils/" (22774 42427 920174 592000) "../" "DOMUtils.js" "./")
+
+ ("/home/krishna/open/my-emacs/" (22774 41125 641039 364000) ".emacs.desktop.lock" ".emacs-backup/" ".gitignore" ".emacs.d/" ".emacs" "../" "Downloads/" ".git/" "./")
+
+ ("/home/krishna/dev/catchMyNotes/src/configs/" (22773 17537 369408 37000) "notes.js" "../" "./")
+
+ ("/home/krishna/dev/test/wordpress/" (22773 42834 490020 560000) "xmlrpc.php" "wp-mail.php" "wp-config-sample.php" "wp-content/" "wp-activate.php" "wp-links-opml.php" "wp-trackback.php" "wp-login.php" "wp-includes/" "wp-load.php" "wp-cron.php" "wp-settings.php" "index.php" "readme.html" "../" "wp-config.php" "license.txt" "wp-comments-post.php" "wp-signup.php" "wp-blog-header.php" "wp-admin/" "./")
+
+ ("/home/krishna/dev/test/" (22773 42056 777129 998000) "vikas.html" "wordpress/" "index.php" "../" "./")
+
+ ("/home/krishna/dev/algos/maimum_subarray/" (22773 7933 653202 62000) "max-sub-array.py" "../" "./")
+
+ ("/home/krishna/dev/algos/" (22772 61534 740017 625000) "maimum_subarray/" "../" "./")
+
+ ("/home/krishna/dev/" (22772 61523 15877 308000) "node/" "bash/" "test/" "algos/" "../" "google-images" "spring/" "react/" "catchMyNotes/" "deepL/" "./")
+
+ ("/var/www/html/" (22772 18568 803621 29000) "index.html" "test/" "../" "./")
+
+ ("/etc/apache2/sites-enabled/" (22772 17707 381507 679000) "000-default.conf" "../" "./")
+
+ ("/etc/apache2/" (22751 3777 914510 935000) "mods-enabled/" "apache2.conf" "conf-available/" "sites-available/" "../" "mods-available/" "magic" "ports.conf" "sites-enabled/" "envvars" "conf-enabled/" "./")
+
+ ("/etc/" (22771 53568 352639 696000) "perl/" "login.defs" "ucf.conf" "update-notifier/" "rc4.d/" "ppp/" "ettercap/" ".java/" "update-manager/" "nsswitch.conf" "ca-certificates/" "bash_completion" "mailcap.order" "ld.so.conf.d/" "environment" "ntp.conf" "timezone" "passwd-" "udev/" "fstab" "protocols" "gshadow" "lighttpd/" "shells" "skel/" "pam.d/" "logcheck/" "sound/" "apache2/" "java-8-oracle/" "nanorc" "cups/" "rc2.d/" "magic.mime" "ca-certificates.conf" "upstart-xsessions" "mpv/" "ldap/" "sudoers" "grub.d/" "bindresvport.blacklist" "insserv.conf.d/" "gss/" "calendar/" "lightdm/" "acpi/" "cron.monthly/" "foomatic/" "localtime" "samba/" "R/" "manpath.config" "crontab" "resolv.conf" "libao.conf" "groff/" "binfmt.d/" "libaudit.conf" "dillo/" "cron.d/" "vdpau_wrapper.cfg" "services" "rc3.d/" "thermald/" "debian_version" "subuid" "hosts.deny" "default/" "hosts.allow" "ssl/" "firefox/" "udisks2/" "shadow-" "dhcp/" "rsyslog.d/" "globash.rc" "postfix/" "kerneloops.conf" "issue" "host.conf" "python/" "lsb-release" "apport/" "thunderbird/" "NetworkManager/" "ld.so.conf" "cupshelpers/" "bash.bashrc" "john/" ".pwd.lock" "pnm2ppa.conf" "gnome-system-tools/" "apparmor/" "subuid-" "modules" "iproute2/" "ImageMagick-6/" "dbus-1/" "rc0.d/" "usb_modeswitch.conf" "gnome/" "gdb/" "tmpfiles.d/" "fuse.conf" "rc6.d/" "inxi.conf" "gtk-3.0/" "sensors3.conf" "newt/" "terminfo/" "aliases" "zsh_command_not_found" "wgetrc" "console-setup/" "dkms/" "inputrc" "PackageKit/" "cron.daily/" "rcS.d/" "doc-base/" "sysctl.conf" "X11/" "texmf/" "gai.conf" "speech-dispatcher/" "mime.types" "init.d/" "appstream.conf" "gshadow-" "logrotate.d/" "rc1.d/" "apm/" "guest-session/" "profile.d/" "cron.weekly/" "papersize" "libpaper.d/" "octave.conf" "adduser.conf" "openal/" "xfce4/" "mtab" "rsyslog.conf" "issue.net" "locale.gen" "resolvconf/" "shadow" "pam.conf" "polkit-1/" "alternatives/" "mailcap" "vtrgb" "updatedb.conf" "sensors.d/" "brltty/" "UPower/" "os-release" "xml/" "gtags/" "bonobo-activation/" "sgml/" "opt/" "debconf.conf" "selinux/" "gconf/" "usb_modeswitch.d/" "python3.5/" "gnome-vfs-2.0/" "group" "security/" "mail.rc" "subgid" "rpc" "purple/" "gimp/" "pulse/" "hddtemp.db" "modules-load.d/" "sysctl.d/" "hostname" "ld.so.cache" "emacs/" "update-motd.d/" "avahi/" "mysql/" "ufw/" "networks" "geoclue/" "java/" "libreoffice/" "apt/" "sane.d/" "wpa_supplicant/" "dpkg/" "chatscripts/" "ltrace.conf" "pki/" "python3/" "kernel/" "mke2fs.conf" "ghostscript/" "fish/" "passwd" "logrotate.conf" "legal" "hp/" "wireshark/" "locale.alias" "fwupd.conf" "magic" "dnsmasq.d/" "apparmor.d/" "profile" "netplan/" "smi.conf" "pm/" "php/" "maven/" "pcmcia/" "initramfs-tools/" "securetty" "rmt" "bash_completion.d/" "popularity-contest.conf" "depmod.d/" "vim/" "init/" "modprobe.d/" "lintianrc" "anacrontab" "network/" "bluetooth/" "rc.local" "rc5.d/" "brltty.conf" "sudoers.d/" "xdg/" "deluser.conf" "gtk-2.0/" "fonts/" "ffserver.conf" "java-8-openjdk/" "quilt.quiltrc" "python2.7/" "systemd/" "group-" "gnome-app-install/" "brlapi.key" "ssh/" "libnl-3/" "hosts" "hdparm.conf" "kernel-img.conf" "drirc" "subgid-" "ifplugd/" "cron.hourly/" "machine-id" "../" "./")
+
+ ("/var/www/" (22751 3741 285920 621000) "../" "html/" "./")
+
+ ("/var/" (22751 3741 285920 621000) "www/" "run/" "local/" "lock/" "tmp/" "log/" "metrics/" "cache/" "spool/" "crash/" "backups/" "opt/" "mail/" "snap/" "../" "lib/" "./")
+
+ ("/home/krishna/open/" (22769 30114 343948 342000) "my-emacs/" "nano/" "../" "./")
+
+ ("/etc/init.d/" (22761 5350 795774 790000) "apache-htcacheclean" "plymouth" "anacron" "plymouth-log" "rsync" "keyboard-setup.sh" "udev" "unattended-upgrades" "networking" "apache2" "cups" "network-manager" "lightdm" "samba" "console-setup.sh" "thermald" "pppd-dns" "alsa-utils" "lm-sensors" "postfix" "apport" "cups-browsed" "virtualbox" "apparmor" "hddtemp" "samba-ad-dc" "avahi-daemon" "uuidd" "speech-dispatcher" "saned" "resolvconf" "hwclock.sh" "cron" "kerneloops" "nmbd" "mysql" "ufw" "../" "rsyslog" "procps" "irqbalance" "smbd" "bluetooth" "whoopsie" "kmod" "grub-common" "x11-common" "startup.sh" "acpid" "./" "dbus" "ntp")
+
+ ("/usr/" (22696 50838 997709 470000) "local/" "etc/" "src/" "share/" "include/" "../" "sbin/" "games/" "lib/" "bin/" "@DATADIRNAME@/" "./")
+
+ ("/usr/local/" (22739 16814 437024 365000) "etc/" "src/" "share/" "man/" "var/" "netbeans-8.2/" "include/" "../" "sbin/" "games/" "lib/" "bin/" "libexec/" "apache-tomcat-8.0.27/" "./")
+
+ ("/usr/local/share/" (22735 7566 346658 591000) "appdata/" "ca-certificates/" "applications/" "man/" "icons/" "texmf/" "xml/" "gtags/" "sgml/" "emacs/" "../" "info/" "fonts/" "./")
+
+ ("/usr/local/share/emacs/" (22747 37187 965405 892000) "../" "site-lisp/" "25.1/" "./")
+
+ ("/usr/local/share/emacs/25.1/" (22747 37752 476384 16000) "etc/" "lisp/" "../" "site-lisp/" "./")
+
+ ("/usr/local/share/emacs/25.1/lisp/" (22747 37763 912467 700000) "vt100-led.el.gz" "image-mode.elc" "generic-x.el.gz" "msb.elc" "bindings.elc" "format.el.gz" "mb-depth.el.gz" "ps-samp.elc" "w32-fns.elc" "cus-edit.elc" "custom.elc" "locate.elc" "hilit-chg.elc" "pcmpl-unix.elc" "pcmpl-linux.elc" "pcmpl-unix.el.gz" "info-xref.el.gz" "image.elc" "select.el.gz" "custom.el.gz" "ansi-color.el.gz" "recentf.el.gz" "tabify.elc" "soundex.el.gz" "gs.el.gz" "avoid.el.gz" "doc-view.elc" "hfy-cmap.el.gz" "view.elc" "frame.el.gz" "wid-edit.elc" "version.elc" "informat.elc" "autoinsert.el.gz" "epa-hook.elc" "apropos.el.gz" "json.el.gz" "term.elc" "bookmark.el.gz" "mouse-copy.elc" "follow.el.gz" "md4.elc" "wid-browse.elc" "mouse-drag.elc" "mpc.el.gz" "chistory.elc" "filenotify.el.gz" "xwidget.elc" "flow-ctrl.el.gz" "userlock.el.gz" "url/" "tempo.elc" "files.elc" "server.el.gz" "rfn-eshadow.elc" "soundex.elc" "w32-vars.elc" "dired.el.gz" "find-lisp.elc" "cus-dep.elc" "version.el.gz" "image-mode.el.gz" "format.elc" "frame.elc" "dos-fns.elc" "ps-bdf.elc" "vt-control.el.gz" "hl-line.el.gz" "paren.elc" "nxml/" "play/" "filesets.el.gz" "echistory.elc" "emacs-lock.elc" "allout-widgets.el.gz" "newcomment.el.gz" "dired-aux.el.gz" "filenotify.elc" "foldout.el.gz" "info-look.el.gz" "rot13.el.gz" "array.elc" "recentf.elc" "cus-start.elc" "epa.el.gz" "minibuf-eldef.el.gz" "facemenu.el.gz" "sort.el.gz" "misearch.el.gz" "hi-lock.el.gz" "env.el.gz" "desktop.el.gz" "epg-config.elc" "finder.elc" "delim-col.elc" "widget.el.gz" "indent.el.gz" "ibuffer.elc" "fringe.elc" "emacs-lock.el.gz" "scroll-lock.elc" "double.el.gz" "cus-face.elc" "ps-bdf.el.gz" "dframe.el.gz" "mb-depth.elc" "help-mode.el.gz" "notifications.elc" "loadup.el" "strokes.el.gz" "COPYING" "midnight.elc" "eshell/" "hilit-chg.el.gz" "char-fold.el.gz" "linum.elc" "calendar/" "xt-mouse.elc" "calculator.el.gz" "image-dired.elc" "faces.elc" "cmuscheme.elc" "autorevert.el.gz" "allout.elc" "password-cache.elc" "ps-print.el.gz" "rect.el.gz" "ehelp.el.gz" "descr-text.elc" "xwidget.el.gz" "hl-line.elc" "help.elc" "finder.el.gz" "isearch.elc" "find-file.el.gz" "elide-head.elc" "vc/" "winner.el.gz" "generic-x.elc" "comint.el.gz" "skeleton.el.gz" "hippie-exp.elc" "tooltip.el.gz" "dynamic-setting.el.gz" "hexl.el.gz" "reposition.elc" "sort.elc" "cus-theme.elc" "image-file.elc" "rfn-eshadow.el.gz" "mouse-copy.el.gz" "newcomment.elc" "descr-text.el.gz" "tool-bar.el.gz" "timezone.elc" "userlock.elc" "imenu.elc" "help-macro.elc" "find-dired.elc" "informat.el.gz" "face-remap.elc" "pcmpl-cvs.el.gz" "term.el.gz" "register.elc" "ehelp.elc" "minibuffer.elc" "org/" "forms.elc" "find-file.elc" "misc.el.gz" "elec-pair.elc" "finder-inf.el" "mpc.elc" "window.el.gz" "apropos.elc" "allout.el.gz" "pcmpl-linux.el.gz" "w32-fns.el.gz" "help-macro.el.gz" "simple.elc" "register.el.gz" "tabify.el.gz" "find-dired.el.gz" "isearch.el.gz" "pcmpl-gnu.elc" "widget.elc" "proced.elc" "array.el.gz" "dframe.elc" "ses.elc" "htmlfontify.elc" "shadowfile.elc" "mouse-drag.el.gz" "edmacro.elc" "tree-widget.elc" "pcomplete.el.gz" "hfy-cmap.elc" "font-core.elc" "ielm.el.gz" "w32-vars.el.gz" "image.el.gz" "filecache.elc" "cus-start.el.gz" "thumbs.el.gz" "help-mode.elc" "misc.elc" "elide-head.el.gz" "minibuffer.el.gz" "hi-lock.elc" "image-file.el.gz" "delsel.el.gz" "type-break.elc" "obsolete/" "dired-x.el.gz" "ses.el.gz" "tmm.el.gz" "dired-x.elc" "jka-cmpr-hook.el.gz" "macros.elc" "winner.elc" "cdl.el.gz" "dnd.elc" "ps-def.el.gz" "replace.elc" "time-stamp.el.gz" "epg.el.gz" "wid-browse.el.gz" "align.elc" "strokes.elc" "filesets.elc" "saveplace.el.gz" "epa-dired.el.gz" "thingatpt.el.gz" "profiler.el.gz" "select.elc" "isearchb.el.gz" "speedbar.elc" "obarray.elc" "help-fns.elc" "kermit.elc" "ps-def.elc" "help-at-pt.el.gz" "arc-mode.el.gz" "vcursor.elc" "ibuf-macs.elc" "menu-bar.el.gz" "jit-lock.elc" "password-cache.el.gz" "scroll-all.el.gz" "bs.elc" "pcmpl-rpm.elc" "vt-control.elc" "bookmark.elc" "composite.elc" "autoinsert.elc" "info.elc" "mwheel.elc" "master.elc" "xml.elc" "follow.elc" "ffap.el.gz" "kmacro.el.gz" "find-cmd.elc" "ps-mule.el.gz" "misearch.elc" "sb-image.elc" "jit-lock.el.gz" "language/" "woman.elc" "subdirs.el" "repeat.el.gz" "emulation/" "mwheel.el.gz" "battery.el.gz" "forms.el.gz" "chistory.el.gz" "dirtrack.el.gz" "dos-fns.el.gz" "ls-lisp.el.gz" "dnd.el.gz" "talk.el.gz" "tar-mode.el.gz" "cus-theme.el.gz" "savehist.elc" "image-dired.el.gz" "ibuf-macs.el.gz" "cus-face.el.gz" "arc-mode.elc" "loadhist.elc" "jka-compr.el.gz" "echistory.el.gz" "ezimage.el.gz" "tutorial.elc" "autorevert.elc" "button.el.gz" "kmacro.elc" "case-table.el.gz" "replace.el.gz" "help-at-pt.elc" "ps-mule.elc" "ido.el.gz" "font-core.el.gz" "mouse.el.gz" "time.el.gz" "lpr.elc" "repeat.elc" "composite.el.gz" "windmove.elc" "dired-aux.elc" "info-xref.elc" "thumbs.elc" "time-stamp.elc" "saveplace.elc" "ebuff-menu.el.gz" "speedbar.el.gz" "tempo.el.gz" "thingatpt.elc" "epa-hook.el.gz" "elec-pair.el.gz" "novice.elc" "novice.el.gz" "simple.el.gz" "master.el.gz" "calc/" "isearchb.elc" "epg.elc" "iimage.el.gz" "double.elc" "tar-mode.elc" "ansi-color.elc" "dos-vars.el.gz" "whitespace.el.gz" "comint.elc" "makesum.elc" "x-dnd.elc" "dos-vars.elc" "reposition.el.gz" "icomplete.elc" "case-table.elc" "scroll-bar.elc" "ruler-mode.el.gz" "ezimage.elc" "disp-table.elc" "tool-bar.elc" "wdired.el.gz" "button.elc" "fringe.el.gz" "window.elc" "term/" "dired.elc" "font-lock.el.gz" "outline.el.gz" "ielm.elc" "startup.el.gz" "t-mouse.el.gz" "hexl.elc" "tooltip.elc" "vt100-led.elc" "disp-table.el.gz" "foldout.elc" "wid-edit.el.gz" "indent.elc" "README" "cmuscheme.el.gz" "cus-dep.el.gz" "frameset.el.gz" "ls-lisp.elc" "mail/" "view.el.gz" "notifications.el.gz" "delim-col.el.gz" "gnus/" "help.el.gz" "json.elc" "doc-view.el.gz" "man.el.gz" "scroll-all.elc" "shell.el.gz" "epa-dired.elc" "edmacro.el.gz" "expand.elc" "profiler.elc" "tutorial.el.gz" "allout-widgets.elc" "ido.elc" "electric.elc" "info.el.gz" "shell.elc" "dynamic-setting.elc" "pcmpl-gnu.el.gz" "gs.elc" "ruler-mode.elc" "erc/" "epa-file.el.gz" "minibuf-eldef.elc" "subr.elc" "textmodes/" "font-lock.elc" "lpr.el.gz" "server.elc" "windmove.el.gz" "type-break.el.gz" "proced.el.gz" "ibuffer.el.gz" "timezone.el.gz" "cus-edit.el.gz" "scroll-bar.el.gz" "expand.el.gz" "loadhist.el.gz" "sb-image.el.gz" "hex-util.elc" "iimage.elc" "desktop.elc" "msb.el.gz" "subr.el.gz" "scroll-lock.el.gz" "rot13.elc" "xt-mouse.el.gz" "epa-mail.elc" "savehist.el.gz" "ibuf-ext.el.gz" "linum.el.gz" "help-fns.el.gz" "ebuff-menu.elc" "files-x.elc" "delsel.elc" "dabbrev.elc" "pcmpl-rpm.el.gz" "rect.elc" "reveal.el.gz" "files.el.gz" "calculator.elc" "completion.elc" "epa.elc" "mh-e/" "avoid.elc" "jka-compr.elc" "locate.el.gz" "epa-file.elc" "dom.elc" "bs.el.gz" "ps-print.elc" "faces.el.gz" "printing.el.gz" "uniquify.elc" "kermit.el.gz" "env.elc" "autoarg.elc" "battery.elc" "dabbrev.el.gz" "autoarg.el.gz" "x-dnd.el.gz" "format-spec.elc" "mouse.elc" "pcmpl-cvs.elc" "paren.el.gz" "international/" "electric.el.gz" "char-fold.elc" "facemenu.elc" "epg-config.el.gz" "startup.elc" "epa-mail.el.gz" "macros.el.gz" "filecache.el.gz" "midnight.el.gz" "ps-samp.el.gz" "cedet/" "outline.elc" "cdl.elc" "skeleton.elc" "printing.elc" "net/" "ldefs-boot.el" "find-cmd.el.gz" "cus-load.el" "reveal.elc" "color.elc" "obarray.el.gz" "shadowfile.el.gz" "leim/" "frameset.elc" "time.elc" "flow-ctrl.elc" "tree-widget.el.gz" "info-look.elc" "dos-w32.elc" "abbrev.el.gz" "hippie-exp.el.gz" "buff-menu.elc" "completion.el.gz" "color.el.gz" "abbrev.elc" "emacs-lisp/" "loaddefs.el" "md4.el.gz" "find-lisp.el.gz" "man.elc" "xml.el.gz" "align.el.gz" "files-x.el.gz" "whitespace.elc" "menu-bar.elc" "vcursor.el.gz" "pcmpl-x.el.gz" "face-remap.el.gz" "bindings.el.gz" "t-mouse.elc" "woman.el.gz" "makesum.el.gz" "pcmpl-x.elc" "wdired.elc" "format-spec.el.gz" "imenu.el.gz" "icomplete.el.gz" "dos-w32.el.gz" "dirtrack.elc" "uniquify.el.gz" "pcomplete.elc" "ibuf-ext.elc" "ffap.elc" "tmm.elc" "progmodes/" "dom.el.gz" "talk.elc" "hex-util.el.gz" "buff-menu.el.gz" "jka-cmpr-hook.elc" "htmlfontify.el.gz" "../" "./")
+
+ ("/usr/local/share/emacs/25.1/lisp/textmodes/" (22747 37759 856438 21000) "refill.el.gz" "texinfmt.elc" "css-mode.elc" "artist.el.gz" "bibtex-style.el.gz" "enriched.elc" "makeinfo.el.gz" "two-column.elc" "reftex-parse.el.gz" "picture.elc" "reftex-sel.elc" "conf-mode.elc" "refer.el.gz" "reftex-auc.el.gz" "ispell.elc" "tildify.elc" "po.el.gz" "table.elc" "dns-mode.el.gz" "reftex-vars.el.gz" "paragraphs.elc" "sgml-mode.elc" "fill.elc" "reftex-vars.elc" "rst.el.gz" "rst.elc" "reftex-parse.elc" "bibtex.elc" "reftex-sel.el.gz" "page.elc" "reftex-ref.el.gz" "nroff-mode.elc" "flyspell.el.gz" "css-mode.el.gz" "underline.el.gz" "texinfo.el.gz" "enriched.el.gz" "po.elc" "ispell.el.gz" "reftex-toc.elc" "texnfo-upd.elc" "remember.el.gz" "underline.elc" "sgml-mode.el.gz" "refbib.el.gz" "page-ext.el.gz" "table.el.gz" "texinfo.elc" "texnfo-upd.el.gz" "artist.elc" "nroff-mode.el.gz" "bib-mode.el.gz" "reftex-auc.elc" "dns-mode.elc" "remember.elc" "reftex-global.el.gz" "reftex-dcr.elc" "bibtex-style.elc" "reftex-index.el.gz" "reftex-dcr.el.gz" "reftex-index.elc" "tildify.el.gz" "../" "fill.el.gz" "picture.el.gz" "reftex-global.elc" "refbib.elc" "makeinfo.elc" "tex-mode.elc" "texinfmt.el.gz" "paragraphs.el.gz" "text-mode.el.gz" "two-column.el.gz" "refill.elc" "reftex-ref.elc" "text-mode.elc" "reftex-cite.el.gz" "page.el.gz" "conf-mode.el.gz" "flyspell.elc" "reftex-toc.el.gz" "refer.elc" "bibtex.el.gz" "page-ext.elc" "reftex.el.gz" "bib-mode.elc" "reftex-cite.elc" "tex-mode.el.gz" "reftex.elc" "./")
+
+ ("/home/krishna/Documents/projects/deep/deppClass/" (22767 1498 382911 393000) "notMNIST_large.tar.gz" "notMNIST_small/" "notMNIST_small.tar.gz" "notMNIST_large/" "../" "deep.py" "./")
+
+ ("/home/krishna/dev/react/my-app/" (22756 18754 422218 144000) "public/" "src/" "README.md" ".gitignore" "package.json" "../" "node_modules/" "./")
+
+ ("/home/krishna/Documents/projects/deep/tensor/" (22759 5809 274928 31000) "tensor.py" "../" "#tensor.py#" "./")
+
+ ("/home/krishna/dev/cs231n.github.io/" (22759 1617 814786 235000) "index.html" "Readme.md" "understanding-cnn.md" "optimization-1.md" "assignments/" "linear-classify.md" "neural-networks-case-study.md" "overview.md" "_config.yml" "convnet-tips.md" "neural-networks-1.md" "_layouts/" "css/" "optimization-2.md" "neural-networks-3.md" "aws-tutorial.md" "_includes/" "transfer-learning.md" "assets/" "python-numpy-tutorial.md" ".gitignore" "ipython-tutorial.md" "terminal-tutorial.md" "neural-networks-2.md" "classification.md" "../" "convolutional-networks.md" "LICENSE" ".git/" "./")
+
+ ("/home/krishna/dev/deepL/neural-networks-and-deep-learning/src/" (22681 6962 778088 421000) "mnist_svm.py" "conv.py" "expand_mnist.py" "network2.py" "mnist_loader.py" "network3.py" "old/" "../" "network.py" "./" "mnist_average_darkness.py")
+
+ ("/home/krishna/dev/deepL/neural-networks-and-deep-learning/" (22681 6962 778088 421000) "requirements.txt" "src/" "fig/" "README.md" "data/" ".gitignore" "../" ".git/" "./")
+
+ ("/home/krishna/dev/deepL/" (22681 6957 98190 580000) "neural-networks-and-deep-learning/" "../" "./")
+
+ ("/home/krishna/dev/bash/" (22677 18514 942954 511000) "../" "images.sh" "./")
+
+ ("/home/krishna/dev/react/" (22756 17841 805750 191000) "my-app/" "../" "./")
+
+ ("/home/krishna/Documents/projects/deep/" (22747 44847 759875 551000) "tensor_test.py" "tensor/" "t10k-labels-idx1-ubyte.gz" "train-labels-idx1-ubyte.gz" "deppClass/" "neural.py" "train-images-idx3-ubyte.gz" "../" "t10k-images-idx3-ubyte.gz" "./")
+
+ ("/home/krishna/dev/node/" (22751 3917 104773 652000) "webpack.config.js" "index.html" "src/" "app.js" "nbproject/" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
+
+ ("/etc/init/" (22751 3851 403701 785000) "acpid.conf" "tty5.conf" "gpu-manager.conf" "udev.conf" "friendly-recovery.conf" "rc-sysinit.conf" "udevmonitor.conf" "rc.conf" "console-font.conf" "ufw.conf" "rcS.conf" "cron.conf" "passwd.conf" "samba-ad-dc.conf" "irqbalance.conf" "tty2.conf" "network-manager.conf" "control-alt-delete.conf" "bluetooth.conf" "network-interface.conf" "upstart-file-bridge.conf" "rfkill-restore.conf" "networking.conf" "upstart-socket-bridge.conf" "nmbd.conf" "console.conf" "smbd.conf" "reload-smbd.conf" "udevtrigger.conf" "whoopsie.conf" "tty6.conf" "resolvconf.conf" "cups.conf" "tty1.conf" "rsyslog.conf" "thermald.conf" "lightdm.conf" "anacron.conf" "ureadahead.conf" "network-interface-security.conf" "container-detect.conf" "failsafe.conf" "cups-browsed.conf" "shutdown.conf" "flush-early-job-log.conf" "wait-for-state.conf" "network-interface-container.conf" "../" "usb-modeswitch-upstart.conf" "ureadahead-other.conf" "upstart-udev-bridge.conf" "apparmor.conf" "apport.conf" "kmod.conf" "tty4.conf" "rfkill-store.conf" "tty3.conf" "setvtrgb.conf" "./")
+
+ ("/etc/apt/" (22696 49703 845825 224000) "sources.list.save" "apt.conf.d/" "trusted.gpg" "preferences.d/" "trusted.gpg.d/" "sources.list.d/" "../" "sources.list" "trusted.gpg~" "./")
+
+ ("/home/krishna/dev/node/src/" (22751 3841 143535 10000) ".tern-port" "App.js" "../" "./")
+
+ ("/home/krishna/Desktop/" (22739 16556 706389 458000) "ps3.org~" "knnl/" "c-mit /" "algos/" "ML/" "ps3.html~" "../" "stat-report.org~" "copper/" "filter.sh~" "IM_STORIES_01232017.pdf" "./" "oil/")
+
+ ("/home/krishna/Documents/projects/C/algos/sorting/" (22745 57406 481684 321000) "insertion.c" "makefile" "insertion.o" "../" "./")
+
+ ("/home/krishna/Documents/notes/myNotes/Algorithms/sorting/" (22744 12550 724590 738000) "sorting.org" "../" "./")
+
+ ("/home/krishna/Documents/projects/C/algos/" (22744 12451 59552 456000) "../" "sorting/" "./")
+
+ ("/home/krishna/Documents/projects/C/" (22744 12439 463431 621000) "main.h" "main.c" "algos/" "makefile" "main.o" "../" "./")
+
+ ("/home/krishna/Documents/notes/myNotes/Algorithms/" (22744 11737 880108 496000) "Flows.html~" "Dynamic Programming/" "dynamic programming.org~" "Assignment3.tex~" "Np/" "bootstrap.css" "Linear Programing/" "Assignments/" "Assignment3.org~" "dynamic programming.html~" "Flows/" "../" "Randomised algorithms/" "sorting/" "Flows.org~" "Assignment3.html~" "./")
+
+ ("/home/krishna/Documents/notes/myNotes/" (22654 61616 101479 366000) "netsec/" "linux/" "stats/" "Algorithms/" "bootstrap.css" "lang/" "Maths/" "../" ".git/" "./")
+
+ ("/home/krishna/.emacs.d/elpa/company-anaconda-20160809.705/" (22744 6731 917190 314000) "company-anaconda-autoloads.el" "company-anaconda.el" "company-anaconda-pkg.el" "../" "company-anaconda.elc" "company-anaconda-pkg.elc" "./")
+
+ ("/home/krishna/.emacs.d/" (22744 6504 946935 466000) "ido.last" "url/" "minnamareddy-theme.el~" "eshell/" "elpa/" "tutorial/" "company-statistics-cache.el" ".python-environments/" "auto-save-list/" "ac-comphist.dat" "newsticker/" "../" "lp/" "minnamareddy-theme.el" "anaconda-mode/" "abbrev_defs" "./")
+
+ ("/home/krishna/.emacs.d/elpa/" (22741 51147 948240 910000) "eclim-readme.txt" "company-dict-20160528.53/" "deferred-20161228.1930/" "archives/" "gnupg/" "0blayout-readme.txt" "seq-2.19/" "ac-js2-readme.txt" "company-jedi-readme.txt" "pos-tip-20150318.813/" "jedi-core-readme.txt" "python-environment-20150310.153/" "f-20161002.800/" "typing-readme.txt" "counsel-gtags-readme.txt" "dash-functional-20160615.1351/" "let-alist-1.0.5/" "company-0.9.2/" "parent-mode-20150824.1600/" "js2-mode-readme.txt" "ctable-20140304.1659/" "dash-20170207.2056/" "company-tern-readme.txt" "company-anaconda-readme.txt" "company-statistics-0.2.3/" "company-0.9.2.signed" "auto-complete-readme.txt" "company-statistics-readme.txt" "async-20170219.942/" "org-20170210.signed" "simple-httpd-20170125.1910/" "magit-20170308.146/" "seq-2.19.signed" "tern-20161222.850/" "python-readme.txt" "epc-20140609.2234/" "with-editor-20170111.609/" "exec-path-from-shell-20170304.1309/" "flycheck-readme.txt" "let-alist-1.0.5.signed" "company-shell-readme.txt" "magit-readme.txt" "sr-speedbar-readme.txt" "epl-20150517.433/" "company-c-headers-readme.txt" "git-commit-20170308.146/" "../" "flycheck-20170308.532/" "exec-path-from-shell-readme.txt" "company-web-readme.txt" "company-readme.txt" "pkg-info-20150517.443/" "company-quickhelp-readme.txt" "ggtags-readme.txt" "org-20170210/" "concurrent-20161228.1930/" "magit-popup-20170308.146/" "ecb-readme.txt" "company-anaconda-20160809.705/" "srefactor-readme.txt" "anaconda-mode-20170313.343/" "s-20160928.636/" "pythonic-20160221.1123/" "company-shell-20161128.953/" "company-statistics-0.2.3.signed" "company-tern-20161004.1147/" "company-c-headers-20150801.901/" "./")
+
+ ("/home/krishna/Documents/notes/deepL/tensor/" (22675 56116 660121 43000) "tensor.org_20170122_175032_4559E9j.png" "tensor.html" "tensor.org" "../" "deep/" "./")
+
+ ("/home/krishna/Documents/notes/deepL/" (22661 13370 987436 305000) "tensor/" "../" "./")
+
+ ("/home/krishna/Documents/projects/python/tf/" (22669 5645 589925 819000) "tf.py" "t10k-labels-idx1-ubyte.gz" "train-labels-idx1-ubyte.gz" "train-images-idx3-ubyte.gz" "tf.py~" "../" "t10k-images-idx3-ubyte.gz" "./")
+
+ ("/home/krishna/Documents/projects/python/" (22653 28930 147947 977000) "../" "tf/" "./")
+
+ ("/home/krishna/projects/tern/emacs/" (22738 1602 292331 903000) "tern-auto-complete.el" "../" "tern.el" "./")
+
+ ("/home/krishna/.emacs.d/lp/" (22735 8117 104000 431000) "../" "gtags.el" "./")
+
+ ("/home/krishna/Documents/projects/js/" (22736 29868 185790 278000) "#test.js#" ".tern-port" "promises.js" "../" "test.js" "codecept/" "./")
+
+ ("/home/krishna/projects/tern/" (22736 28563 977569 965000) "index.html" ".no-sublime-package" "CONTRIBUTING.md" "test/" "defs/" "AUTHORS" "README.md" "plugin/" ".gitattributes" ".tern-project" ".jshintrc" "doc/" ".gitignore" "package.json" "emacs/" "../" "LICENSE" ".travis.yml" "node_modules/" "lib/" ".git/" "bin/" "./")
+
+ ("/home/krishna/projects/" (22735 7203 835153 332000) "john-1.8.0/" "okular/" "aircrack-ng-1.2-rc4/" "passCrack/" "tor-browser_en-US/" "hello-2.10/" "nano-2.7.0/" "../" "global-6.5.6/" "tern/" "./")
+
+ ("/home/krishna/Downloads/" (22736 30719 222219 760000) "Apoorva_Cover.pdf" "6-087-january-iap-2010.zip" "rs-1 (1).pdf" "netsec.chm" "Untitled document.pdf" "tails-i386-2.10/" "9781447129202-c2.pdf" "rs-1.pdf" "Visual-vocabulary.pdf" "debian-8.7.0-amd64-netinst.iso" "Vulnerabilitiesfound.pdf" "Krishna_Vikas_Resume.pdf" "MS_APOORVA (1) (1).odt" "Developing Scalable Apps in Java Subtitles.zip" ".Rhistory" "project.pdf" "DeepLearningBook.pdf" "Explanation of a remote buffer overflow vulnerability.rar" "MS_APOORVA (1) (1).docx" "JavaScript Design Patterns Subtitles.zip" "MS_APOORVA_India.pdf" "kali-linux-xfce-2016.2-amd64/" "Neural networks and deep learning_files/" "toms_vol2no2_doi001.pdf" "JavaScript Design Patterns Videos.zip" "MS_APOORVA.odt" "Bloomberg-66-Shipping.pdf" "outdir/" "CK12_Prob_Stat_Basic.pdf" "../" "bok%3A978-1-4302-1998-9.pdf" "Developing Scalable Apps in Java Videos.zip" "Krishna_Vikas_Resume (1).pdf" "MS_APOORVA.pdf" "pi.zip" "copper.zip" "./")
+
+ ("/home/krishna/projects/nano-2.7.0/src/" (22735 8964 272146 722000) "rcfile.c" "chars.c" "proto.h" "GPATH" "GRTAGS" "help.c" "files.c" "Makefile.in" "nano.h" "browser.c" "winio.c" "text.c" "nano.c" "search.c" "move.c" "utils.c" "../" "cut.c" "global.c" "GTAGS" "Makefile.am" "color.c" "prompt.c" "./")
+
+ ("/home/krishna/Documents/" (22736 26594 895237 703000) "notes/" "bootstrap.css" "Schedule.org" "Schedule.org~" "../" "projects/" "vikas/" "./")
 
  ("/home/krishna/Documents/notes/markets/Commodities/oil/" (22732 35594 894198 3000) "oil.org_20160810_173304_26297ygU.png" "oil.org_20170121_155309_14655nmT.png" "oil.org_20170121_155231_14655acN.png" "oil.html" "oil.org_20170121_163710_17679KHb.png" "oil.org_20170121_171522_17679xlt.png" "oil.org_20170121_164911_17679XRh.png" "oil.org_20170121_163501_1767998U.png" "oil.org_20160810_180338_26297_qa.png" "oil.org_20160915_114804_29160GUE.png" "oil.org_20170121_172159_17679w5C.png" "oil.org_20161202_214949_32711V8J.png" "oil.org_20170121_163203_17679wyO.png" "oil.org_20170121_171500_17679kbn.png" "oil.org_20161201_205152_29498Ldq.png" "oil.org_20160918_141444_28251GiP.png" "../" "oil.org" "oil.org_20170121_171545_17679-vz.png" "./")
 
  ("/home/krishna/.emacs-backup/" (22731 11909 519403 88000) "!home!krishna!.profile~" "!home!krishna!dev!catchMyNotes!index.html~" "!home!krishna!Documents!notes!myNotes!linux!OS!os.org~" "!home!krishna!dev!catchMyNotes!src!NotesContainer.js~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.org~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.html~" "!home!krishna!.emacs.d!elpa!magit-popup-20170214.347!magit-popup-autoloads.el~" "!home!krishna!dev!node!app.js~" "!home!krishna!.emacs.d!elpa!skewer-mode-20170122.938!skewer-mode-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!index.js~" "!home!krishna!.emacs.d!elpa!magit-popup-20170308.146!magit-popup-autoloads.el~" "!home!krishna!dev!node!package.json~" "!home!krishna!Documents!notes!deepL!tensor!deep!deep.org~" "!home!krishna!.emacs.d!elpa!git-commit-20170308.146!git-commit-autoloads.el~" "!home!krishna!dev!node!webpack.config.js~" "!home!krishna!Documents!projects!bash!practice.sh~" "!home!krishna!Documents!projects!deep!deppClass!deep.py~" "!home!krishna!dev!catchMyNotes!src!.eslintrc~" "!home!krishna!Documents!notes!deepL!tensor!tensor.org~" "!home!krishna!Documents!notes!markets!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!notes!markets !Commodities!oil!oil.html~" "!home!krishna!.emacs.d!elpa!async-20170219.942!async-autoloads.el~" "!home!krishna!Documents!projects!deep!tensor!tensor.py~" "!home!krishna!.emacs.d!elpa!popup-20160709.729!popup-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!configs!notes.js~" "!home!krishna!.emacs.d!elpa!simple-httpd-20170125.1910!simple-httpd-autoloads.el~" "!home!krishna!Documents!notes!markets !.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!org-20170210!org-loaddefs.el~" "!home!krishna!.bashrc~" "!home!krishna!Documents!notes!myNotes!Maths!Differentiation!Diff.html~" "!home!krishna!dev!node!src!App.jsx~" "!home!krishna!.emacs.d!elpa!flycheck-20170117.1430!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!with-editor-20170111.609!with-editor-autoloads.el~" "!home!krishna!Documents!projects!C!main.c~" "!home!krishna!dev!catchMyNotes!src!Note.js~" "!home!krishna!.emacs.d!elpa!git-commit-20170214.347!git-commit-autoloads.el~" "!home!krishna!.emacs.d!elpa!exec-path-from-shell-20170304.1309!exec-path-from-shell-autoloads.el~" "!home!krishna!.emacs.d!elpa!flycheck-20170308.532!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!org-20170210!org-autoloads.el~" "!home!krishna!Documents!notes!deepL!tensor!tensor.html~" "!home!krishna!Documents!projects!deep!neural.py~" "!home!krishna!Documents!projects!githooks!.git!hooks!pre-push~" "!home!krishna!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!projects!js!promises.js~" "!home!krishna!.emacs.d!elpa!js2-mode-20170221.1636!js2-mode-autoloads.el~" "!home!krishna!Documents!projects!bash!images.sh~" "!home!krishna!dev!catchMyNotes!.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!pkg-info-20150517.443!pkg-info-autoloads.el~" "!home!krishna!.emacs~" "!home!krishna!.emacs.d!elpa!magit-20170119.1803!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!ac-js2-20140906.442!ac-js2-autoloads.el~" "!home!krishna!.emacs.d!elpa!htmlize-20161211.1019!htmlize-autoloads.el~" "!home!krishna!dev!catchMyNotes!app.js~" "!home!krishna!.emacs.d!elpa!seq-2.19!seq-autoloads.el~" "!home!krishna!Documents!projects!js!test.js~" "!home!krishna!.emacs.d!elpa!flycheck-20170223.247!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!auto-complete-20170124.1845!auto-complete-autoloads.el~" "!home!krishna!dev!catchMyNotes!webpack.config.js~" "!home!krishna!.gitconfig~" "!home!krishna!.emacs.d!ido.last~" "!home!krishna!dev!bash!images.sh~" "!home!krishna!dev!catchMyNotes!package.json~" "!home!krishna!.emacs.d!elpa!epl-20150517.433!epl-autoloads.el~" "!home!krishna!.emacs.d!elpa!magit-20170308.146!magit-autoloads.el~" "!home!krishna!dev!node!src!App.js~" "!home!krishna!.emacs.d!elpa!ecb-20160101.933!ecb-autoloads.el~" "!home!krishna!Documents!projects!C!makefile~" "!home!krishna!dev!test!vikas~" "!home!krishna!.emacs.d!elpa!let-alist-1.0.5!let-alist-autoloads.el~" "!home!krishna!dev!catchMyNotes!index.js~" "!home!krishna!dev!node!index.html~" "!home!krishna!.emacs.d!elpa!magit-20170302.309!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!dash-20170207.2056!dash-autoloads.el~" "../" "./")
-
- ("/home/krishna/dev/" (22727 17361 490599 427000) "node/" "bash/" "../" "google-images" "catchMyNotes/" "deepL/" "./")
-
- ("/home/krishna/dev/catchMyNotes/" (22727 28063 266833 896000) "webpack.config.js" "index.html" "src/" ".gitignore" "package.json" "../" "npm-debug.log" "node_modules/" ".git/" "build/" "./")
-
- ("/home/krishna/dev/test/" (22727 13144 258605 479000) "../" "vikas" "./")
-
- ("/home/krishna/dev/node/" (22724 34491 243602 82000) "webpack.config.js" "index.html" "src/" "app.js" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
-
- ("/home/krishna/dev/catchMyNotes/src/configs/" (22724 39398 154425 350000) "notes.js" "../" "./")
 
  ("/home/krishna/Documents/notes/markets/Commodities/" (22657 31652 273998 404000) "../" "metals/" "./" "oil/")
 
@@ -80,31 +243,13 @@
 
  ("/home/krishna/Documents/notes/" (22682 36948 937129 37000) "myNotes/" "README.md" "bootstrap.css" "../" "markets/" "my-notes-temp/" "deepL/" "./")
 
- ("/home/krishna/" (22723 21682 459729 646000) "open/" ".atom/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" ".ecb-tip-of-day.el" ".xscreensaver" ".node_repl_history" ".xinputrc" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".dillo/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".profile" "id_rsa" "Templates/" ".ssh/" ".Rhistory" ".Xdefaults" "Arch/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".fltk/" "kr.crt" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".local/" ".xchm" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" "Calibre Library/" "VirtualBox VMs/" ".gconf/" ".git/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" ".thunderbird/" ".bash_history" "./" "vikas.log" ".gstreamer-0.10/")
-
  ("/home/krishna/.emacs.d/elpa/flycheck-20170308.532/" (22720 46529 849115 768000) "flycheck-ert.el" "flycheck-ert.elc" "flycheck-autoloads.el" "flycheck-buttercup.el" "flycheck.elc" "flycheck.el" "../" "flycheck-pkg.el" "./")
-
- ("/home/krishna/.emacs.d/elpa/" (22720 46375 974701 659000) "archives/" "gnupg/" "0blayout-readme.txt" "seq-2.19/" "ac-js2-readme.txt" "skewer-mode-20170122.938/" "auto-complete-20170124.1845/" "let-alist-1.0.5/" "js2-mode-20170221.1636/" "popup-20160709.729/" "dash-20170207.2056/" "ac-js2-20140906.442/" "auto-complete-readme.txt" "async-20170219.942/" "org-20170210.signed" "simple-httpd-20170125.1910/" "magit-20170308.146/" "seq-2.19.signed" "with-editor-20170111.609/" "exec-path-from-shell-20170304.1309/" "flycheck-readme.txt" "let-alist-1.0.5.signed" "magit-readme.txt" "epl-20150517.433/" "git-commit-20170308.146/" "../" "flycheck-20170308.532/" "exec-path-from-shell-readme.txt" "pkg-info-20150517.443/" "org-20170210/" "magit-popup-20170308.146/" "ecb-readme.txt" "ecb-20160101.933/" "./")
-
- ("/home/krishna/.emacs.d/" (22720 46561 65605 43000) "ido.last" "url/" "minnamareddy-theme.el~" "eshell/" "elpa/" ".python-environments/" "auto-save-list/" "ac-comphist.dat" "newsticker/" "../" "lp/" "minnamareddy-theme.el" "abbrev_defs" "./")
 
  ("/home/krishna/projects/nano-2.7.0/" (22715 42147 886308 215000) "nano.spec" "GSYMS" "config.sub" "po/" "nano.spec.in" "config.rpath" "GPATH" "GRTAGS" "src/" "COPYING" "Makefile.in" "m4/" "configure.ac" "config.guess" "AUTHORS" "compile" "ABOUT-NLS" "THANKS" "ChangeLog" "TODO" "COPYING.DOC" "README.GIT" "BROWSE" "NEWS" "doc/" "depcomp" "install-sh" "IMPROVEMENTS" "ChangeLog.pre-2.1" "mkinstalldirs" "config.h.in" "README" "missing" "../" "GTAGS" "Makefile.am" "aclocal.m4" "configure" "./" "INSTALL")
 
- ("/home/krishna/projects/nano-2.7.0/src/" (22715 38344 71819 564000) "rcfile.c" "chars.c" "proto.h" "help.c" "files.c" "Makefile.in" "nano.h" "browser.c" "winio.c" "text.c" "nano.c" "search.c" "move.c" "utils.c" "../" "cut.c" "global.c" "Makefile.am" "color.c" "prompt.c" "./")
-
- ("/home/krishna/projects/" (22659 46702 183972 674000) "john-1.8.0/" "okular/" "aircrack-ng-1.2-rc4/" "passCrack/" "tor-browser_en-US/" "hello-2.10/" "nano-2.7.0/" "../" "./")
-
- ("/home/krishna/Documents/projects/deep/deppClass/" (22711 28272 673500 485000) "../" "deep.py" "./")
-
  ("/home/krishna/Documents/projects/" (22710 6323 495730 268000) "bash/" "R/" "js/" "python/" "vikas.sh~" "vikas.sh" "C/" "#vikas.sh#" "../" "deep/" "githooks/" "NetSec/" "./")
 
- ("/home/krishna/dev/node/src/" (22696 62103 899355 472000) "App.js" "../" "./")
-
- ("/home/krishna/Documents/projects/C/" (22706 22094 762641 315000) "main.h" "main.c" "makefile" "main.o" ".emacs.desktop" "../" "./")
-
  ("/home/krishna/Documents/vikas/" (22599 16469 355416 504000) "thoughts.org" "pki.pdf" "cellular-security.pdf" "../" "ssl-tls.pdf" "oauth.pdf" "./")
-
- ("/home/krishna/Documents/" (22672 6910 166878 888000) "notes/" "bootstrap.css" "Schedule.org" "Schedule.org~" "../" "projects/" "vikas/" "./")
 
  ("/home/" (22531 39386 186506 726000) "krishna/" "../" "./")
 

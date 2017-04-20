@@ -1,0 +1,320 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"Utilities for writing code that runs on Python 2 and 3\"\"\"" code nil nil [1 61])
+            ("__future__" include nil nil [1165 1203])
+            ("functools" include nil nil [1205 1221])
+            ("itertools" include nil nil [1222 1238])
+            ("operator" include nil nil [1239 1254])
+            ("sys" include nil nil [1255 1265])
+            ("types" include nil nil [1266 1278])
+            ("__author__" variable nil nil [1280 1334])
+            ("__version__" variable nil nil [1335 1357])
+            ("PY2" code nil nil [1410 1440])
+            ("PY3" code nil nil [1441 1471])
+            ("PY34" code nil nil [1472 1510])
+            ("if" code nil nil [1512 2319])
+            ("_add_doc" function
+               (:documentation "Add documentation to a function."
+                :arguments 
+                  ( ("func" variable nil (reparse-symbol function_parameters) [2334 2338])
+                    ("doc" variable nil (reparse-symbol function_parameters) [2340 2343]))                  )
+                nil [2321 2412])
+            ("_import_module" function
+               (:documentation "Import module, returning the module after the last dot."
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [2433 2437]))                  )
+                nil [2414 2556])
+            ("_LazyDescr" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2623 2639]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2602 2606])
+                            ("name" variable nil (reparse-symbol function_parameters) [2608 2612]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2589 2640])
+                    ("__get__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2657 2661])
+                            ("obj" variable nil (reparse-symbol function_parameters) [2663 2666])
+                            ("tp" variable nil (reparse-symbol function_parameters) [2668 2670]))                          )
+                        (reparse-symbol indented_block_body) [2645 3005]))                  
+                :type "class")
+                nil [2558 3005])
+            ("MovedModule" type
+               (:superclasses ("_LazyDescr")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3092 3131])
+                            ("if" code nil (reparse-symbol indented_block_body) [3140 3271]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3056 3060])
+                            ("name" variable nil (reparse-symbol function_parameters) [3062 3066])
+                            ("old" variable nil (reparse-symbol function_parameters) [3068 3071])
+                            ("new" variable nil (reparse-symbol function_parameters) [3073 3076]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3043 3271])
+                    ("_resolve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3289 3293]))                          )
+                        (reparse-symbol indented_block_body) [3276 3336])
+                    ("__getattr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3357 3361])
+                            ("attr" variable nil (reparse-symbol function_parameters) [3363 3367]))                          )
+                        (reparse-symbol indented_block_body) [3341 3499]))                  
+                :type "class")
+                nil [3007 3499])
+            ("_LazyModule" type
+               (:superclasses ("types.ModuleType")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [3577 3616])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3625 3662]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3556 3560])
+                            ("name" variable nil (reparse-symbol function_parameters) [3562 3566]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3543 3663])
+                    ("__dir__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3680 3684]))                          )
+                        (reparse-symbol indented_block_body) [3668 3812])
+                    ("_moved_attributes" variable nil (reparse-symbol indented_block_body) [3855 3877]))                  
+                :type "class")
+                nil [3501 3878])
+            ("MovedAttribute" type
+               (:superclasses ("_LazyDescr")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [4001 4043])
+                            ("if" code nil (reparse-symbol indented_block_body) [4052 4498]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3932 3936])
+                            ("name" variable nil (reparse-symbol function_parameters) [3938 3942])
+                            ("old_mod" variable nil (reparse-symbol function_parameters) [3944 3951])
+                            ("new_mod" variable nil (reparse-symbol function_parameters) [3953 3960])
+                            ("old_attr" variable nil (reparse-symbol function_parameters) [3962 3970])
+                            ("new_attr" variable nil (reparse-symbol function_parameters) [3977 3985]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3919 4498])
+                    ("_resolve" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4516 4520]))                          )
+                        (reparse-symbol indented_block_body) [4503 4607]))                  
+                :type "class")
+                nil [3880 4607])
+            ("_SixMetaPathImporter" type
+               (:documentation "
+    A meta path importer to import six.moves and its submodules.
+
+    This class implements a PEP302 finder and loader. It should be compatible
+    with Python 2.5 and all existing versions of Python3
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [4913 4940])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4949 4972]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4881 4885])
+                            ("six_module_name" variable nil (reparse-symbol function_parameters) [4887 4902]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [4868 4973])
+                    ("_add_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4994 4998])
+                            ("mod" variable nil (reparse-symbol function_parameters) [5000 5003])
+                            ("fullnames" variable nil (reparse-symbol function_parameters) [5005 5015]))                          )
+                        (reparse-symbol indented_block_body) [4978 5118])
+                    ("_get_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5139 5143])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [5145 5153]))                          )
+                        (reparse-symbol indented_block_body) [5123 5218])
+                    ("find_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5239 5243])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [5245 5253])
+                            ("path" variable nil (reparse-symbol function_parameters) [5255 5259]))                          )
+                        (reparse-symbol indented_block_body) [5223 5354])
+                    ("__get_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5376 5380])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [5382 5390]))                          )
+                        (reparse-symbol indented_block_body) [5359 5557])
+                    ("load_module" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5578 5582])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [5584 5592]))                          )
+                        (reparse-symbol indented_block_body) [5562 5944])
+                    ("is_package" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5964 5968])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [5970 5978]))                          
+                        :documentation "
+        Return true, if the named module is a package.
+
+        We need this method to get correct spec objects with
+        Python 3.4 (see PEP451)
+        ")
+                        (reparse-symbol indented_block_body) [5949 6218])
+                    ("get_code" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6236 6240])
+                            ("fullname" variable nil (reparse-symbol function_parameters) [6242 6250]))                          
+                        :documentation "Return None
+
+        Required, if is_package is implemented")
+                        (reparse-symbol indented_block_body) [6223 6416])
+                    ("get_source" variable nil (reparse-symbol indented_block_body) [6420 6441]))                  
+                :type "class")
+                nil [4609 6462])
+            ("_importer" variable nil nil [6463 6505])
+            ("_MovedItems" type
+               (:documentation "Lazy loading of moved objects"
+                :superclasses ("_LazyModule")
+                :members 
+                  ( ("__path__" variable nil (reparse-symbol indented_block_body) [6585 6598]))                  
+                :type "class")
+                nil [6508 6618])
+            ("_moved_attributes" variable nil nil [6620 10822])
+            ("if" code nil nil [10855 10958])
+            ("for" code nil nil [10959 11128])
+            ("del" code nil nil [11128 11136])
+            ("_MovedItems" variable nil nil [11138 11187])
+            ("moves" variable nil nil [11189 11229])
+            ("_importer" code nil nil [11230 11267])
+            ("Module_six_moves_urllib_parse" type
+               (:documentation "Lazy loading of moved objects in six.moves.urllib_parse"
+                :superclasses ("_LazyModule")
+                :type "class")
+                nil [11270 11387])
+            ("_urllib_parse_moved_attributes" variable nil nil [11389 12824])
+            ("for" code nil nil [12825 12929])
+            ("del" code nil nil [12929 12937])
+            ("Module_six_moves_urllib_parse" variable nil nil [12939 13019])
+            ("_importer" code nil nil [13021 13173])
+            ("Module_six_moves_urllib_error" type
+               (:documentation "Lazy loading of moved objects in six.moves.urllib_error"
+                :superclasses ("_LazyModule")
+                :type "class")
+                nil [13176 13293])
+            ("_urllib_error_moved_attributes" variable nil nil [13295 13520])
+            ("for" code nil nil [13521 13625])
+            ("del" code nil nil [13625 13633])
+            ("Module_six_moves_urllib_error" variable nil nil [13635 13715])
+            ("_importer" code nil nil [13717 13869])
+            ("Module_six_moves_urllib_request" type
+               (:documentation "Lazy loading of moved objects in six.moves.urllib_request"
+                :superclasses ("_LazyModule")
+                :type "class")
+                nil [13872 13993])
+            ("_urllib_request_moved_attributes" variable nil nil [13995 16272])
+            ("for" code nil nil [16273 16381])
+            ("del" code nil nil [16381 16389])
+            ("Module_six_moves_urllib_request" variable nil nil [16391 16475])
+            ("_importer" code nil nil [16477 16637])
+            ("Module_six_moves_urllib_response" type
+               (:documentation "Lazy loading of moved objects in six.moves.urllib_response"
+                :superclasses ("_LazyModule")
+                :type "class")
+                nil [16640 16763])
+            ("_urllib_response_moved_attributes" variable nil nil [16765 17052])
+            ("for" code nil nil [17053 17163])
+            ("del" code nil nil [17163 17171])
+            ("Module_six_moves_urllib_response" variable nil nil [17173 17259])
+            ("_importer" code nil nil [17261 17425])
+            ("Module_six_moves_urllib_robotparser" type
+               (:documentation "Lazy loading of moved objects in six.moves.urllib_robotparser"
+                :superclasses ("_LazyModule")
+                :type "class")
+                nil [17428 17557])
+            ("_urllib_robotparser_moved_attributes" variable nil nil [17559 17677])
+            ("for" code nil nil [17678 17794])
+            ("del" code nil nil [17794 17802])
+            ("Module_six_moves_urllib_robotparser" variable nil nil [17804 17896])
+            ("_importer" code nil nil [17898 18074])
+            ("Module_six_moves_urllib" type
+               (:documentation "Create a six.moves.urllib namespace that resembles the Python 3 namespace"
+                :superclasses ("types.ModuleType")
+                :members 
+                  ( ("__path__" variable nil (reparse-symbol indented_block_body) [18215 18228])
+                    ("parse" variable nil (reparse-symbol indented_block_body) [18252 18303])
+                    ("error" variable nil (reparse-symbol indented_block_body) [18308 18359])
+                    ("request" variable nil (reparse-symbol indented_block_body) [18364 18419])
+                    ("response" variable nil (reparse-symbol indented_block_body) [18424 18481])
+                    ("robotparser" variable nil (reparse-symbol indented_block_body) [18486 18549])
+                    ("__dir__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18567 18571]))                          )
+                        (reparse-symbol indented_block_body) [18555 18646]))                  
+                :type "class")
+                nil [18077 18646])
+            ("_importer" code nil nil [18647 18759])
+            ("add_move" function
+               (:documentation "Add an item to six.moves."
+                :arguments 
+                  ( ("move" variable nil (reparse-symbol function_parameters) [18775 18779]))                  )
+                nil [18762 18860])
+            ("remove_move" function
+               (:documentation "Remove item from six.moves."
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [18878 18882]))                  )
+                nil [18862 19132])
+            ("if" code nil nil [19134 19528])
+            ("try" code nil nil [19530 19636])
+            ("next" variable nil nil [19636 19659])
+            ("try" code nil nil [19662 19812])
+            ("if" code nil nil [19814 20405])
+            ("_add_doc" code nil nil [20405 20503])
+            ("get_method_function" variable nil nil [20506 20559])
+            ("get_method_self" variable nil nil [20560 20609])
+            ("get_function_closure" variable nil nil [20610 20667])
+            ("get_function_code" variable nil nil [20668 20719])
+            ("get_function_defaults" variable nil nil [20720 20779])
+            ("get_function_globals" variable nil nil [20780 20837])
+            ("if" code nil nil [20840 21656])
+            ("_add_doc" code nil nil [21657 21728])
+            ("_add_doc" code nil nil [21729 21804])
+            ("_add_doc" code nil nil [21805 21900])
+            ("_add_doc" code nil nil [21901 21999])
+            ("if" code nil nil [22002 30099]))          
+      :file "six.py"
+      :pointmax 30099
+      :fsize 30098
+      :lastmodtime '(22531 56847 918759 0)
+      :unmatched-syntax '((NEWLINE 30098 . 30099) (RPAREN 30097 . 30098) (DEDENT 30067 . 30067) (NAME 30067 . 30070) (LPAREN 30087 . 30088) (NEWLINE 29213 . 29214) (COLON 29212 . 29213) (IS 29201 . 29203) (RPAREN 29199 . 29200) (LPAREN 29188 . 29189) (PERIOD 29184 . 29185) (RPAREN 29183 . 29184) (IF 29172 . 29174) (LPAREN 29182 . 29183) (NEWLINE 29113 . 29114) (RBRACK 29076 . 29077) (DEDENT 29064 . 29064) (NAME 29064 . 29072) (LBRACK 29075 . 29076) (NEWLINE 28266 . 28267) (COLON 28265 . 28266) (RPAREN 28264 . 28265) (DEDENT 28227 . 28227) (DEF 28227 . 28230) (LPAREN 28258 . 28259) (NEWLINE 27709 . 27710) (COLON 27708 . 27709) (RPAREN 27707 . 27708) (DEDENT 27680 . 27680) (DEF 27680 . 27683) (LPAREN 27697 . 27698) (NEWLINE 27269 . 27270) (COLON 27268 . 27269) (RPAREN 27267 . 27268) (MULT 27261 . 27262) (DEDENT 27236 . 27236) (DEF 27236 . 27239) (LPAREN 27254 . 27255) (NEWLINE 27205 . 27206) (COLON 27204 . 27205) (DEDENT 27200 . 27200) (ELSE 27200 . 27204) (NEWLINE 26919 . 26920) (COLON 26918 . 26919) (RPAREN 26917 . 26918) (LPAREN 26912 . 26913) (LT 26910 . 26911) (RBRACK 26908 . 26909) (COLON 26906 . 26907) (LBRACK 26904 . 26905) (NEWLINE 26883 . 26884) (RPAREN 26882 . 26883) (DEDENT 26837 . 26837) (NAME 26837 . 26845) (LPAREN 26845 . 26846) (NEWLINE 26602 . 26603) (COLON 26601 . 26602) (RPAREN 26600 . 26601) (LPAREN 26595 . 26596) (LT 26593 . 26594) (RBRACK 26591 . 26592) (COLON 26589 . 26590) (DEDENT 26569 . 26569) (IF 26569 . 26571) (LBRACK 26588 . 26589) (NEWLINE 24674 . 24675) (RPAREN 24673 . 24674) (DEDENT 24627 . 24627) (NAME 24627 . 24633) (LPAREN 24643 . 24644) (NEWLINE 24565 . 24566) (COLON 24564 . 24565) (DEDENT 24560 . 24560) (ELSE 24560 . 24564) (NEWLINE 24474 . 24475) (COLON 24473 . 24474) (RPAREN 24472 . 24473) (LPAREN 24467 . 24468) (GT 24465 . 24466) (RBRACK 24463 . 24464) (COLON 24461 . 24462) (LBRACK 24460 . 24461) (DEDENT 24439 . 24439) (ELIF 24439 . 24443) (NEWLINE 24306 . 24307) (COLON 24305 . 24306) (RPAREN 24304 . 24305) (LPAREN 24299 . 24300) (EQ 24296 . 24298) (RBRACK 24294 . 24295) (COLON 24292 . 24293) (DEDENT 24272 . 24272) (IF 24272 . 24274) (LBRACK 24291 . 24292) (NEWLINE 23795 . 23796) (COLON 23794 . 23795) (DEDENT 23790 . 23790) (ELSE 23790 . 23794) (NEWLINE 23484 . 23485) (COLON 23483 . 23484) (RPAREN 23482 . 23483) (EXPONENT 23474 . 23476) (MULT 23467 . 23468) (DEDENT 23445 . 23445) (DEF 23445 . 23448) (LPAREN 23460 . 23461) (NEWLINE 23380 . 23381) (COLON 23379 . 23380) (RPAREN 23378 . 23379) (EXPONENT 23370 . 23372) (MULT 23363 . 23364) (DEDENT 23335 . 23335) (DEF 23335 . 23338) (LPAREN 23356 . 23357) (NEWLINE 23271 . 23272) (COLON 23270 . 23271) (RPAREN 23269 . 23270) (EXPONENT 23261 . 23263) (MULT 23254 . 23255) (LPAREN 23247 . 23248) (NEWLINE 23224 . 23225) (RPAREN 23223 . 23224) (LPAREN 23201 . 23202) (NEWLINE 23192 . 23193) (RPAREN 23191 . 23192) (DEDENT 23161 . 23161) (NAME 23161 . 23169) (LPAREN 23169 . 23170))))
+  :file "!usr!local!lib!python2.7!dist-packages!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
