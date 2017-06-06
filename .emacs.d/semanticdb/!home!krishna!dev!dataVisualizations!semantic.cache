@@ -1,0 +1,26 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "package.json"
+      :pointmax 1140
+      :fsize 1139
+      :lastmodtime '(22804 64962 832284 805000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("" section nil nil [26 71])
+            ("" section nil nil [71 142]))          
+      :file "index.html"
+      :pointmax 142
+      :fsize 141
+      :lastmodtime '(22805 287 567781 732000)
+      :unmatched-syntax nil))
+  :file "!home!krishna!dev!dataVisualizations!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

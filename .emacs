@@ -1,23 +1,24 @@
 (package-initialize)
-(semantic-mode 1)
+(setq company-dabbrev-downcase 0)
 (set-face-attribute 'default nil :height 105)
-(setq-default line-spacing 2)
+(setq-default line-spacing 10)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(company-idle-delay 0)
- '(company-minimum-prefix-length 2)
- '(company-tern-meta-as-single-line t)
- '(company-tooltip-align-annotations t)
+ '(company-minimum-prefix-length 0)
  '(company-tooltip-idle-delay 0)
- '(company-tooltip-minimum 6)
- '(company-tooltip-minimum-width 40)
+ '(company-tooltip-minimum 1)
  '(compilation-window-height 5)
- '(custom-enabled-themes nil)
+ '(custom-enabled-themes (quote (deeper-blue)))
  '(ecb-options-version "2.50")
  '(ecb-source-path (quote (("/" "/"))))
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(global-company-mode t)
  '(js2-strict-trailing-comma-warning nil)
  '(man-notify-method (quote newframe))
@@ -42,14 +43,26 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (web-mode company-php rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc company-tern company-statistics company-shell company-dict company-c-headers company-anaconda)))
- '(show-trailing-whitespace t))
+    (company-tern company-anaconda company yaml-mode highlight-indent-guides web-mode rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+ '(show-trailing-whitespace t)
+ '(speedbar-show-unknown-files t)
+ '(speedbar-use-images nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(ediff-current-diff-A ((t (:background "black" :foreground "white"))))
+ '(ediff-current-diff-Ancestor ((t (:foreground "yellow"))))
+ '(ediff-current-diff-B ((t (:background "darkorange3" :foreground "black"))))
+ '(ediff-current-diff-C ((t (:foreground "#888833"))))
+ '(ediff-even-diff-A ((t (:background "rosy brown" :foreground "black"))))
+ '(ediff-even-diff-Ancestor ((t (:background "dim gray"))))
+ '(ediff-even-diff-B ((t (:background "Grey50" :foreground "dark red"))))
+ '(ediff-even-diff-C ((t (:background "dim gray"))))
+ '(ediff-odd-diff-B ((t (:background "dim gray"))))
+ '(ediff-odd-diff-C ((t (:background "dim gray"))))
  '(mode-line ((t (:background "white" :foreground "black"))))
  '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
  '(show-paren-match ((t (:inherit (quote region))))))
@@ -63,7 +76,7 @@
 ;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
-
+(global-set-key (kbd "<C-tab>") 'other-window)
 ;; save and compile
 (defun save-all-and-compile ()
   (interactive)
@@ -73,27 +86,27 @@
 
 ;;auto-indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
-
 ;;set the file name as buffer
 (setq frame-title-format "%b")
-
+(add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'python-mode-hook
           (lambda ()
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
-            (anaconda-mode 1)
-            (anaconda-eldoc-mode 1)
-            (setq python-indent-offset 4);
+            (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-	    ))
-
-(add-to-list 'load-path "~/projects/tern/emacs/")
-(autoload 'tern-mode "tern.el" nil t)
+            (anaconda-mode t)
+            (anaconda-eldoc-mode t)
+            (eval-after-load "company"
+              '(add-to-list 'company-backends 'company-anaconda))
+ 	    ))
 (add-hook 'js-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
 		 (concat "node " buffer-file-name))
-            (tern-mode t)
+            (tern-mode 1)
+            (eval-after-load "company"
+              '(add-to-list 'company-backends 'company-tern))
 	    ))
 
 ;; this is for the disappearence of the top menu bar
@@ -185,7 +198,11 @@ same directory as the org-buffer and insert a link to this file."
 ;;------------------------------------------
 ;;hideshow  code toggling
 (add-hook 'prog-mode-hook 'hs-minor-mode 1)
-(add-hook 'hs-minor-mode-hook '(lambda ()(define-key hs-minor-mode-map (kbd "C-c C-c") 'hs-toggle-hiding)))
+(add-hook 'hs-minor-mode-hook '(lambda ()
+                                 (define-key hs-minor-mode-map (kbd "M-]") 'hs-toggle-hiding)
+                                 (define-key hs-minor-mode-map (kbd "M-[") 'hs-toggle-hiding)
+                                 (hs-hide-all)
+                                 ))
 
 (eval-after-load 'org '(color-keys-org))
 
@@ -218,7 +235,7 @@ same directory as the org-buffer and insert a link to this file."
 
 (add-hook 'org-mode-hook (lambda ()
                           (add-macros-to-org)
-                          '(define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
+                          (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
                           (flyspell-mode 1)))
 
 (defun vikas-export-org (regex c)
@@ -278,13 +295,14 @@ same directory as the org-buffer and insert a link to this file."
 
 
 (global-set-key (kbd "s-k") 'kill-this-buffer)
-(global-set-key (kbd "<f2>n") 'next-buffer)
-(global-set-key (kbd "<f2>p") 'previous-buffer)
+(global-set-key (kbd "M-n") 'next-buffer)
+(global-set-key (kbd "M-p") 'previous-buffer)
 
-(global-set-key (kbd "<f2><up>") 'windmove-up)
-(global-set-key (kbd "<f2><down>") 'windmove-down)
-(global-set-key (kbd "<f2><left>") 'windmove-left)
-(global-set-key (kbd "<f2><right>") 'windmove-right)
+(global-set-key (kbd "C-<up>") 'windmove-up)
+(global-set-key (kbd "C-<down>") 'windmove-down)
+(global-set-key (kbd "C-<left>") 'windmove-left)
+(global-set-key (kbd "C-<right>") 'windmove-right)
+
 
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 
@@ -375,19 +393,11 @@ same directory as the org-buffer and insert a link to this file."
   )
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
-(setq linum-supress-updates t)
-(global-company-mode 1)
 
-(setq company-dabbrev-downcase nil)
-(add-to-list 'company-backends '(company-tern company-shell company-anaconda company-c-headers))
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
+(add-hook 'rjsx-mode-hook '(lambda () ))
 
-(add-hook 'rjsx-mode-hook '(lambda ()
-                            (tern-mode 1)))
-(add-hook 'tern-mode-hook '(lambda ()
-                             (define-key tern-mode-keymap (kbd "s-h") 'tern-highlight-refs)))
 (put 'narrow-to-region 'disabled nil)
-
 (defun indent-close-tag-with-open (func &rest args)
   (apply func args)
   (save-excursion
@@ -409,16 +419,11 @@ same directory as the org-buffer and insert a link to this file."
                   (search-forward "/>")
                   (goto-char (- (point) 2))
                   (delete-backward-char 2)))
-
             )
         ))
     ))
-
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
+(setq highlight-indent-guides-method 'character)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
-(add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
-(setq web-mode-engines-alist
-      '(("php"    . "\\.phtml\\'")))
-(add-hook 'web-mode-hook
-         '(lambda ()
-            (add-to-list 'company-backends 'company-ac-php-backend )))
+(add-hook 'shell-mode '(lambda()))

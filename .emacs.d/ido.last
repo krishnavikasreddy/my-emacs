@@ -2,6 +2,28 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/service_factory-0.1.5-py2.7.egg/" . "service_factory/")
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/" . "service_factory-0.1.5-py2.7.egg/")
+ ("/home/krishna/.emacs.d/anaconda-mode/" . "0.1.7/")
+ ("/home/krishna/dev/dataVisualizations/src/" . "main/")
+ ("/home/krishna/.atom/" . "blob-store/")
+ ("/home/krishna/dev/myNotes/" . "numpy/")
+ ("/home/krishna/dev/python/" . "stocks/")
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/" . "main/")
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/" . "efilot/")
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/" . "com/")
+ ("/home/krishna/dev/NotesCatcherJava/src/main/" . "java/")
+ ("/home/krishna/dev/NotesCatcherJava/src/" . "main/")
+ ("/home/krishna/dev/NotesCatcherJava/" . "src/")
+ ("/home/krishna/Documents/myNotes/Commodities/oil/" . "Basics/")
+ ("/home/krishna/Documents/myNotes/Commodities/" . "oil/")
+ ("/home/krishna/Documents/myNotes/" . "Commodities/")
+ ("/home/krishna/dev/NotesCatcher/src/follower/" . "comment/")
+ ("/home/krishna/dev/dataVisualizations/" . "src/")
+ ("/home/krishna/dev/NotesCatcher/src/" . "main/")
+ ("/home/krishna/dev/NotesCatcher/" . "src/")
+ ("/home/krishna/dev/code-base/okular/" . "ui/")
+ ("/home/krishna/dev/code-base/" . "okular/")
  ("/home/krishna/dev/test/wordpress/wp-content/themes/" . "twentyfifteen/")
  ("/home/krishna/dev/test/wordpress/wp-content/" . "themes/")
  ("/home/krishna/dev/test/wordpress/" . "wp-content/")
@@ -29,22 +51,52 @@
  ("/home/krishna/Documents/notes/" . "myNotes/")
  ("/home/krishna/dev/catchMyNotes/" . "src/")
  ("/home/krishna/.emacs.d/elpa/" . "flycheck-20170308.532/")
- ("/home/krishna/.emacs.d/" . "elpa/")
+ ("/home/krishna/.emacs.d/" . "anaconda-mode/")
  ("/home/krishna/projects/" . "tern/")
  ("/home/krishna/Documents/projects/deep/" . "deppClass/")
- ("/home/krishna/Documents/" . "projects/")
+ ("/home/krishna/Documents/" . "myNotes/")
  ("/home/krishna/Documents/projects/" . "deep/")
  ("/home/" . "krishna/")
- ("/home/krishna/dev/" . "catchMyNotes/")
+ ("/home/krishna/dev/" . "python/")
  ("/home/krishna/" . "dev/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/krishna/"
+ "/home/krishna/dev/python/stocks/"
+ "/home/krishna/.emacs.d/anaconda-mode/0.1.7/service_factory-0.1.5-py2.7.egg/service_factory/"
+ "/home/krishna/dev/NotesCatcherJava/"
+ "/home/krishna/dev/dataVisualizations/src/main/"
+ "/home/krishna/.atom/"
+ "/home/krishna/.atom/blob-store/"
+ "/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/main/"
+ "/home/krishna/dev/python/lstm/"
+ "/home/krishna/dev/python/"
+ "/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/endpoint/"
+ "/home/krishna/dev/NotesCatcher/src/main/"
+ "/home/krishna/dev/NotesCatcher/src/menu/"
+ "/home/krishna/dev/NotesCatcher/src/follower/comment/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Basics/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Non-OPEC/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Opec/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/EIA-Data/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Seasons/Opec/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Seasons/"
+ "/home/krishna/Documents/myNotes/Commodities/oil/Archives/"
+ "/home/krishna/dev/NotesCatcher/src/follower/"
+ "/home/krishna/dev/NotesCatcher/src/"
+ "/home/krishna/dev/NotesCatcher/"
+ "/home/krishna/dev/dataVisualizations/src/"
+ "/home/krishna/dev/dataVisualizations/"
+ "/home/krishna/dev/NotesCatcher/src/configs/"
+ "/home/krishna/dev/NotesCatcher/src/ui/"
+ "/home/krishna/dev/react/"
+ "/home/krishna/dev/code-base/okular/ui/"
  "/home/krishna/dev/catchMyNotes/"
  "/home/krishna/dev/test/wordpress/wp-content/themes/twentyfifteen/"
  "/home/krishna/dev/test/wordpress/wp-content/themes/vikas/"
- "/home/krishna/"
  "/home/krishna/dev/test/wordpress/wp-content/themes/"
  "/home/krishna/dev/catchMyNotes/src/"
  "/home/krishna/dev/catchMyNotes/src/main/"
@@ -61,40 +113,148 @@
  "/var/www/html/"
  "/home/krishna/open/"
  "/home/krishna/Documents/projects/deep/deppClass/"
- "/home/krishna/Documents/projects/deep/tensor/"
- "/home/krishna/dev/react/my-app/"
- "/etc/apt/"
- "/home/krishna/dev/node/src/"
- "/home/krishna/dev/node/"
- "/home/krishna/Documents/projects/deep/"
- "/home/krishna/Documents/projects/C/algos/sorting/"
- "/home/krishna/Documents/projects/C/"
- "/home/krishna/Documents/notes/myNotes/Algorithms/sorting/"
- "/home/krishna/Documents/"
- "/home/krishna/Documents/notes/deepL/tensor/"
- "/home/krishna/projects/tern/emacs/"
- "/home/krishna/Documents/projects/js/"
- "/home/krishna/Documents/notes/markets/Commodities/oil/"
- "/home/krishna/projects/nano-2.7.0/src/"
- "/home/krishna/projects/nano-2.7.0/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "package.json"
- "header.php"
- "index.php"
  ".emacs"
- ".eslintrc"
- "NotesContainer.js"
- "NoteFollower.js"
- "Note.js"
- "webpack.config.js"
- "index.js"
+ "stocks.py"
+ "service.py"
+ "data.csv"
+ "build.gradle"
+ "DataVisualizer.js"
+ "test.jsx"
+ "config.cson"
+ "BLOB"
+ "keymap.cson"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/krishna/dev/python/stocks/" (22838 4054 158386 395000) "stocks.py" "data.csv" "../" ".flycheck_stocks.py" "./")
+
+ ("/home/krishna/Documents/my-emacs/" (22838 3987 737611 531000) ".emacs.~master~" ".emacs" ".emacs.desktop.lock" ".emacs.d/" ".emacs-backup/" "../" "Downloads/" ".gitignore" ".git/" "./")
+
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/service_factory-0.1.5-py2.7.egg/service_factory/" (22837 63206 647425 836000) "errors.py" "validation.py" "compat.pyc" "service.py" "validation.pyc" "__init__.pyc" "service.pyc" "../" "providers/" "factory.pyc" "errors.pyc" "__init__.py" "factory.py" "exceptions.pyc" "exceptions.py" "./" "compat.py")
+
+ ("/home/krishna/.emacs.d/" (22837 63185 595879 96000) "lp/" "url/" ".python-environments/" "minnamareddy-theme.el" "eshell/" "tutorial/" "newsticker/" "semanticdb/" "elpa/" "flow-for-emacs/" "ac-comphist.dat" ".emacs.desktop" "anaconda-mode/" "session.281da67d4-0a1c-465d-b290-1338eba556eb" "ido.last" "abbrev_defs" "../" "auto-save-list/" "minnamareddy-theme.el~" "company-statistics-cache.el" "./")
+
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/service_factory-0.1.5-py2.7.egg/" (22789 23790 260743 228000) "EGG-INFO/" "service_factory/" "../" "./")
+
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/anaconda_mode-0.1.7-py2.7.egg/" (22799 22114 84991 797000) "EGG-INFO/" "anaconda_mode.py" "../" "anaconda_mode.pyc" "./")
+
+ ("/home/krishna/.emacs.d/anaconda-mode/0.1.7/" (22789 23790 260743 228000) "anaconda_mode-0.1.7-py2.7.egg/" "../" "easy-install.pth" "service_factory-0.1.5-py2.7.egg/" "./")
+
+ ("/home/krishna/.emacs.d/anaconda-mode/" (22789 23790 256743 184000) "../" "0.1.7/" "./")
+
+ ("/home/krishna/dev/python/" (22835 34029 209546 264000) "notMNIST_large.tar.gz" "lstm/" "../" "stocks/" ".vscode/" ".pylintrc" "url_lib_test.py" "downloaddata.py" "iterator.py" "./" "os_test.py")
+
+ ("/home/krishna/.atom/blob-store/" (22835 33275 776523 954000) "MAP" "BLOB" "../" "./")
+
+ ("/home/krishna/dev/dataVisualizations/src/main/" (22834 8688 817869 601000) "DataVisualizer.js" "../" "test.jsx" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/" (22834 24572 978681 80000) ".classpath" ".nb-gradle-properties" "bin/" "src/" "gradle/" ".nb-gradle/" "build/" "curl.sh" "../" ".gradle/" ".gitignore" ".settings/" ".git/" "nbproject/" "gradlew.bat" "vikas.yml" "gradlew" ".project" "./" "build.gradle")
+
+ ("/home/krishna/" (22835 6583 854172 471000) ".xscreensaver" ".npm/" ".local/" ".lesshst" ".bash_history" ".dbus/" "Desktop/" ".mozilla/" ".pylint.d/" ".bashrc" ".nano/" ".emacs" "dev/" "Templates/" ".profile" ".wget-hsts" ".dmrc" ".thumbnails/" ".xsession-errors.old" "Pictures/" "2017-01-16 TankerTrackers User Manual.pdf" ".gitconfig" "2017-01-15 The Side-Effects Of Traffic Disruptions In Houston.pdf" "workspace/" "Music/" ".macromedia/" ".xsession-errors" ".emacs.d/" ".Xauthority" ".tooling/" ".oracle_jre_usage/" "VirtualBox VMs/" ".atom/" ".gnupg/" ".emacs-backup/" "../" ".Xdefaults" ".ssh/" ".eclipse/" "Downloads/" ".gradle/" ".vscode/" ".gconf/" ".ICEauthority" ".swt/" ".bash_logout" ".pki/" "eclipse/" "Public/" ".cache/" ".p2/" "NetBeansProjects/" ".sudo_as_admin_successful" "Documents/" ".java/" ".gnome/" ".config/" "./" ".netbeans/" "Videos/" ".adobe/")
+
+ ("/home/krishna/dev/dataVisualizations/" (22834 6706 439834 463000) "src/" "package.json" "node_modules/" "../" "index.html" ".babelrc" "./" "webpack.config.js" ".flowconfig")
+
+ ("/usr/" (22797 4298 924992 126000) "include/" "lib/" "bin/" "@DATADIRNAME@/" "src/" "games/" "share/" "../" "sbin/" "etc/" "local/" "./")
+
+ ("/usr/local/" (22789 30952 582948 334000) "include/" "lib/" "bin/" "src/" "games/" "var/" "share/" "man/" "../" "sbin/" "etc/" "libexec/" "netbeans-8.2/" "apache-tomcat-8.0.27/" "./")
+
+ ("/usr/local/share/" (22789 21507 617825 963000) "applications/" "appdata/" "ca-certificates/" "info/" "texmf/" "icons/" "man/" "../" "emacs/" "fonts/" "xml/" "./" "sgml/")
+
+ ("/usr/local/share/emacs/" (22789 21507 729824 661000) "../" "site-lisp/" "./" "25.2/")
+
+ ("/usr/local/share/emacs/25.2/" (22789 21523 353648 397000) "lisp/" "../" "etc/" "site-lisp/" "./")
+
+ ("/usr/local/share/emacs/25.2/lisp/" (22789 21530 33576 530000) "custom.el.gz" "battery.el.gz" "help-fns.elc" "cus-dep.el.gz" "cus-edit.elc" "dos-w32.elc" "type-break.el.gz" "obarray.elc" "url/" "userlock.elc" "talk.el.gz" "savehist.el.gz" "replace.elc" "epg.el.gz" "pcmpl-gnu.el.gz" "edmacro.el.gz" "edmacro.elc" "simple.elc" "case-table.el.gz" "term/" "ps-print.el.gz" "hi-lock.el.gz" "novice.elc" "ido.elc" "ebuff-menu.el.gz" "sb-image.elc" "composite.elc" "minibuffer.el.gz" "x-dnd.elc" "gs.elc" "language/" "linum.elc" "autoarg.elc" "dos-w32.el.gz" "select.elc" "widget.el.gz" "select.el.gz" "follow.elc" "env.elc" "scroll-all.elc" "README" "cus-face.el.gz" "cedet/" "md4.elc" "novice.el.gz" "winner.el.gz" "macros.el.gz" "thumbs.elc" "tempo.el.gz" "scroll-all.el.gz" "tooltip.elc" "button.el.gz" "allout.elc" "term.el.gz" "wid-browse.elc" "dframe.el.gz" "windmove.el.gz" "ses.el.gz" "misc.elc" "skeleton.elc" "xml.elc" "apropos.el.gz" "mouse-drag.el.gz" "desktop.el.gz" "xwidget.elc" "help-macro.elc" "allout.el.gz" "wid-edit.elc" "elec-pair.el.gz" "speedbar.elc" "paren.elc" "profiler.el.gz" "man.el.gz" "t-mouse.elc" "abbrev.el.gz" "descr-text.el.gz" "timezone.el.gz" "info-look.el.gz" "password-cache.el.gz" "mb-depth.el.gz" "foldout.elc" "autoarg.el.gz" "gs.el.gz" "woman.el.gz" "w32-fns.el.gz" "calculator.el.gz" "hfy-cmap.el.gz" "ps-print.elc" "align.elc" "pcmpl-gnu.elc" "misearch.el.gz" "vcursor.el.gz" "vt100-led.elc" "dired-aux.el.gz" "emulation/" "startup.elc" "eshell/" "soundex.el.gz" "help.el.gz" "expand.el.gz" "epa.el.gz" "filenotify.el.gz" "outline.el.gz" "char-fold.el.gz" "image-mode.elc" "frameset.el.gz" "hi-lock.elc" "view.el.gz" "ansi-color.el.gz" "ebuff-menu.elc" "reveal.el.gz" "isearch.elc" "forms.elc" "macros.elc" "talk.elc" "repeat.elc" "icomplete.elc" "doc-view.el.gz" "ffap.elc" "hexl.el.gz" "ielm.elc" "shell.el.gz" "time-stamp.el.gz" "find-lisp.elc" "widget.elc" "frame.el.gz" "electric.elc" "json.el.gz" "comint.el.gz" "filecache.elc" "help-macro.el.gz" "allout-widgets.elc" "filesets.elc" "hfy-cmap.elc" "nxml/" "register.elc" "soundex.elc" "ffap.el.gz" "menu-bar.elc" "rect.el.gz" "loadup.el" "kermit.el.gz" "face-remap.elc" "dnd.elc" "saveplace.elc" "cus-edit.el.gz" "filenotify.elc" "indent.elc" "array.elc" "server.el.gz" "array.el.gz" "frame.elc" "find-file.el.gz" "printing.elc" "outline.elc" "font-lock.el.gz" "informat.el.gz" "dired-x.el.gz" "replace.el.gz" "ezimage.el.gz" "ps-bdf.elc" "ibuf-ext.el.gz" "env.el.gz" "double.el.gz" "ps-mule.elc" "double.elc" "midnight.elc" "follow.el.gz" "jit-lock.el.gz" "master.elc" "chistory.elc" "proced.el.gz" "dirtrack.el.gz" "tar-mode.el.gz" "fringe.elc" "mh-e/" "rect.elc" "tree-widget.el.gz" "xt-mouse.elc" "buff-menu.el.gz" "wid-edit.el.gz" "expand.elc" "ibuf-ext.elc" "lpr.elc" "vt-control.elc" "calc/" "disp-table.elc" "tool-bar.el.gz" "lpr.el.gz" "misearch.elc" "avoid.elc" "time.el.gz" "files.el.gz" "pcmpl-linux.el.gz" "autoinsert.el.gz" "version.elc" "xt-mouse.el.gz" "password-cache.elc" "wid-browse.el.gz" "makesum.elc" "dabbrev.el.gz" "generic-x.elc" "ps-samp.elc" "minibuf-eldef.elc" "fringe.el.gz" "mwheel.elc" "strokes.elc" "help-mode.el.gz" "dirtrack.elc" "kermit.elc" "chistory.el.gz" "time-stamp.elc" "pcmpl-x.elc" "menu-bar.el.gz" "face-remap.el.gz" "international/" "cdl.el.gz" "calculator.elc" "finder.el.gz" "windmove.elc" "cus-load.el" "textmodes/" "image.el.gz" "composite.el.gz" "subr.el.gz" "recentf.elc" "jka-compr.elc" "facemenu.elc" "ruler-mode.el.gz" "frameset.elc" "savehist.elc" "mouse-copy.elc" "timezone.elc" "sb-image.el.gz" "ido.el.gz" "ibuffer.elc" "ps-bdf.el.gz" "vt-control.el.gz" "allout-widgets.el.gz" "info-xref.el.gz" "shell.elc" "epa-file.el.gz" "delim-col.elc" "uniquify.elc" "tutorial.el.gz" "epa-hook.el.gz" "w32-vars.elc" "informat.elc" "image-file.el.gz" "scroll-lock.elc" "dos-fns.elc" "scroll-bar.el.gz" "foldout.el.gz" "uniquify.el.gz" "ls-lisp.el.gz" "vc/" "format.el.gz" "format.elc" "epa-mail.elc" "emacs-lisp/" "dired-x.elc" "hex-util.el.gz" "pcmpl-cvs.elc" "newcomment.elc" "ruler-mode.elc" "filesets.el.gz" "delim-col.el.gz" "ses.elc" "battery.elc" "buff-menu.elc" "repeat.el.gz" "help-fns.el.gz" "sort.el.gz" "pcmpl-cvs.el.gz" "autoinsert.elc" "scroll-bar.elc" "master.el.gz" "type-break.elc" "md4.el.gz" "notifications.elc" "erc/" "facemenu.el.gz" "proced.elc" "COPYING" "isearchb.el.gz" "flow-ctrl.elc" "misc.el.gz" "iimage.elc" "generic-x.el.gz" "rot13.el.gz" "notifications.el.gz" "comint.elc" "image-file.elc" "simple.el.gz" "elec-pair.elc" "ansi-color.elc" "ibuf-macs.el.gz" "jit-lock.elc" "skeleton.el.gz" "hippie-exp.elc" "time.elc" "apropos.elc" "finder-inf.el" "progmodes/" "window.elc" "dos-vars.elc" "align.el.gz" "xwidget.el.gz" "pcmpl-unix.elc" "term.elc" "dynamic-setting.elc" "hl-line.el.gz" "reposition.el.gz" "printing.el.gz" "ps-mule.el.gz" "bs.elc" "shadowfile.elc" "epa.elc" "tree-widget.elc" "newcomment.el.gz" "epg-config.elc" "net/" "cus-start.elc" "epa-dired.el.gz" "bookmark.elc" "autorevert.elc" "help-mode.elc" "tooltip.el.gz" "loadhist.elc" "cus-start.el.gz" "whitespace.el.gz" "cmuscheme.elc" "abbrev.elc" "mpc.elc" "epa-file.elc" "pcmpl-x.el.gz" "leim/" "pcomplete.el.gz" "mb-depth.elc" "json.elc" "autorevert.el.gz" "startup.el.gz" "tabify.elc" "vt100-led.el.gz" "msb.el.gz" "ehelp.elc" "calendar/" "format-spec.el.gz" "delsel.el.gz" "faces.el.gz" "disp-table.el.gz" "cus-theme.el.gz" "dom.elc" "font-core.elc" "image-mode.el.gz" "minibuffer.elc" "info-look.elc" "ldefs-boot.el" "font-core.el.gz" "electric.el.gz" "tmm.el.gz" "pcmpl-linux.elc" "play/" "tmm.elc" "window.el.gz" "emacs-lock.el.gz" "flow-ctrl.el.gz" "dos-fns.el.gz" "userlock.el.gz" "kmacro.elc" "winner.elc" "tutorial.elc" "linum.el.gz" "dabbrev.elc" "gnus/" "org/" "completion.elc" "server.elc" "pcmpl-rpm.el.gz" "cmuscheme.el.gz" "jka-compr.el.gz" "info.el.gz" "epa-hook.elc" "mouse-drag.elc" "find-lisp.el.gz" "elide-head.elc" "bindings.el.gz" "find-file.elc" "image.elc" "tempo.elc" "find-dired.el.gz" "find-cmd.elc" "elide-head.el.gz" "filecache.el.gz" "w32-fns.elc" "man.elc" "descr-text.elc" "pcmpl-rpm.elc" "dired-aux.elc" "obarray.el.gz" "cus-dep.elc" "sort.elc" "hexl.elc" "rfn-eshadow.el.gz" "speedbar.el.gz" "epg.elc" "subdirs.el" "doc-view.elc" "dired.el.gz" "paren.el.gz" "htmlfontify.elc" "hilit-chg.elc" "recentf.el.gz" "woman.elc" "echistory.el.gz" "emacs-lock.elc" "dos-vars.el.gz" "help-at-pt.el.gz" "mouse.el.gz" "mwheel.el.gz" "delsel.elc" "epg-config.el.gz" "completion.el.gz" "color.elc" "cdl.elc" "dired.elc" "subr.elc" "locate.el.gz" "color.el.gz" "thingatpt.elc" "t-mouse.el.gz" "ehelp.el.gz" "iimage.el.gz" "version.el.gz" "cus-theme.elc" "htmlfontify.el.gz" "midnight.el.gz" "ps-samp.el.gz" "forms.el.gz" "ibuf-macs.elc" "mpc.el.gz" "makesum.el.gz" "thingatpt.el.gz" "help-at-pt.elc" "ielm.el.gz" "epa-mail.el.gz" "bindings.elc" "hilit-chg.el.gz" "thumbs.el.gz" "loadhist.el.gz" "wdired.el.gz" "hippie-exp.el.gz" "files-x.elc" "pcomplete.elc" "rot13.elc" "register.el.gz" "imenu.elc" "jka-cmpr-hook.el.gz" "arc-mode.elc" "find-cmd.el.gz" "faces.elc" "font-lock.elc" "mail/" "imenu.el.gz" "xml.el.gz" "info-xref.elc" "custom.elc" "minibuf-eldef.el.gz" "ls-lisp.elc" "strokes.el.gz" "cus-face.elc" "help.elc" "mouse.elc" "isearch.el.gz" "bookmark.el.gz" "tool-bar.elc" "wdired.elc" "ps-def.el.gz" "info.elc" "avoid.el.gz" "epa-dired.elc" "files.elc" "char-fold.elc" "icomplete.el.gz" "pcmpl-unix.el.gz" "msb.elc" "jka-cmpr-hook.elc" "arc-mode.el.gz" "reveal.elc" "dframe.elc" "indent.el.gz" "tar-mode.elc" "case-table.elc" "locate.elc" "whitespace.elc" "ibuffer.el.gz" "saveplace.el.gz" "find-dired.elc" "scroll-lock.el.gz" "profiler.elc" "image-dired.elc" "dnd.el.gz" "dom.el.gz" "w32-vars.el.gz" "ezimage.elc" "x-dnd.el.gz" "obsolete/" "kmacro.el.gz" "ps-def.elc" "rfn-eshadow.elc" "vcursor.elc" "button.elc" "dynamic-setting.el.gz" "image-dired.el.gz" "desktop.elc" "files-x.el.gz" "mouse-copy.el.gz" "loaddefs.el" "reposition.elc" "tabify.el.gz" "shadowfile.el.gz" "isearchb.elc" "bs.el.gz" "hex-util.elc" "hl-line.elc" "finder.elc" "view.elc" "format-spec.elc" "echistory.elc" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/endpoint/" (22828 54946 460969 282000) "GreetingController.java" "YamlJackson2HttpMessageConvertor.java" "../" "YamlConfiguration.java" "Greeting.java" "./")
+
+ ("/home/krishna/dev/python/lstm/" (22828 40713 38542 290000) "../" "lstm.py" "./")
+
+ ("/home/krishna/.atom/" (22834 420 594664 864000) "keymap.cson" "init.coffee" "config.cson" "snippets.cson" "styles.less" ".node-gyp/" "blob-store/" "recovery/" "packages/" "../" ".gitignore" ".apm/" "storage/" "./" "compile-cache/")
+
+ ("/home/krishna/dev/dataVisualizations/src/" (22832 45977 606730 283000) "index.js" "main/" ".eslintrc" "data/" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/main/" (22828 54946 460969 282000) "EfilotApplication.java" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/efilot/" (22828 54946 460969 282000) "main/" "dto/" "endpoint/" "validation/" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/com/" (22828 54946 460969 282000) "../" "efilot/" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/java/" (22828 54946 460969 282000) "com/" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/main/" (22828 54946 460969 282000) "java/" "../" "resources/" "./")
+
+ ("/home/krishna/dev/NotesCatcherJava/src/" (22828 54946 460969 282000) "main/" "test/" "../" "./")
+
+ ("/home/krishna/dev/myNotes/numpy/" (22827 28661 349186 734000) "../" "./")
+
+ ("/home/krishna/dev/myNotes/" (22827 28661 349186 734000) "lang/" "stats/" "Maths/" "linux/" "Algorithms/" "numpy/" "../" "bootstrap.css" ".git/" "netsec/" "./")
+
+ ("/home/krishna/dev/" (22827 28597 612460 297000) "NotesCatcher/" "python/" "NotesCatcherJava/" "code-base/" "myNotes/" "../" "react/" ".babelrc" "dataVisualizations/" "./")
+
+ ("/etc/init.d/" (22823 32412 873621 446000) "thermald" "lm-sensors" "cron" "irqbalance" "unattended-upgrades" "lightdm" "networking" "ufw" "uuidd" "whoopsie" "anacron" "x11-common" "speech-dispatcher" "procps" "plymouth-log" "postfix" "network-manager" "console-setup.sh" "udev" "bluetooth" "keyboard-setup.sh" "kerneloops" "virtualbox" "dbus" "alsa-utils" "plymouth" "apparmor" "hwclock.sh" "resolvconf" "rsyslog" "hddtemp" "../" "grub-common" "pppd-dns" "apport" "saned" "avahi-daemon" "rsync" "kmod" "acpid" "cups" "./" "cups-browsed")
+
+ ("/home/krishna/dev/NotesCatcher/src/follower/comment/" (22820 57726 749154 853000) "CommentModal.jsx" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcher/src/menu/" (22820 61403 307680 168000) ".tern-port" "../" "pagemenu.jsx" "./")
+
+ ("/home/krishna/dev/NotesCatcher/src/main/" (22820 61205 118169 107000) "NoteFollower.jsx" "NotesContainer.jsx" "Note.jsx" "Follower.jsx" "../" "NotesAggregator.jsx" "./")
+
+ ("/home/krishna/dev/NotesCatcher/src/" (22820 57465 716488 530000) "utils/" "index.js" "main/" "configs/" ".eslintrc" "TODO.org" "follower/" "data/" "../" "ui/" "menu/" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Opec/" (22816 63987 461717 249000) "oil.org_20160915_114804_29160GUE.png" "oil.org_20161201_205152_29498Ldq.png" "Opec.org_20170520_220813_173098JK.png" "../" "Opec.org" "./" "oil.org_20161202_214949_32711V8J.png" "Opec.html")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/" (22817 52843 843685 123000) "oil.html" "Seasons/" "Basics/" ".emacs.desktop" "Archives/" "oil.org" "EIA-Data/" "../" "Politics/" "Opec/" "./" "Non-OPEC/")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Non-OPEC/" (22817 52434 635134 298000) "Non-OPEC.html" "Non-OPEC.org" "../" "./" "Non-OPEC.org_20170521_132209_24201cbB.png")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Basics/" (22816 64279 8409 645000) "oil.org_20160810_180338_26297_qa.png" "oil.org_20160918_141444_28251GiP.png" "Basics.html" "../" "Basics.org" "oil.org_20160810_173304_26297ygU.png" "./")
+
+ ("/home/krishna/Downloads/" (22817 62780 21993 883000) "ic_delete_forever_black_24dp.zip" "SKM_454e17050208440.pdf" "atom-amd64.deb" "ic_note_add_black_24dp.zip" "code_1.12.1-1493934083_amd64.deb" "PASSPORT.pdf" "gs-rest-service-master.zip" "Making_the_green_journey_work_-_web_version.pdf" "OtherProgramHelp.zip" "jodi-gas-data-availability-by-country.xlsx" "opec-outlook-oil-051617.mp3" "I94 - Official Website.pdf" "../" "bootstrap-3.3.7-dist.zip" "NG.zip" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/EIA-Data/" (22816 62481 948147 545000) "Eia-Data.html" "../" "./" "Eia-Data.org")
+
+ ("/home/krishna/Documents/" (22816 61767 145485 65000) "calibre/" "tor-browser_en-US/" "myNotes/" "../" "bootstrap.css" "my-emacs/" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Seasons/" (22816 61614 400102 768000) "Seasons.html" "oil.org_20170520_210226_17309v_D.png" "../" "Seasons.org" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Seasons/Opec/" (22816 61498 935075 176000) "../" ".#Opec.org" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Archives/" (22816 48563 322723 548000) "../" "./")
+
+ ("/home/krishna/dev/NotesCatcher/src/follower/" (22812 62711 936171 194000) "DeleteNote.jsx" "ColorChanger.jsx" "Color.jsx" "AddComment.jsx" "../" "comment/" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/oil/Oil-Archive.org/" (22816 48320 587315 296000) "../" "./")
+
+ ("/home/krishna/Documents/myNotes/Commodities/" (22816 48082 736022 459000) "metals/" "oil/" "../" "./")
+
+ ("/home/krishna/Documents/myNotes/" (22816 48082 744023 96000) "us/" "India/" "Commodities/" "world/" "Europe/" "Dollar/" "Instruments/" "japan/" "../" "Eco/" ".git/" "reminders/" "./")
+
+ ("/home/krishna/dev/NotesCatcher/" (22806 28283 406906 318000) "LICENSE" "src/" "package.json" "node_modules/" "../" "index.html" ".gitignore" ".git/" ".babelrc" "README.md" "./" "webpack.config.js")
+
+ ("/home/krishna/dev/NotesCatcher/src/configs/" (22803 47352 379308 668000) "../" "./" "notes.js")
+
+ ("/home/krishna/.config/" (22799 54793 990694 61000) "google-chrome/" "session/" "Trolltech.conf" "VirtualBox/" "pulse/" "gtk-3.0/" "mimeapps.list" "xfce4/" "update-notifier/" "menus/" "evince/" "../" "gtk-2.0/" "user-dirs.locale" "xubuntu/" "libreoffice/" "QtProject.conf" "okularrc" "dconf/" "user-dirs.dirs" "./" "Thunar/")
+
+ ("/home/" (22789 13434 520489 893000) "krishna/" "../" "./")
+
+ ("/home/krishna/dev/NotesCatcher/src/ui/" (22797 13746 764088 222000) "Notes.jsx" "../" "./")
+
+ ("/etc/apt/" (22791 63879 533408 281000) "sources.list.d/" "preferences.d/" "sources.list.save" "trusted.gpg" "trusted.gpg.d/" "sources.list" "../" "trusted.gpg~" "apt.conf.d/" "./")
+
+ ("/home/krishna/dev/react/" (22797 5885 449149 750000) "package.json" "../" "./")
+
+ ("/home/krishna/dev/code-base/okular/ui/" (22789 24550 137549 790000) "annotationmodel.cpp" "guiutils.cpp" "embeddedfilesdialog.h" "toolaction.h" "toc.cpp" "thumbnaillist.h" "guiutils.h" "toc.h" "minibar.cpp" "toolaction.cpp" "searchlineedit.cpp" "pageviewannotator.h" "presentationwidget.cpp" "pageviewutils.cpp" "presentationsearchbar.cpp" "annotationpopup.cpp" "magnifierview.h" "annotwindow.cpp" "annotationmodel.h" "pagepainter.h" "latexrenderer.cpp" "annotwindow.h" "bookmarklist.cpp" "okmenutitle.cpp" "propertiesdialog.h" "sidebar.cpp" "priorities.h" "searchwidget.cpp" "thumbnaillist.cpp" "formwidgets.cpp" "pageviewmouseannotation.h" "annotationpropertiesdialog.cpp" "ktreeviewsearchline.h" "magnifierview.cpp" "drawingtoolactions.h" "pageitemdelegate.h" "pagesizelabel.cpp" "layers.cpp" "latexrenderer.h" "presentationsearchbar.h" "side_reviews.cpp" "videowidget.h" "videowidget.cpp" "findbar.cpp" "tts.cpp" "pageitemdelegate.cpp" "formwidgets.h" "annotationproxymodels.cpp" "data/" "../" "pagesizelabel.h" "fileprinterpreview.h" "pageview.cpp" "annotationwidgets.h" "findbar.h" "ktreeviewsearchline.cpp" "embeddedfilesdialog.cpp" "drawingtoolactions.cpp" "fileprinterpreview.cpp" "searchwidget.h" "presentationwidget.h" "debug_ui.h" "sidebar.h" "annotationtools.cpp" "side_reviews.h" "annotationpopup.h" "pageviewannotator.cpp" "tts.h" "tocmodel.h" "bookmarklist.h" "propertiesdialog.cpp" "tocmodel.cpp" "snapshottaker.h" "searchlineedit.h" "url_utils.h" "annotationproxymodels.h" "pagepainter.cpp" "./" "minibar.h" "annotationwidgets.cpp" "pageviewutils.h" "okmenutitle.h" "CMakeLists.txt" "annotationpropertiesdialog.h" "debug_ui.cpp" "pageview.h" "pageviewmouseannotation.cpp" "annotationtools.h" "snapshottaker.cpp" "layers.h")
+
+ ("/home/krishna/dev/code-base/okular/" (22789 23096 146340 163000) "okular.categories" "part.h" "extensions.cpp" "metainfo.yaml" "part-viewermode.rc" "AUTHORS" "Messages.sh" "generators/" "mobile/" "TODO" "kdocumentviewer.h" "Mainpage.dox" "part.cpp" "config-okular.h.cmake" "core/" "shell/" "autotests/" "COPYING.DOC" "conf/" "cmake/" "README.internals.png" "COPYING" "aboutdata.h" "doc/" "../" ".gitignore" "extensions.h" ".git/" "ui/" ".krazy" "okular_part.desktop" "OkularConfigureChecks.cmake" "COPYING.LIB" "interfaces/" "./" "Okular5Config.cmake.in" "okular.upd" "CMakeLists.txt" "part.rc")
+
+ ("/home/krishna/dev/code-base/" (22789 23087 270281 524000) "emacs-25.2/" "../" "okular/" "./")
+
  ("/home/krishna/dev/test/wordpress/wp-content/themes/twentyfifteen/" (22717 34719 0 0) "content.php" "image.php" "footer.php" "content-page.php" "search.php" "content-link.php" "header.php" "js/" "css/" "readme.txt" "screenshot.png" "archive.php" "style.css" "comments.php" "sidebar.php" "content-none.php" "genericons/" "inc/" "rtl.css" "index.php" "404.php" "../" "content-search.php" "functions.php" "single.php" "author-bio.php" "page.php" "./")
 
  ("/home/krishna/dev/test/wordpress/wp-content/themes/vikas/" (22774 61481 748907 480000) "header.php" "style.css" "index.php" "../" "./")
@@ -108,8 +268,6 @@
  ("/home/krishna/dev/test/wordpress/wp-content/themes/" (22773 42894 170703 110000) "twentyfifteen/" "twentysixteen/" "twentyseventeen/" "index.php" "../" "vikas/" "./")
 
  ("/home/krishna/dev/test/wordpress/wp-content/" (22717 34718 0 0) "themes/" "plugins/" "index.php" "../" "./")
-
- ("/home/krishna/" (22774 53598 394672 851000) ".gimp-2.8/" "open/" ".sudo_as_admin_successful" ".emacs.before_ecb_2.50" ".java/" "Videos/" ".gksu.lock" ".vagrant.d/" ".wget-hsts" ".Xauthority" "vikas.html" ".xscreensaver" ".node_repl_history" ".xinputrc" ".tooling/" ".bash_logout" ".nano/" "Desktop/" ".john/" "Pictures/" ".netbeans/" ".v8flags.5.5.372.41.krishna.json" ".mozilla/" ".p2/" "kr.key" ".npm/" "R/" ".emacs-tags/" ".oracle_jre_usage/" ".profile" "id_rsa" ".netbeans-derby/" ".gradle/" "Templates/" ".ssh/" ".Rhistory" ".eclipse/" ".Xdefaults" "Arch/" ".swt/" ".xsession-errors" ".cache/" ".gnome/" ".gphoto/" ".gnupg/" "Documents/" ".scapy_history" ".rstudio-desktop/" ".ICEauthority" ".m2/" ".fltk/" "kr.crt" "ls" ".dmrc" ".gitconfig" ".dbus/" ".bashrc" ".mysql_history" ".emacs-backup/" ".gitignore" ".emacs.d/" ".lesshst" ".vscode/" ".local/" ".xchm" "workspace/" ".emacs" ".pki/" "../" "Downloads/" ".selected_editor" "Music/" ".thumbnails/" ".pylint.d/" "VirtualBox VMs/" ".gconf/" ".emacs~" "projects/" ".kde/" ".config/" "dev/" ".xsession-errors.old" "NetBeansProjects/" ".thunderbird/" ".bash_history" "./" ".gstreamer-0.10/")
 
  ("/home/krishna/dev/react/my-app/src/" (22774 41972 802888 544000) "App.css" "App.js" "logo.svg" "index.css" "../" "index.js" "App.test.js" "./")
 
@@ -129,8 +287,6 @@
 
  ("/home/krishna/dev/algos/" (22772 61534 740017 625000) "maimum_subarray/" "../" "./")
 
- ("/home/krishna/dev/" (22772 61523 15877 308000) "node/" "bash/" "test/" "algos/" "../" "google-images" "spring/" "react/" "catchMyNotes/" "deepL/" "./")
-
  ("/var/www/html/" (22772 18568 803621 29000) "index.html" "test/" "../" "./")
 
  ("/etc/apache2/sites-enabled/" (22772 17707 381507 679000) "000-default.conf" "../" "./")
@@ -144,16 +300,6 @@
  ("/var/" (22751 3741 285920 621000) "www/" "run/" "local/" "lock/" "tmp/" "log/" "metrics/" "cache/" "spool/" "crash/" "backups/" "opt/" "mail/" "snap/" "../" "lib/" "./")
 
  ("/home/krishna/open/" (22769 30114 343948 342000) "my-emacs/" "nano/" "../" "./")
-
- ("/etc/init.d/" (22761 5350 795774 790000) "apache-htcacheclean" "plymouth" "anacron" "plymouth-log" "rsync" "keyboard-setup.sh" "udev" "unattended-upgrades" "networking" "apache2" "cups" "network-manager" "lightdm" "samba" "console-setup.sh" "thermald" "pppd-dns" "alsa-utils" "lm-sensors" "postfix" "apport" "cups-browsed" "virtualbox" "apparmor" "hddtemp" "samba-ad-dc" "avahi-daemon" "uuidd" "speech-dispatcher" "saned" "resolvconf" "hwclock.sh" "cron" "kerneloops" "nmbd" "mysql" "ufw" "../" "rsyslog" "procps" "irqbalance" "smbd" "bluetooth" "whoopsie" "kmod" "grub-common" "x11-common" "startup.sh" "acpid" "./" "dbus" "ntp")
-
- ("/usr/" (22696 50838 997709 470000) "local/" "etc/" "src/" "share/" "include/" "../" "sbin/" "games/" "lib/" "bin/" "@DATADIRNAME@/" "./")
-
- ("/usr/local/" (22739 16814 437024 365000) "etc/" "src/" "share/" "man/" "var/" "netbeans-8.2/" "include/" "../" "sbin/" "games/" "lib/" "bin/" "libexec/" "apache-tomcat-8.0.27/" "./")
-
- ("/usr/local/share/" (22735 7566 346658 591000) "appdata/" "ca-certificates/" "applications/" "man/" "icons/" "texmf/" "xml/" "gtags/" "sgml/" "emacs/" "../" "info/" "fonts/" "./")
-
- ("/usr/local/share/emacs/" (22747 37187 965405 892000) "../" "site-lisp/" "25.1/" "./")
 
  ("/usr/local/share/emacs/25.1/" (22747 37752 476384 16000) "etc/" "lisp/" "../" "site-lisp/" "./")
 
@@ -177,83 +323,13 @@
 
  ("/home/krishna/dev/bash/" (22677 18514 942954 511000) "../" "images.sh" "./")
 
- ("/home/krishna/dev/react/" (22756 17841 805750 191000) "my-app/" "../" "./")
-
  ("/home/krishna/Documents/projects/deep/" (22747 44847 759875 551000) "tensor_test.py" "tensor/" "t10k-labels-idx1-ubyte.gz" "train-labels-idx1-ubyte.gz" "deppClass/" "neural.py" "train-images-idx3-ubyte.gz" "../" "t10k-images-idx3-ubyte.gz" "./")
 
  ("/home/krishna/dev/node/" (22751 3917 104773 652000) "webpack.config.js" "index.html" "src/" "app.js" "nbproject/" "#app.js#" "#package.json#" "package.json" "../" "node_modules/" "build/" "./")
 
  ("/etc/init/" (22751 3851 403701 785000) "acpid.conf" "tty5.conf" "gpu-manager.conf" "udev.conf" "friendly-recovery.conf" "rc-sysinit.conf" "udevmonitor.conf" "rc.conf" "console-font.conf" "ufw.conf" "rcS.conf" "cron.conf" "passwd.conf" "samba-ad-dc.conf" "irqbalance.conf" "tty2.conf" "network-manager.conf" "control-alt-delete.conf" "bluetooth.conf" "network-interface.conf" "upstart-file-bridge.conf" "rfkill-restore.conf" "networking.conf" "upstart-socket-bridge.conf" "nmbd.conf" "console.conf" "smbd.conf" "reload-smbd.conf" "udevtrigger.conf" "whoopsie.conf" "tty6.conf" "resolvconf.conf" "cups.conf" "tty1.conf" "rsyslog.conf" "thermald.conf" "lightdm.conf" "anacron.conf" "ureadahead.conf" "network-interface-security.conf" "container-detect.conf" "failsafe.conf" "cups-browsed.conf" "shutdown.conf" "flush-early-job-log.conf" "wait-for-state.conf" "network-interface-container.conf" "../" "usb-modeswitch-upstart.conf" "ureadahead-other.conf" "upstart-udev-bridge.conf" "apparmor.conf" "apport.conf" "kmod.conf" "tty4.conf" "rfkill-store.conf" "tty3.conf" "setvtrgb.conf" "./")
 
- ("/etc/apt/" (22696 49703 845825 224000) "sources.list.save" "apt.conf.d/" "trusted.gpg" "preferences.d/" "trusted.gpg.d/" "sources.list.d/" "../" "sources.list" "trusted.gpg~" "./")
-
  ("/home/krishna/dev/node/src/" (22751 3841 143535 10000) ".tern-port" "App.js" "../" "./")
-
- ("/home/krishna/Desktop/" (22739 16556 706389 458000) "ps3.org~" "knnl/" "c-mit /" "algos/" "ML/" "ps3.html~" "../" "stat-report.org~" "copper/" "filter.sh~" "IM_STORIES_01232017.pdf" "./" "oil/")
-
- ("/home/krishna/Documents/projects/C/algos/sorting/" (22745 57406 481684 321000) "insertion.c" "makefile" "insertion.o" "../" "./")
-
- ("/home/krishna/Documents/notes/myNotes/Algorithms/sorting/" (22744 12550 724590 738000) "sorting.org" "../" "./")
-
- ("/home/krishna/Documents/projects/C/algos/" (22744 12451 59552 456000) "../" "sorting/" "./")
-
- ("/home/krishna/Documents/projects/C/" (22744 12439 463431 621000) "main.h" "main.c" "algos/" "makefile" "main.o" "../" "./")
-
- ("/home/krishna/Documents/notes/myNotes/Algorithms/" (22744 11737 880108 496000) "Flows.html~" "Dynamic Programming/" "dynamic programming.org~" "Assignment3.tex~" "Np/" "bootstrap.css" "Linear Programing/" "Assignments/" "Assignment3.org~" "dynamic programming.html~" "Flows/" "../" "Randomised algorithms/" "sorting/" "Flows.org~" "Assignment3.html~" "./")
-
- ("/home/krishna/Documents/notes/myNotes/" (22654 61616 101479 366000) "netsec/" "linux/" "stats/" "Algorithms/" "bootstrap.css" "lang/" "Maths/" "../" ".git/" "./")
-
- ("/home/krishna/.emacs.d/elpa/company-anaconda-20160809.705/" (22744 6731 917190 314000) "company-anaconda-autoloads.el" "company-anaconda.el" "company-anaconda-pkg.el" "../" "company-anaconda.elc" "company-anaconda-pkg.elc" "./")
-
- ("/home/krishna/.emacs.d/" (22744 6504 946935 466000) "ido.last" "url/" "minnamareddy-theme.el~" "eshell/" "elpa/" "tutorial/" "company-statistics-cache.el" ".python-environments/" "auto-save-list/" "ac-comphist.dat" "newsticker/" "../" "lp/" "minnamareddy-theme.el" "anaconda-mode/" "abbrev_defs" "./")
-
- ("/home/krishna/.emacs.d/elpa/" (22741 51147 948240 910000) "eclim-readme.txt" "company-dict-20160528.53/" "deferred-20161228.1930/" "archives/" "gnupg/" "0blayout-readme.txt" "seq-2.19/" "ac-js2-readme.txt" "company-jedi-readme.txt" "pos-tip-20150318.813/" "jedi-core-readme.txt" "python-environment-20150310.153/" "f-20161002.800/" "typing-readme.txt" "counsel-gtags-readme.txt" "dash-functional-20160615.1351/" "let-alist-1.0.5/" "company-0.9.2/" "parent-mode-20150824.1600/" "js2-mode-readme.txt" "ctable-20140304.1659/" "dash-20170207.2056/" "company-tern-readme.txt" "company-anaconda-readme.txt" "company-statistics-0.2.3/" "company-0.9.2.signed" "auto-complete-readme.txt" "company-statistics-readme.txt" "async-20170219.942/" "org-20170210.signed" "simple-httpd-20170125.1910/" "magit-20170308.146/" "seq-2.19.signed" "tern-20161222.850/" "python-readme.txt" "epc-20140609.2234/" "with-editor-20170111.609/" "exec-path-from-shell-20170304.1309/" "flycheck-readme.txt" "let-alist-1.0.5.signed" "company-shell-readme.txt" "magit-readme.txt" "sr-speedbar-readme.txt" "epl-20150517.433/" "company-c-headers-readme.txt" "git-commit-20170308.146/" "../" "flycheck-20170308.532/" "exec-path-from-shell-readme.txt" "company-web-readme.txt" "company-readme.txt" "pkg-info-20150517.443/" "company-quickhelp-readme.txt" "ggtags-readme.txt" "org-20170210/" "concurrent-20161228.1930/" "magit-popup-20170308.146/" "ecb-readme.txt" "company-anaconda-20160809.705/" "srefactor-readme.txt" "anaconda-mode-20170313.343/" "s-20160928.636/" "pythonic-20160221.1123/" "company-shell-20161128.953/" "company-statistics-0.2.3.signed" "company-tern-20161004.1147/" "company-c-headers-20150801.901/" "./")
-
- ("/home/krishna/Documents/notes/deepL/tensor/" (22675 56116 660121 43000) "tensor.org_20170122_175032_4559E9j.png" "tensor.html" "tensor.org" "../" "deep/" "./")
-
- ("/home/krishna/Documents/notes/deepL/" (22661 13370 987436 305000) "tensor/" "../" "./")
-
- ("/home/krishna/Documents/projects/python/tf/" (22669 5645 589925 819000) "tf.py" "t10k-labels-idx1-ubyte.gz" "train-labels-idx1-ubyte.gz" "train-images-idx3-ubyte.gz" "tf.py~" "../" "t10k-images-idx3-ubyte.gz" "./")
-
- ("/home/krishna/Documents/projects/python/" (22653 28930 147947 977000) "../" "tf/" "./")
-
- ("/home/krishna/projects/tern/emacs/" (22738 1602 292331 903000) "tern-auto-complete.el" "../" "tern.el" "./")
-
- ("/home/krishna/.emacs.d/lp/" (22735 8117 104000 431000) "../" "gtags.el" "./")
-
- ("/home/krishna/Documents/projects/js/" (22736 29868 185790 278000) "#test.js#" ".tern-port" "promises.js" "../" "test.js" "codecept/" "./")
-
- ("/home/krishna/projects/tern/" (22736 28563 977569 965000) "index.html" ".no-sublime-package" "CONTRIBUTING.md" "test/" "defs/" "AUTHORS" "README.md" "plugin/" ".gitattributes" ".tern-project" ".jshintrc" "doc/" ".gitignore" "package.json" "emacs/" "../" "LICENSE" ".travis.yml" "node_modules/" "lib/" ".git/" "bin/" "./")
-
- ("/home/krishna/projects/" (22735 7203 835153 332000) "john-1.8.0/" "okular/" "aircrack-ng-1.2-rc4/" "passCrack/" "tor-browser_en-US/" "hello-2.10/" "nano-2.7.0/" "../" "global-6.5.6/" "tern/" "./")
-
- ("/home/krishna/Downloads/" (22736 30719 222219 760000) "Apoorva_Cover.pdf" "6-087-january-iap-2010.zip" "rs-1 (1).pdf" "netsec.chm" "Untitled document.pdf" "tails-i386-2.10/" "9781447129202-c2.pdf" "rs-1.pdf" "Visual-vocabulary.pdf" "debian-8.7.0-amd64-netinst.iso" "Vulnerabilitiesfound.pdf" "Krishna_Vikas_Resume.pdf" "MS_APOORVA (1) (1).odt" "Developing Scalable Apps in Java Subtitles.zip" ".Rhistory" "project.pdf" "DeepLearningBook.pdf" "Explanation of a remote buffer overflow vulnerability.rar" "MS_APOORVA (1) (1).docx" "JavaScript Design Patterns Subtitles.zip" "MS_APOORVA_India.pdf" "kali-linux-xfce-2016.2-amd64/" "Neural networks and deep learning_files/" "toms_vol2no2_doi001.pdf" "JavaScript Design Patterns Videos.zip" "MS_APOORVA.odt" "Bloomberg-66-Shipping.pdf" "outdir/" "CK12_Prob_Stat_Basic.pdf" "../" "bok%3A978-1-4302-1998-9.pdf" "Developing Scalable Apps in Java Videos.zip" "Krishna_Vikas_Resume (1).pdf" "MS_APOORVA.pdf" "pi.zip" "copper.zip" "./")
-
- ("/home/krishna/projects/nano-2.7.0/src/" (22735 8964 272146 722000) "rcfile.c" "chars.c" "proto.h" "GPATH" "GRTAGS" "help.c" "files.c" "Makefile.in" "nano.h" "browser.c" "winio.c" "text.c" "nano.c" "search.c" "move.c" "utils.c" "../" "cut.c" "global.c" "GTAGS" "Makefile.am" "color.c" "prompt.c" "./")
-
- ("/home/krishna/Documents/" (22736 26594 895237 703000) "notes/" "bootstrap.css" "Schedule.org" "Schedule.org~" "../" "projects/" "vikas/" "./")
-
- ("/home/krishna/Documents/notes/markets/Commodities/oil/" (22732 35594 894198 3000) "oil.org_20160810_173304_26297ygU.png" "oil.org_20170121_155309_14655nmT.png" "oil.org_20170121_155231_14655acN.png" "oil.html" "oil.org_20170121_163710_17679KHb.png" "oil.org_20170121_171522_17679xlt.png" "oil.org_20170121_164911_17679XRh.png" "oil.org_20170121_163501_1767998U.png" "oil.org_20160810_180338_26297_qa.png" "oil.org_20160915_114804_29160GUE.png" "oil.org_20170121_172159_17679w5C.png" "oil.org_20161202_214949_32711V8J.png" "oil.org_20170121_163203_17679wyO.png" "oil.org_20170121_171500_17679kbn.png" "oil.org_20161201_205152_29498Ldq.png" "oil.org_20160918_141444_28251GiP.png" "../" "oil.org" "oil.org_20170121_171545_17679-vz.png" "./")
-
- ("/home/krishna/.emacs-backup/" (22731 11909 519403 88000) "!home!krishna!.profile~" "!home!krishna!dev!catchMyNotes!index.html~" "!home!krishna!Documents!notes!myNotes!linux!OS!os.org~" "!home!krishna!dev!catchMyNotes!src!NotesContainer.js~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.org~" "!home!krishna!Documents!notes!myNotes!lang!c!paradigms.html~" "!home!krishna!.emacs.d!elpa!magit-popup-20170214.347!magit-popup-autoloads.el~" "!home!krishna!dev!node!app.js~" "!home!krishna!.emacs.d!elpa!skewer-mode-20170122.938!skewer-mode-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!index.js~" "!home!krishna!.emacs.d!elpa!magit-popup-20170308.146!magit-popup-autoloads.el~" "!home!krishna!dev!node!package.json~" "!home!krishna!Documents!notes!deepL!tensor!deep!deep.org~" "!home!krishna!.emacs.d!elpa!git-commit-20170308.146!git-commit-autoloads.el~" "!home!krishna!dev!node!webpack.config.js~" "!home!krishna!Documents!projects!bash!practice.sh~" "!home!krishna!Documents!projects!deep!deppClass!deep.py~" "!home!krishna!dev!catchMyNotes!src!.eslintrc~" "!home!krishna!Documents!notes!deepL!tensor!tensor.org~" "!home!krishna!Documents!notes!markets!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!notes!markets !Commodities!oil!oil.html~" "!home!krishna!.emacs.d!elpa!async-20170219.942!async-autoloads.el~" "!home!krishna!Documents!projects!deep!tensor!tensor.py~" "!home!krishna!.emacs.d!elpa!popup-20160709.729!popup-autoloads.el~" "!home!krishna!dev!catchMyNotes!src!configs!notes.js~" "!home!krishna!.emacs.d!elpa!simple-httpd-20170125.1910!simple-httpd-autoloads.el~" "!home!krishna!Documents!notes!markets !.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!org-20170210!org-loaddefs.el~" "!home!krishna!.bashrc~" "!home!krishna!Documents!notes!myNotes!Maths!Differentiation!Diff.html~" "!home!krishna!dev!node!src!App.jsx~" "!home!krishna!.emacs.d!elpa!flycheck-20170117.1430!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!with-editor-20170111.609!with-editor-autoloads.el~" "!home!krishna!Documents!projects!C!main.c~" "!home!krishna!dev!catchMyNotes!src!Note.js~" "!home!krishna!.emacs.d!elpa!git-commit-20170214.347!git-commit-autoloads.el~" "!home!krishna!.emacs.d!elpa!exec-path-from-shell-20170304.1309!exec-path-from-shell-autoloads.el~" "!home!krishna!.emacs.d!elpa!flycheck-20170308.532!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!org-20170210!org-autoloads.el~" "!home!krishna!Documents!notes!deepL!tensor!tensor.html~" "!home!krishna!Documents!projects!deep!neural.py~" "!home!krishna!Documents!projects!githooks!.git!hooks!pre-push~" "!home!krishna!.git!COMMIT_EDITMSG~" "!home!krishna!Documents!projects!js!promises.js~" "!home!krishna!.emacs.d!elpa!js2-mode-20170221.1636!js2-mode-autoloads.el~" "!home!krishna!Documents!projects!bash!images.sh~" "!home!krishna!dev!catchMyNotes!.git!COMMIT_EDITMSG~" "!home!krishna!.emacs.d!elpa!pkg-info-20150517.443!pkg-info-autoloads.el~" "!home!krishna!.emacs~" "!home!krishna!.emacs.d!elpa!magit-20170119.1803!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!ac-js2-20140906.442!ac-js2-autoloads.el~" "!home!krishna!.emacs.d!elpa!htmlize-20161211.1019!htmlize-autoloads.el~" "!home!krishna!dev!catchMyNotes!app.js~" "!home!krishna!.emacs.d!elpa!seq-2.19!seq-autoloads.el~" "!home!krishna!Documents!projects!js!test.js~" "!home!krishna!.emacs.d!elpa!flycheck-20170223.247!flycheck-autoloads.el~" "!home!krishna!.emacs.d!elpa!auto-complete-20170124.1845!auto-complete-autoloads.el~" "!home!krishna!dev!catchMyNotes!webpack.config.js~" "!home!krishna!.gitconfig~" "!home!krishna!.emacs.d!ido.last~" "!home!krishna!dev!bash!images.sh~" "!home!krishna!dev!catchMyNotes!package.json~" "!home!krishna!.emacs.d!elpa!epl-20150517.433!epl-autoloads.el~" "!home!krishna!.emacs.d!elpa!magit-20170308.146!magit-autoloads.el~" "!home!krishna!dev!node!src!App.js~" "!home!krishna!.emacs.d!elpa!ecb-20160101.933!ecb-autoloads.el~" "!home!krishna!Documents!projects!C!makefile~" "!home!krishna!dev!test!vikas~" "!home!krishna!.emacs.d!elpa!let-alist-1.0.5!let-alist-autoloads.el~" "!home!krishna!dev!catchMyNotes!index.js~" "!home!krishna!dev!node!index.html~" "!home!krishna!.emacs.d!elpa!magit-20170302.309!magit-autoloads.el~" "!home!krishna!.emacs.d!elpa!dash-20170207.2056!dash-autoloads.el~" "../" "./")
-
- ("/home/krishna/Documents/notes/markets/Commodities/" (22657 31652 273998 404000) "../" "metals/" "./" "oil/")
-
- ("/home/krishna/Documents/notes/markets/" (22657 31535 817944 790000) "Eco/" "Dollar/" "India/" "world/" "Commodities/" "Europe/" "japan/" "reminders/" "../" ".git/" "us/" "Instruments/" "./")
-
- ("/home/krishna/Documents/notes/" (22682 36948 937129 37000) "myNotes/" "README.md" "bootstrap.css" "../" "markets/" "my-notes-temp/" "deepL/" "./")
-
- ("/home/krishna/.emacs.d/elpa/flycheck-20170308.532/" (22720 46529 849115 768000) "flycheck-ert.el" "flycheck-ert.elc" "flycheck-autoloads.el" "flycheck-buttercup.el" "flycheck.elc" "flycheck.el" "../" "flycheck-pkg.el" "./")
-
- ("/home/krishna/projects/nano-2.7.0/" (22715 42147 886308 215000) "nano.spec" "GSYMS" "config.sub" "po/" "nano.spec.in" "config.rpath" "GPATH" "GRTAGS" "src/" "COPYING" "Makefile.in" "m4/" "configure.ac" "config.guess" "AUTHORS" "compile" "ABOUT-NLS" "THANKS" "ChangeLog" "TODO" "COPYING.DOC" "README.GIT" "BROWSE" "NEWS" "doc/" "depcomp" "install-sh" "IMPROVEMENTS" "ChangeLog.pre-2.1" "mkinstalldirs" "config.h.in" "README" "missing" "../" "GTAGS" "Makefile.am" "aclocal.m4" "configure" "./" "INSTALL")
-
- ("/home/krishna/Documents/projects/" (22710 6323 495730 268000) "bash/" "R/" "js/" "python/" "vikas.sh~" "vikas.sh" "C/" "#vikas.sh#" "../" "deep/" "githooks/" "NetSec/" "./")
-
- ("/home/krishna/Documents/vikas/" (22599 16469 355416 504000) "thoughts.org" "pki.pdf" "cellular-security.pdf" "../" "ssl-tls.pdf" "oauth.pdf" "./")
-
- ("/home/" (22531 39386 186506 726000) "krishna/" "../" "./")
-
- ("/home/krishna/Documents/notes/myNotes/Maths/Differentiation/" (22693 238 375263 942000) "Diff.org_20170214_194540_12084Yre.png" "Diff.org_20170211_161951_12084XqX.png" "Diff.org_20170214_201911_12084_Jx.png" "Diff.org_20170211_170755_12084-Pe.png" "Diff.org_20170214_192743_12084xMM.png" "Diff.org_20170214_210949_12084_Ql.png" "Diff.org_20170214_211450_12084Mbr.png" "Diff.org_20170211_160224_120849OX.png" "Diff.org_20170215_195432_12084Y5G.png" "Diff.org~" "Diff.org_20170211_161024_12084-B2.png" "Diff.org_20170214_193050_12084-WS.png" "Diff.org_20170211_160139_12084wER.png" "Diff.org_20170211_163354_12084LTw.png" "Diff.org_20170214_205225_12084-dG.png" "Diff.org_20170214_193604_12084LhY.png" "Diff.org_20170211_161009_12084x3v.png" "Diff.org_20170214_210612_12084yGf.png" "Diff.org_20170214_190614_12084y42.png" "Diff.org" "Diff.org_20160630_180842_25651fgL.png" "Diff.org_20170215_195449_12084lDN.png" "Diff.org_20170211_171334_12084Ykq.png" "Diff.org_20170214_210050_12084YyS.png" "Diff.org_20160630_174611_25651G4p.png" "Diff.org_20170214_211900_12084Zlx.png" "Diff.org_20160630_175851_25651gM2.png" "Diff.org_20160630_175002_25651TCw.png" "Diff.org_20170214_210148_12084l8Y.png" "Diff.org_20170211_170521_12084xFY.png" "Diff.org_20170214_203739_12084xTA.png" "Diff.org_20160630_180619_25651SWF.png" "Diff.org_20170211_165455_12084KnF.png" "Diff.org_20170214_205511_12084LoM.png" "Diff.org_20170214_194609_12084l1k.png" "Diff.org_20170214_192026_12084kCG.png" "Diff.org_20160630_173059_256515tj.png" "Diff.org_20170215_185413_12084LvA.png" "Diff.org_20170211_163016_12084-Iq.png" "../" "Diff.org_20170211_170432_12084k7R.png" "Diff.org_20170211_161154_12084wLF.png" "Diff.org_20170211_170235_12084XxL.png" "Diff.html" "Diff.org_20170211_160740_12084Xjj.png" "Diff.org_20170211_162210_12084x-j.png" "Diff.org_20170211_160237_12084KZd.png" "Diff.org_20170214_201607_12084y_q.png" "Diff.org_20170211_170822_12084Lak.png" "Diff.org_20170211_161547_12084KgR.png" "Diff.org_20170211_163459_12084Yd2.png" "./" "Diff.org_20170211_161434_120849VL.png")
 )
 
 ;; ----- ido-unc-hosts-cache -----
