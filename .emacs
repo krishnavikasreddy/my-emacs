@@ -1,7 +1,7 @@
 (package-initialize)
 (setq company-dabbrev-downcase 0)
 (set-face-attribute 'default nil :height 105)
-(setq-default line-spacing 10)
+(setq-default line-spacing 5)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -11,15 +11,15 @@
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(company-idle-delay 0)
  '(company-minimum-prefix-length 0)
- '(company-tooltip-idle-delay 0)
- '(company-tooltip-minimum 1)
- '(compilation-window-height 5)
+ '(compilation-window-height 15)
  '(custom-enabled-themes (quote (deeper-blue)))
  '(ecb-options-version "2.50")
  '(ecb-source-path (quote (("/" "/"))))
  '(ediff-split-window-function (quote split-window-horizontally))
+ '(elpy-rpc-backend nil)
+ '(elpy-rpc-python-command "python")
  '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(global-company-mode t)
+ '(global-visual-line-mode t)
  '(js2-strict-trailing-comma-warning nil)
  '(man-notify-method (quote newframe))
  '(org-agenda-files
@@ -43,7 +43,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (company-tern company-anaconda company yaml-mode highlight-indent-guides web-mode rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (elpy company-tern company yaml-mode highlight-indent-guides web-mode rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil))
@@ -69,7 +69,6 @@
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
-
 ;;line numbers
 (global-linum-mode 1)
 
@@ -83,9 +82,12 @@
   (save-some-buffers 1)
   (recompile))
 
+;; for python
+(elpy-enable)
 
 ;;auto-indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
 ;;set the file name as buffer
 (setq frame-title-format "%b")
 (add-hook 'after-init-hook 'global-company-mode)
@@ -95,10 +97,6 @@
                  (concat "python " buffer-file-name))
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-            (anaconda-mode t)
-            (anaconda-eldoc-mode t)
-            (eval-after-load "company"
-              '(add-to-list 'company-backends 'company-anaconda))
  	    ))
 (add-hook 'js-mode-hook
 	  (lambda ()
@@ -160,29 +158,6 @@ same directory as the org-buffer and insert a link to this file."
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-
-;; all your custom scripts are stored in this path
-;; (add-to-list 'load-path "~/.emacs.d/lp/")
-
-;; Smooth Scrolling
-;; scroll one line at a time (less "jumpy" than defaults)
-;;(horizontal-scroll-bar-mode -1)
-(scroll-bar-mode 1)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
-(setq scroll-margin 1
-      scroll-conservatively 0
-      scroll-up-aggressively 0.01
-      scroll-down-aggressively 0.01)
-
-(setq redisplay-dont-pause t
-      scroll-margin 1
-      scroll-step 1
-      scroll-conservatively 10000
-      scroll-preserve-screen-position 1)
-
 
 ;; refresh files as it is changed in the disk
 (global-auto-revert-mode t)
@@ -425,5 +400,7 @@ same directory as the org-buffer and insert a link to this file."
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 (setq highlight-indent-guides-method 'character)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-
-(add-hook 'shell-mode '(lambda()))
+(add-hook 'speedbar-load-hook (lambda ()
+                                (speedbar-add-supported-extension ".js")
+                                (speedbar-add-supported-extension ".jsx")
+                                ))
