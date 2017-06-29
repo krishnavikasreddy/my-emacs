@@ -1,6 +1,6 @@
 (package-initialize)
 (setq company-dabbrev-downcase 0)
-(set-face-attribute 'default nil :height 105)
+(set-face-attribute 'default nil :height 135)
 (setq-default line-spacing 5)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -10,7 +10,7 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(company-idle-delay 0)
- '(company-minimum-prefix-length 0)
+ '(company-minimum-prefix-length 1)
  '(compilation-window-height 15)
  '(custom-enabled-themes (quote (deeper-blue)))
  '(ecb-options-version "2.50")
@@ -52,7 +52,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:weight normal :height 105 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:weight normal :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(ediff-current-diff-A ((t (:background "black" :foreground "white"))))
  '(ediff-current-diff-Ancestor ((t (:foreground "yellow"))))
  '(ediff-current-diff-B ((t (:background "darkorange3" :foreground "black"))))
@@ -97,6 +97,7 @@
                  (concat "python " buffer-file-name))
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
+            (elpy-mode)
  	    ))
 (add-hook 'js-mode-hook
 	  (lambda ()
@@ -176,7 +177,6 @@ same directory as the org-buffer and insert a link to this file."
 (add-hook 'hs-minor-mode-hook '(lambda ()
                                  (define-key hs-minor-mode-map (kbd "M-]") 'hs-toggle-hiding)
                                  (define-key hs-minor-mode-map (kbd "M-[") 'hs-toggle-hiding)
-                                 (hs-hide-all)
                                  ))
 
 (eval-after-load 'org '(color-keys-org))
@@ -404,3 +404,5 @@ same directory as the org-buffer and insert a link to this file."
                                 (speedbar-add-supported-extension ".js")
                                 (speedbar-add-supported-extension ".jsx")
                                 ))
+(mouse-wheel-mode -1)
+(scroll-bar-mode -1)
