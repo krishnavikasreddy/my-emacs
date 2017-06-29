@@ -53,22 +53,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:weight normal :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(ediff-current-diff-A ((t (:background "black" :foreground "white"))))
- '(ediff-current-diff-Ancestor ((t (:foreground "yellow"))))
- '(ediff-current-diff-B ((t (:background "darkorange3" :foreground "black"))))
- '(ediff-current-diff-C ((t (:foreground "#888833"))))
- '(ediff-even-diff-A ((t (:background "rosy brown" :foreground "black"))))
- '(ediff-even-diff-Ancestor ((t (:background "dim gray"))))
- '(ediff-even-diff-B ((t (:background "Grey50" :foreground "dark red"))))
- '(ediff-even-diff-C ((t (:background "dim gray"))))
- '(ediff-odd-diff-B ((t (:background "dim gray"))))
- '(ediff-odd-diff-C ((t (:background "dim gray"))))
  '(mode-line ((t (:background "white" :foreground "black"))))
- '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec"))))
- '(show-paren-match ((t (:inherit (quote region))))))
+ '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec")))))
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
+
+
 ;;line numbers
 (global-linum-mode 1)
 
@@ -82,8 +73,6 @@
   (save-some-buffers 1)
   (recompile))
 
-;; for python
-(elpy-enable)
 
 ;;auto-indent
 (define-key global-map (kbd "RET") 'newline-and-indent)
@@ -93,12 +82,14 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'python-mode-hook
           (lambda ()
+            (elpy-enable)
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
             (elpy-mode)
  	    ))
+
 (add-hook 'js-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
@@ -328,9 +319,8 @@ same directory as the org-buffer and insert a link to this file."
 ;; (setq split-height-threshold nil)
 ;; (setq split-width-threshold 0)
 
-;; open buffer list on mouse-3 button
-(global-set-key [down-mouse-3] 'mouse-buffer-menu)
 (global-flycheck-mode 1)
+
 ;; turn on flychecking globally
 (add-hook 'prog-mode-hook #'global-flycheck-mode)
 
@@ -397,8 +387,11 @@ same directory as the org-buffer and insert a link to this file."
             )
         ))
     ))
+
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
+
 (setq highlight-indent-guides-method 'character)
+
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'speedbar-load-hook (lambda ()
                                 (speedbar-add-supported-extension ".js")
