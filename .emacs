@@ -1,5 +1,4 @@
 (package-initialize)
-(setq company-dabbrev-downcase 0)
 (set-face-attribute 'default nil :height 135)
 (setq-default line-spacing 5)
 (custom-set-variables
@@ -9,9 +8,6 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(company-idle-delay 0)
- '(company-minimum-prefix-length 1)
- '(compilation-window-height 15)
  '(custom-enabled-themes (quote (deeper-blue)))
  '(ecb-options-version "2.50")
  '(ecb-source-path (quote (("/" "/"))))
@@ -20,7 +16,6 @@
  '(elpy-rpc-python-command "python")
  '(fringe-mode (quote (nil . 0)) nil (fringe))
  '(global-visual-line-mode t)
- '(js2-strict-trailing-comma-warning nil)
  '(man-notify-method (quote newframe))
  '(org-agenda-files
    (quote
@@ -43,7 +38,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (elpy company-tern company yaml-mode highlight-indent-guides web-mode rjsx-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (elpy yaml-mode highlight-indent-guides web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil))
@@ -79,7 +74,6 @@
 
 ;;set the file name as buffer
 (setq frame-title-format "%b")
-(add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'python-mode-hook
           (lambda ()
             (elpy-enable)
@@ -90,13 +84,10 @@
             (elpy-mode)
  	    ))
 
-(add-hook 'js-mode-hook
+(add-hook 'web-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
 		 (concat "node " buffer-file-name))
-            (tern-mode 1)
-            (eval-after-load "company"
-              '(add-to-list 'company-backends 'company-tern))
 	    ))
 
 ;; this is for the disappearence of the top menu bar
@@ -331,7 +322,7 @@ same directory as the org-buffer and insert a link to this file."
                       '(javascript-jshint)))
 
 ;;use eslint with mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+(flycheck-add-mode 'javascript-eslint 'web-mode)
 
 ;;enable sub-word mode
 (global-subword-mode 1)
@@ -359,8 +350,8 @@ same directory as the org-buffer and insert a link to this file."
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
 
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . rjsx-mode))
-(add-hook 'rjsx-mode-hook '(lambda () ))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
+(add-hook 'web-mode-hook '(lambda () ))
 
 (put 'narrow-to-region 'disabled nil)
 (defun indent-close-tag-with-open (func &rest args)
@@ -389,13 +380,10 @@ same directory as the org-buffer and insert a link to this file."
     ))
 
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
-
-(setq highlight-indent-guides-method 'character)
-
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'speedbar-load-hook (lambda ()
                                 (speedbar-add-supported-extension ".js")
                                 (speedbar-add-supported-extension ".jsx")
                                 ))
 (mouse-wheel-mode -1)
 (scroll-bar-mode -1)
+(ivy-mode 1)
