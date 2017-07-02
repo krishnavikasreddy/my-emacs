@@ -6,9 +6,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(custom-enabled-themes (quote (deeper-blue)))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(elpy-rpc-backend nil)
  '(elpy-rpc-python-command "python")
@@ -213,42 +210,12 @@ same directory as the org-buffer and insert a link to this file."
     )
   )
 
-
-;;twittering-mode
-(setq twittering-use-master-password t)
-(setq twittering-icon-mode t)
-;;(setq twittering-reverse-mode t)
-(setq twittering-use-icon-storage t)
-
-;;R
-(setq ess-help-reuse-window t)
-;;; MARKDOWN
-(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-
-;;; R modes
-(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
-
-
 (global-set-key  [f1] (lambda () (interactive) (man (current-word))))
-
-
-(global-set-key (kbd "s-k") 'kill-this-buffer)
-(global-set-key (kbd "M-n") 'next-buffer)
-(global-set-key (kbd "M-p") 'previous-buffer)
-
-(global-set-key (kbd "C-<up>") 'windmove-up)
-(global-set-key (kbd "C-<down>") 'windmove-down)
-(global-set-key (kbd "C-<left>") 'windmove-left)
-(global-set-key (kbd "C-<right>") 'windmove-right)
-
 
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 
 (global-set-key (kbd "s-g") (lambda () (interactive) (imenu (thing-at-point 'symbol))))
 (global-set-key (kbd "s-s") 'speedbar)
-(global-set-key (kbd "C-0") 'delete-window)
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
@@ -281,6 +248,7 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;use eslint with mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
+(setq web-mode-code-indent-offset 2)
 
 ;;enable sub-word mode
 (global-subword-mode 1)
