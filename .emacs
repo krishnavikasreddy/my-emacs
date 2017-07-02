@@ -6,6 +6,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (adwaita)))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(elpy-rpc-backend nil)
  '(elpy-rpc-python-command "python")
@@ -33,7 +34,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (elpy yaml-mode highlight-indent-guides web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (json-mode js2-mode yasnippet elpy yaml-mode highlight-indent-guides web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil)
@@ -44,7 +45,7 @@
 ;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
-(global-set-key (kbd "<C-tab>") 'other-window)
+
 ;; save and compile
 (defun save-all-and-compile ()
   (interactive)
@@ -67,7 +68,7 @@
             (elpy-mode)
  	    ))
 
-(add-hook 'web-mode-hook
+(add-hook 'js-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
 		 (concat "node " buffer-file-name))
@@ -96,16 +97,7 @@ same directory as the org-buffer and insert a link to this file."
   (call-process "import" nil nil nil filename)
   (insert (concat "[[./" filename "]]"))
   (org-display-inline-images))
-;;------------------------------------------
-
-
-;;Display error messages-buffer
-;;(setq debug-on-error t)
-
-;; to open previous configuration
-;; (desktop-save-mode 1)
-
-
+;;---------------------------------------
 
 ;; turn on highlight matching brackets when cursor is on one
 (setq show-paren-delay 0)
@@ -196,8 +188,6 @@ same directory as the org-buffer and insert a link to this file."
 	    (vikas-export-org "\\?[^\s].+[^\s]\\?" "y")
 	    ))
 
-
-
 (defun color-red (c)
   (interactive "s")
   (save-excursion
@@ -211,9 +201,7 @@ same directory as the org-buffer and insert a link to this file."
   )
 
 (global-set-key  [f1] (lambda () (interactive) (man (current-word))))
-
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
-
 (global-set-key (kbd "s-g") (lambda () (interactive) (imenu (thing-at-point 'symbol))))
 (global-set-key (kbd "s-s") 'speedbar)
 
@@ -224,60 +212,13 @@ same directory as the org-buffer and insert a link to this file."
 ;;set js indent level to 2
 (setq js-indent-level 2)
 
-
 ;;keybinding for magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
 (setq org-src-fontify-natively t)
-
 (ido-mode 1)
-
-;; ;; set the split to horizontal rather than vertical
-;; (setq split-height-threshold nil)
-;; (setq split-width-threshold 0)
-
-(global-flycheck-mode 1)
-
-;; turn on flychecking globally
-(add-hook 'prog-mode-hook #'global-flycheck-mode)
-
-
-;; disable jshint since we prefer eslint checking
-(setq-default flycheck-disabled-checkers
-              (append flycheck-disabled-checkers
-                      '(javascript-jshint)))
-
-;;use eslint with mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'web-mode)
-(setq web-mode-code-indent-offset 2)
 
 ;;enable sub-word mode
 (global-subword-mode 1)
-
-;; customize flycheck temp file prefix
-(setq-default flycheck-temp-prefix ".flycheck")
-
-;; disable json-jsonlist checking for json files
-(setq-default flycheck-disabled-checkers
-              (append flycheck-disabled-checkers
-                      '(json-jsonlist)))
-
-;; use local eslint from node_modules before global
-;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
-(defun my/use-eslint-from-node-modules ()
-  (let* ((root (locate-dominating-file
-                (or (buffer-file-name) default-directory)
-                "node_modules"))
-         (eslint (and root
-                      (expand-file-name "node_modules/eslint/bin/eslint.js"
-                                        root))))
-    (when (and eslint (file-executable-p eslint))
-      (setq-local flycheck-javascript-eslint-executable eslint)))
-  )
-(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-
-
-(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
-
 (put 'narrow-to-region 'disabled nil)
 (add-hook 'speedbar-load-hook (lambda ()
                                 (speedbar-add-supported-extension ".js")
@@ -286,3 +227,38 @@ same directory as the org-buffer and insert a link to this file."
 (mouse-wheel-mode -1)
 (scroll-bar-mode -1)
 (ivy-mode 1)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+
+;; http://www.flycheck.org/manual/latest/index.html
+(require 'flycheck)
+
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
+
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
+
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(json-jsonlist)))
+
+;; https://github.com/purcell/exec-path-from-shell
+;; only need exec-path-from-shell on OSX
+;; this hopefully sets up path and other 
+(exec-path-from-shell-initialize)
