@@ -9,13 +9,11 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (deeper-blue)))
- '(ecb-options-version "2.50")
- '(ecb-source-path (quote (("/" "/"))))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(elpy-rpc-backend nil)
  '(elpy-rpc-python-command "python")
  '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(global-visual-line-mode t)
+ '(ivy-display-function (quote ivy-display-function-popup))
  '(man-notify-method (quote newframe))
  '(org-agenda-files
    (quote
@@ -41,23 +39,11 @@
     (elpy yaml-mode highlight-indent-guides web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
- '(speedbar-use-images nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:weight normal :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(mode-line ((t (:background "white" :foreground "black"))))
- '(mode-line-inactive ((t (:background "black" :foreground "#eeeeec")))))
+ '(speedbar-use-images nil)
+ '(version-control (quote never)))
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
-
-
-;;line numbers
-(global-linum-mode 1)
-
 ;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
@@ -162,9 +148,6 @@ same directory as the org-buffer and insert a link to this file."
                                  ))
 
 (eval-after-load 'org '(color-keys-org))
-
-
-
 (defun color-keys-org ()
   (interactive)
   (define-key org-mode-map (kbd "C-c M-r") '(lambda
@@ -280,31 +263,6 @@ same directory as the org-buffer and insert a link to this file."
 (setq org-src-fontify-natively t)
 
 (ido-mode 1)
-(if window-system
-(setq-default
- mode-line-format
- (list
-  " "'(:eval (propertize (format-time-string "%I:%M:%p") 'face '(:foreground "red" :weight bold)))
-  " "'(:eval (propertize "%b"
-                         'face '(:weight bold :background "blue" :foreground "white")
-                         'help-echo (buffer-file-name)))
-  '(vc-mode vc-mode)
-  " "'(:eval (propertize "%m" 'face '(:foreground "dark green" :weight bold) 'help-echo buffer-file-coding-system))
-  " "'(:eval
-       (cond
-        (buffer-read-only
-         (propertize "READ ONLY"
-                     'face '(:foreground "red" :weight bold :background "black")
-                     'help-echo "buffer is read-only"))
-        ((buffer-modified-p)
-         (propertize "MODIFIED"
-                     'face '(:foreground "white" :weight bold :background "red")
-                     'help-echo "buffer modified."))
-
-        )
-       )
-  )))
-
 
 ;; ;; set the split to horizontal rather than vertical
 ;; (setq split-height-threshold nil)
@@ -351,35 +309,8 @@ same directory as the org-buffer and insert a link to this file."
 
 
 (add-to-list 'auto-mode-alist '("\\.jsx?\\'" . web-mode))
-(add-hook 'web-mode-hook '(lambda () ))
 
 (put 'narrow-to-region 'disabled nil)
-(defun indent-close-tag-with-open (func &rest args)
-  (apply func args)
-  (save-excursion
-    (let
-        ((current-line (string-trim-left(buffer-substring
-                                         (line-beginning-position)
-                                         (line-end-position)))))
-      (if (not (string-blank-p current-line))
-          (if (string-equal (substring current-line 0 1) ">")
-              (progn
-                (goto-char (line-beginning-position))
-                (search-forward ">")
-                (goto-char (- (point) 1))
-                (delete-backward-char 2))
-
-            (if (string-equal (substring current-line 0 2) "/>")
-                (progn
-                  (goto-char (line-beginning-position))
-                  (search-forward "/>")
-                  (goto-char (- (point) 2))
-                  (delete-backward-char 2)))
-            )
-        ))
-    ))
-
-(advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 (add-hook 'speedbar-load-hook (lambda ()
                                 (speedbar-add-supported-extension ".js")
                                 (speedbar-add-supported-extension ".jsx")
