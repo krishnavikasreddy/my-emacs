@@ -11,7 +11,6 @@
  '(elpy-rpc-backend nil)
  '(elpy-rpc-python-command "python")
  '(fringe-mode (quote (nil . 0)) nil (fringe))
- '(ivy-display-function (quote ivy-display-function-popup))
  '(man-notify-method (quote newframe))
  '(org-agenda-files
    (quote
@@ -34,7 +33,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (json-mode js2-mode yasnippet elpy yaml-mode highlight-indent-guides web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (json-mode js2-mode yasnippet elpy yaml-mode web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil)
@@ -178,9 +177,6 @@ same directory as the org-buffer and insert a link to this file."
     (insert " )}}}")
     )
   )
-
-
-
 (add-hook 'org-export-before-processing-hook
 	  (lambda (b)
 	    (vikas-export-org "![^\s].+[^\s]!" "r")
@@ -204,6 +200,7 @@ same directory as the org-buffer and insert a link to this file."
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
 (global-set-key (kbd "s-g") (lambda () (interactive) (imenu (thing-at-point 'symbol))))
 (global-set-key (kbd "s-s") 'speedbar)
+(global-set-key (kbd "s-k") 'kill-this-buffer)
 
 ;; backup files to .emacs-backup
 (setq backup-directory-alist `(("." . "~/.emacs-backup")))
@@ -219,20 +216,23 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;enable sub-word mode
 (global-subword-mode 1)
+
+;; enable narrowing the region
 (put 'narrow-to-region 'disabled nil)
 (add-hook 'speedbar-load-hook (lambda ()
                                 (speedbar-add-supported-extension ".js")
                                 (speedbar-add-supported-extension ".jsx")
                                 ))
-(mouse-wheel-mode -1)
+(mouse-wheel-mode -1) 
 (scroll-bar-mode -1)
-(ivy-mode 1)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
 
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
@@ -262,3 +262,29 @@ same directory as the org-buffer and insert a link to this file."
 ;; only need exec-path-from-shell on OSX
 ;; this hopefully sets up path and other 
 (exec-path-from-shell-initialize)
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+;; adjust indents for web-mode to 2 spaces
+(defun my-web-mode-hook ()
+  "Hooks for Web mode. Adjust indents"
+  ;;; http://web-mode.org/
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2))
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+
+;; for better jsx syntax-highlighting in web-mode
+;; - courtesy of Patrick @halbtuerke
+(defadvice web-mode-highlight-part (around tweak-jsx activate)
+  (if (equal web-mode-content-type "jsx")
+    (let ((web-mode-enable-part-face nil))
+      ad-do-it)
+    ad-do-it))
