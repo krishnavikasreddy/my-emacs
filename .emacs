@@ -6,6 +6,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (adwaita)))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(elpy-rpc-backend nil)
  '(elpy-rpc-python-command "python")
@@ -44,7 +45,7 @@
 ;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
-(global-set-key (kbd "<C-tab>") 'other-window)
+
 ;; save and compile
 (defun save-all-and-compile ()
   (interactive)
