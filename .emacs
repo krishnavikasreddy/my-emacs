@@ -33,7 +33,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (json-mode js2-mode yasnippet elpy yaml-mode web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (rjsx-mode json-mode js2-mode yasnippet elpy yaml-mode web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil)
@@ -234,7 +234,7 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
 
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?" . rjsx-mode))
 
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
@@ -248,7 +248,7 @@ same directory as the org-buffer and insert a link to this file."
     '(javascript-jshint)))
 
 ;; use eslint with web-mode for jsx files
-(flycheck-add-mode 'javascript-eslint 'web-mode)
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
 
 ;; customize flycheck temp file prefix
 (setq-default flycheck-temp-prefix ".flycheck")
@@ -272,19 +272,29 @@ same directory as the org-buffer and insert a link to this file."
     (when (and eslint (file-executable-p eslint))
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-;; adjust indents for web-mode to 2 spaces
-(defun my-web-mode-hook ()
-  "Hooks for Web mode. Adjust indents"
-  ;;; http://web-mode.org/
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq web-mode-code-indent-offset 2))
-(add-hook 'web-mode-hook  'my-web-mode-hook)
 
-;; for better jsx syntax-highlighting in web-mode
-;; - courtesy of Patrick @halbtuerke
-(defadvice web-mode-highlight-part (around tweak-jsx activate)
-  (if (equal web-mode-content-type "jsx")
-    (let ((web-mode-enable-part-face nil))
-      ad-do-it)
-    ad-do-it))
+(defun indent-close-tag-with-open (func &rest args)
+  (apply func args)
+  (save-excursion
+    (let
+        ((current-line (string-trim-left(buffer-substring
+                                         (line-beginning-position)
+                                         (line-end-position)))))
+      (if (string-equal (substring current-line 0 1) ">")
+          (progn
+            (goto-char (line-beginning-position))
+            (search-forward ">")
+            (goto-char (- (point) 1))
+            (delete-backward-char 2))
+        (if (string-equal (substring current-line 0 2) "/>")
+            (progn
+              (goto-char (line-beginning-position))
+              (search-forward "/>")
+              (goto-char (- (point) 2))
+              (delete-backward-char 2)))
+        )
+      )
+    ))
+(advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
+(setq js-switch-indent-offset 2)
+(setq js2-strict-trailing-comma-warning nil)
