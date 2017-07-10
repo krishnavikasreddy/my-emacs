@@ -1,6 +1,7 @@
 (package-initialize)
 (set-face-attribute 'default nil :height 135)
 (setq-default line-spacing 5)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -19,12 +20,9 @@
    (quote
     (("*" bold)
      ("/" italic)
-     ("!"
-      (:foreground "red"))
-     ("%"
-      (:Foreground "Green"))
-     ("?"
-      (:Foreground "Yellow"))
+     ("!" diff-refine-removed)
+     ("%" diff-refine-added)
+     ("?" diff-refine-changed)
      ("_" Underline)
      ("=" Org-verbatim verbatim)
      ("~" org-code verbatim)
@@ -298,3 +296,4 @@ same directory as the org-buffer and insert a link to this file."
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 (setq js-switch-indent-offset 2)
 (setq js2-strict-trailing-comma-warning nil)
+(visual-line-mode 1)
