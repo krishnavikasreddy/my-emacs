@@ -1,12 +1,13 @@
 (package-initialize)
-(set-face-attribute 'default nil :height 135)
-(setq-default line-spacing 5)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
  '(custom-enabled-themes (quote (adwaita)))
  '(ediff-split-window-function (quote split-window-horizontally))
  '(elpy-rpc-backend nil)
@@ -31,7 +32,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (rjsx-mode json-mode js2-mode yasnippet elpy yaml-mode web-mode simple-httpd python-environment org magit flycheck exec-path-from-shell epc)))
+    (flycheck markdown-mode rjsx-mode json-mode js2-mode elpy yaml-mode web-mode simple-httpd python-environment org magit exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil)
@@ -221,15 +222,6 @@ same directory as the org-buffer and insert a link to this file."
                                 (speedbar-add-supported-extension ".js")
                                 (speedbar-add-supported-extension ".jsx")
                                 ))
-(mouse-wheel-mode -1) 
-(scroll-bar-mode -1)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-
 ;; http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
 
 (add-to-list 'auto-mode-alist '("\\.jsx?" . rjsx-mode))
@@ -296,4 +288,14 @@ same directory as the org-buffer and insert a link to this file."
 (advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
 (setq js-switch-indent-offset 2)
 (setq js2-strict-trailing-comma-warning nil)
-(visual-line-mode 1)
+
+(global-visual-line-mode 1)
+(add-to-list 'auto-mode-alist '("\\.html" . web-mode))
+(yas-global-mode 1)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
