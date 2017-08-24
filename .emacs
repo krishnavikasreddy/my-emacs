@@ -43,6 +43,7 @@
 ;;key shortcuts
 (global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
+(global-set-key (kbd "C-c C-f") 'find-file-in-current-directory)
 
 ;; save and compile
 (defun save-all-and-compile ()
