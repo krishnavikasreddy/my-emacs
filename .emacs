@@ -1,65 +1,49 @@
-;; This is a line to understand the complexities of branching
-;; new branch and new things ahooo
-(setq horizontal-scroll-bar-mode 'disabled)
+(package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(Man-notify-method (quote newframe))
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(custom-enabled-themes (quote (misterioso)))
- '(ess-R-font-lock-keywords
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (adwaita)))
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(elpy-rpc-backend nil)
+ '(elpy-rpc-python-command "python")
+ '(fringe-mode (quote (nil . 0)) nil (fringe))
+ '(man-notify-method (quote newframe))
+ '(org-agenda-files
    (quote
-    ((ess-R-fl-keyword:modifiers . t)
-     (ess-R-fl-keyword:fun-defs . t)
-     (ess-R-fl-keyword:keywords . t)
-     (ess-R-fl-keyword:assign-ops . t)
-     (ess-R-fl-keyword:constants . t)
-     (ess-fl-keyword:fun-calls . t)
-     (ess-fl-keyword:numbers . t)
-     (ess-fl-keyword:operators . t)
-     (ess-fl-keyword:delimiters)
-     (ess-fl-keyword:=)
-     (ess-R-fl-keyword:F&T)
-     (ess-R-fl-keyword:%op%))))
- '(org-agenda-files (quote ("~/Documents/Schedule.org")))
- '(org-emphasis-alisty
+    ("~/dev/catchMyNotes/src/TODO.org" "~/Documents/Schedule.org")))
+ '(org-emphasis-alist
    (quote
     (("*" bold)
      ("/" italic)
-     ("!"
-      (:foreground "red"))
-     ("%"
-      (:foreground "green"))
-     ("?"
-      (:foreground "yellow"))
-     ("_" underline)
-     ("=" org-verbatim verbatim)
+     ("!" diff-refine-removed)
+     ("%" diff-refine-added)
+     ("?" diff-refine-changed)
+     ("_" Underline)
+     ("=" Org-verbatim verbatim)
      ("~" org-code verbatim)
      ("+"
       (:strike-through t)))))
- '(org-hide-emphasis-markers t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+ '(org-hide-emphasis-markers t)
+ '(package-selected-packages
+   (quote
+    (flycheck markdown-mode rjsx-mode json-mode js2-mode elpy yaml-mode web-mode simple-httpd python-environment org magit exec-path-from-shell epc)))
+ '(show-trailing-whitespace t)
+ '(speedbar-show-unknown-files t)
+ '(speedbar-use-images nil)
+ '(version-control (quote never)))
 
 ;;dont display startup message
 (setq inhibit-startup-message t)
-
-;line numbers
-(global-linum-mode 1)
-
-
-;key shortcuts
-(global-set-key [(C-f5)] 'compile)
+;;key shortcuts
+(global-set-key (kbd "<f6>") 'compile)
 (global-set-key [(f5)] 'save-all-and-compile)
+(global-set-key (kbd "C-c C-f") 'find-name-dired)
 
 ;; save and compile
 (defun save-all-and-compile ()
@@ -73,41 +57,32 @@
 
 ;;set the file name as buffer
 (setq frame-title-format "%b")
-
-;;HOOKS
-(setq jedi:complete-on-dot t)
 (add-hook 'python-mode-hook
           (lambda ()
+            (elpy-enable)
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
-			(setq python-indent-offset 4)
+            (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-	    (jedi:setup)
-		(setq jedi:setup-keys t)
-	    ))
-
+            (elpy-mode)
+ 	    ))
 
 (add-hook 'js-mode-hook
 	  (lambda ()
 	    (set (make-local-variable 'compile-command)
 		 (concat "node " buffer-file-name))
-	    (hs-minor-mode t)
 	    ))
 
 ;; this is for the disappearence of the top menu bar
-(tool-bar-mode -1)
+(if window-system (tool-bar-mode 0))
 
 ;;ORG-MODE variables
 (setq org-startup-with-inline-images t)
 
-
-;;Line numbers
-(global-visual-line-mode t)
-
-
+;; tabs - spaces
+(setq-default indent-tabs-mode nil)
 ;;-------------------------------------------
 ;; this is for taking screen shot
-;;TODO ;figure out a way to add it only to org-mode
 (defun my-org-screenshot ()
   "Take a screenshot into a time stamped unique-named file in the
 same directory as the org-buffer and insert a link to this file."
@@ -118,20 +93,10 @@ same directory as the org-buffer and insert a link to this file."
           (concat (file-name-nondirectory (buffer-file-name))
                   "_"
                   (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
- (call-process "import" nil nil nil filename)
+  (call-process "import" nil nil nil filename)
   (insert (concat "[[./" filename "]]"))
   (org-display-inline-images))
-(global-set-key (kbd "M-p") 'my-org-screenshot)
-;;------------------------------------------
-
-
-;;Display error messages-buffer
-(setq debug-on-error t)
-
-;; to open previous configuration
-(desktop-save-mode 1)
-
-
+;;---------------------------------------
 
 ;; turn on highlight matching brackets when cursor is on one
 (setq show-paren-delay 0)
@@ -140,6 +105,8 @@ same directory as the org-buffer and insert a link to this file."
 
 ;;putiing auto pairs automatically
 (electric-pair-mode 1)
+(push '(?\' . ?\') electric-pair-pairs)
+(push '(?\' . ?\') electric-pair-text-pairs)
 ;;add <> in auto complete mode in sgml and nxml mode-line
 
 
@@ -149,155 +116,26 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
-;; all your custom scripts are stored in this path
-(add-to-list 'load-path "~/.emacs.d/lp/")
-
-;; adding html-tags mode this is to identify the tags pair automatically
-(require 'hl-tags-mode)
-(add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
-(add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
-
-
-(defun vikas ()
-  (interactive)
-  (save-excursion
-   (setq char-in (search-backward "<" nil t))
-  (forward-char 1)
-  (setq mystr (thing-at-point 'symbol)))
-  (save-excursion
-    (setq char-not-in (search-backward "/" nil t)))
-  (if (equal char-in nil) (setq char-in -1))
-  (if (equal char-not-in nil) (setq char-not-in -1))
-  (if (> char-in char-not-in)
-      (progn
-
-	(newline-and-indent)
-	(insert (concat "\n</" mystr ">"))
-	(indent-according-to-mode)
-	(forward-line -1)
-	(indent-according-to-mode)
-      )))
-
-
-(defun add-key-close()
-  (local-set-key (kbd "C-.") 'vikas))
-
-(add-hook 'sgml-mode-hook 'add-key-close)
-
-
-
-
-;;typescript mode
-(require 'typescript)
-(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
-
-
-;; Smooth Scrolling
-;; scroll one line at a time (less "jumpy" than defaults)
-(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
-(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
-(setq scroll-step 1) ;; keyboard scroll one line at a time
-(setq scroll-margin 1
-scroll-conservatively 0
-scroll-up-aggressively 0.01
-scroll-down-aggressively 0.01)
-
-(setq redisplay-dont-pause t
-  scroll-margin 1
-  scroll-step 1
-  scroll-conservatively 10000
-  scroll-preserve-screen-position 1)
-
-
 ;; refresh files as it is changed in the disk
 (global-auto-revert-mode t)
-
-(defun test-hook (change-beg change-end prev-len)
-  (if (and (> change-beg start-s) (<= change-end start-e))
-      (save-excursion
-	(goto-char start-s)
-	(setq-local cur-w (thing-at-point 'word))
-	(goto-char (+ end-s 3))
-	(delete-region (+ end-s 3) end-e)
-	(insert "h")
-	)
-  ))
-
-(defun auto-change-html (change-beg change-end prev-len)
-  (if (not (equal cur-w 'nil))
-      (if (not (equal (car cur-w) (cdr cur-w)))
-	  (progn
-	    (setq start-s (car (car cur-w)))
-	    (setq start-e (cdr (car cur-w)))
-	    (setq end-s (car (cdr cur-w)))
-	    (setq end-e (cdr (cdr cur-w)))
-
-  (if (and (<= (point) start-e) (> (point) start-s))
-    (save-excursion
-      (goto-char (+ start-s 1))
-      (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-      (if (= prev-len 1)
-      (progn
-	(delete-region (+ end-s 1) (- end-e 2))
-	(goto-char (+ end-s 1))
-	(insert cur-w)
-	)
-     (progn
-	(delete-region (+ end-s 3) end-e)
-	(goto-char (+ end-s 3))
-	(insert cur-w)
-	)
-      )
-      ))
-    (if (and (< (point) end-e) (> (point) end-s))
-    (progn
-      (setq cur-w (hl-tags-context))
-      (setq start-s (car (car cur-w)))
-      (setq start-e (cdr (car cur-w)))
-      (setq end-s (car (cdr cur-w)))
-      (setq end-e (cdr (cdr cur-w)))
-
-	(save-excursion
-	  (goto-char (+ end-s 2))
-	  (setq cur-w (buffer-substring (point) (- (search-forward ">") 1)))
-	  (delete-region (+ start-s 1) (- start-e 1))
-	  (goto-char (+ start-s 1))
-	  (insert cur-w)
-	  ))
-      )))))
-
-
-(defun auto-change-html-before-change (begin end)
- (setq cur-w (hl-tags-context)))
-
-(setq inhibit-modification-hooks nil)
-;;(add-hook 'after-change-functions 'test-hook)
-
-
-;; (add-hook 'sgml-mode-hook
-;;           (lambda ()
-;; 	    (add-hook 'after-change-functions 'auto-change-html nil 'make-it-local)
-;; 	    (add-hook 'before-change-functions 'auto-change-html-before-change nil 'make-it-local)
-;; 	    ))
-
 
 (put 'dired-find-alternate-file 'disabled nil)
 
 (add-hook 'dired-mode-hook
- (lambda ()
-  (define-key dired-mode-map (kbd "^")
-    (lambda () (interactive) (find-alternate-file "..")))
-  ; was dired-up-directory
- ))
+          (lambda ()
+            (define-key dired-mode-map [backspace]
+              (lambda () (interactive) (find-alternate-file "..")))
+                                        ; was dired-up-directory
+            ))
 ;;------------------------------------------
 ;;hideshow  code toggling
-(eval-after-load "hideshow" '(define-key hs-minor-mode-map (kbd "C-c C-c") 'hs-toggle-hiding))
+(add-hook 'prog-mode-hook 'hs-minor-mode 1)
+(add-hook 'hs-minor-mode-hook '(lambda ()
+                                 (define-key hs-minor-mode-map (kbd "M-]") 'hs-toggle-hiding)
+                                 (define-key hs-minor-mode-map (kbd "M-[") 'hs-toggle-hiding)
+                                 ))
 
 (eval-after-load 'org '(color-keys-org))
-
-
-
 (defun color-keys-org ()
   (interactive)
   (define-key org-mode-map (kbd "C-c M-r") '(lambda
@@ -311,31 +149,40 @@ scroll-down-aggressively 0.01)
 					      (color-red "%")))
   )
 
+;; add macros to the org file while opening so as to not to copy every time
+(defun add-macros-to-org ()
+  (unless (file-exists-p (buffer-file-name (current-buffer)))
+    (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='/home/krishna/Documents/bootstrap.css' />
+#+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
+
+#+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
+#+MACRO: g @@html:<span class='text-success'>@@$1@@html:</span>@@
+#+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@
+
+")))
+
 (add-hook 'org-mode-hook (lambda ()
-			   (flyspell-mode 1)))
+                          (add-macros-to-org)
+                          (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
+                          (flyspell-mode 1)))
 
 (defun vikas-export-org (regex c)
   (goto-line 0)
-	    (while (re-search-forward regex nil t)
-	      (goto-char (match-beginning 0))
-	      (delete-forward-char 1)
-	      (insert (concat "{{{" c "( "))
-	      (goto-char (+ (match-end 0) 5))
-	      (delete-backward-char 1)
-	      (insert " )}}}")
-	      )
-	    )
-
-
-
+  (while (re-search-forward regex nil t)
+    (goto-char (match-beginning 0))
+    (delete-forward-char 1)
+    (insert (concat "{{{" c "( "))
+    (goto-char (+ (match-end 0) 5))
+    (delete-backward-char 1)
+    (insert " )}}}")
+    )
+  )
 (add-hook 'org-export-before-processing-hook
 	  (lambda (b)
 	    (vikas-export-org "![^\s].+[^\s]!" "r")
 	    (vikas-export-org "\\%[^\s].+[^\s]\\%" "g")
 	    (vikas-export-org "\\?[^\s].+[^\s]\\?" "y")
 	    ))
-
-
 
 (defun color-red (c)
   (interactive "s")
@@ -349,78 +196,104 @@ scroll-down-aggressively 0.01)
     )
   )
 
-
-;;-----------
-;; php-mode
-(require 'php-mode);
-
-;;twittering-mode
-(setq twittering-use-master-password t)
-(setq twittering-icon-mode t)
-;;(setq twittering-reverse-mode t)
-(setq twittering-use-icon-storage t)
-
-;;R
-(setq ess-help-reuse-window t)
-;;; MARKDOWN
-(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
-
-;;; R modes
-(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
-
-
-;;; Auto-Complete-Mode
-
-(package-initialize)
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-20160827.649/dict")
-(ac-config-default)
-
-(global-set-key  [f1] (lambda () (interactive) (manual-entry (current-word))))
-
-
-(global-set-key (kbd "s-k") 'kill-this-buffer)
-(global-set-key (kbd "<f2>n") 'next-buffer)
-(global-set-key (kbd "<f2>p") 'previous-buffer)
-
-(global-set-key (kbd "<f2><up>") 'windmove-up)
-(global-set-key (kbd "<f2><down>") 'windmove-down)
-(global-set-key (kbd "<f2><left>") 'windmove-left)
-(global-set-key (kbd "<f2><right>") 'windmove-right)
-
+(global-set-key  [f1] (lambda () (interactive) (man (current-word))))
 (global-set-key (kbd "C-x C-o") 'ff-find-other-file)
-
 (global-set-key (kbd "s-g") (lambda () (interactive) (imenu (thing-at-point 'symbol))))
 (global-set-key (kbd "s-s") 'speedbar)
-(global-set-key (kbd "C-0") 'delete-window)
+(global-set-key (kbd "s-k") 'kill-this-buffer)
 
-;;---python jedi
+;; backup files to .emacs-backup
+(setq backup-directory-alist `(("." . "~/.emacs-backup")))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
-(setq ac-auto-start 0)
-(setq ac-auto-show-menu 0)
-(setq ac-delay 0)
-(setq ac-quick-help-delay 0)
-(setq ac-quick-help-prefer-postip 1)
+;;set js indent level to 2
+(setq js-indent-level 2)
 
+;;keybinding for magit-status
+(global-set-key (kbd "C-x g") 'magit-status)
+(setq org-src-fontify-natively t)
+(ido-mode 1)
 
-(setq jedi:get-in-function-call-delay 0)
-(setq jedi:doc-mode t)
-(setq jedi:complete-on-dot t)
-;;(org-agenda nil "n")
+;;enable sub-word mode
+(global-subword-mode 1)
 
+;; enable narrowing the region
+(put 'narrow-to-region 'disabled nil)
+(add-hook 'speedbar-load-hook (lambda ()
+                                (speedbar-add-supported-extension ".js")
+                                (speedbar-add-supported-extension ".jsx")
+                                ))
+;; http://codewinds.com/blog/2015-04-02-emacs-flycheck-eslint-jsx.html
 
-(setq ess-help-own-frame t)
+(add-to-list 'auto-mode-alist '("\\.jsx?" . rjsx-mode))
 
-;; indentation guide
-(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-(setq highlight-indent-guides-method 'character)
-(setq highlight-indent-guides-character ?\.)
+;; http://www.flycheck.org/manual/latest/index.html
+(require 'flycheck)
 
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(javascript-jshint)))
 
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
 
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
 
-(setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+  (append flycheck-disabled-checkers
+    '(json-jsonlist)))
+
+;; https://github.com/purcell/exec-path-from-shell
+;; only need exec-path-from-shell on OSX
+;; this hopefully sets up path and other
+(exec-path-from-shell-initialize)
+(defun my/use-eslint-from-node-modules ()
+  (let* ((root (locate-dominating-file
+                (or (buffer-file-name) default-directory)
+                "node_modules"))
+         (eslint (and root
+                      (expand-file-name "node_modules/eslint/bin/eslint.js"
+                                        root))))
+    (when (and eslint (file-executable-p eslint))
+      (setq-local flycheck-javascript-eslint-executable eslint))))
+(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+
+(defun indent-close-tag-with-open (func &rest args)
+  (apply func args)
+  (save-excursion
+    (let
+        ((current-line (string-trim-left(buffer-substring
+                                         (line-beginning-position)
+                                         (line-end-position)))))
+      (if (string-equal (substring current-line 0 1) ">")
+          (progn
+            (goto-char (line-beginning-position))
+            (search-forward ">")
+            (goto-char (- (point) 1))
+            (delete-backward-char 2))
+        (if (string-equal (substring current-line 0 2) "/>")
+            (progn
+              (goto-char (line-beginning-position))
+              (search-forward "/>")
+              (goto-char (- (point) 2))
+              (delete-backward-char 2)))
+        )
+      )
+    ))
+(advice-add 'sgml-indent-line :around #'indent-close-tag-with-open)
+(setq js-switch-indent-offset 2)
+(setq js2-strict-trailing-comma-warning nil)
+
+(global-visual-line-mode 1)
+(add-to-list 'auto-mode-alist '("\\.html" . web-mode))
+(yas-global-mode 1)
+
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'super)
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
