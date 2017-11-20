@@ -32,7 +32,7 @@
  '(org-hide-emphasis-markers t)
  '(package-selected-packages
    (quote
-    (flycheck markdown-mode rjsx-mode json-mode js2-mode elpy yaml-mode web-mode simple-httpd python-environment org magit exec-path-from-shell epc)))
+    (matlab-mode racket-mode flycheck markdown-mode rjsx-mode json-mode js2-mode elpy yaml-mode web-mode simple-httpd python-environment org magit exec-path-from-shell epc)))
  '(show-trailing-whitespace t)
  '(speedbar-show-unknown-files t)
  '(speedbar-use-images nil)
@@ -251,7 +251,7 @@ same directory as the org-buffer and insert a link to this file."
 
 ;; https://github.com/purcell/exec-path-from-shell
 ;; only need exec-path-from-shell on OSX
-;; this hopefully sets up path and other 
+;; this hopefully sets up path and other
 (exec-path-from-shell-initialize)
 (defun my/use-eslint-from-node-modules ()
   (let* ((root (locate-dominating-file
@@ -294,9 +294,5 @@ same directory as the org-buffer and insert a link to this file."
 (add-to-list 'auto-mode-alist '("\\.html" . web-mode))
 (yas-global-mode 1)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(exec-path-from-shell-copy-env "LD_LIBRARY_PATH")
+(exec-path-from-shell-copy-env "CUDA_HOME")
