@@ -296,3 +296,4 @@ same directory as the org-buffer and insert a link to this file."
 
 (exec-path-from-shell-copy-env "LD_LIBRARY_PATH")
 (exec-path-from-shell-copy-env "CUDA_HOME")
+(setq gdb-show-main t)
