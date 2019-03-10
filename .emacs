@@ -5,26 +5,37 @@
 ;; add melpa to packages
 (require 'package)
 (package-initialize)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 (setq package-list
       (list 'yasnippet
 	    'exec-path-from-shell
 	    'idomenu
-	    'elpy
+	    'iedit
 	    'org
 	    'magit
+	    'company
+            'company-anaconda
+            'anaconda-mode
 	    'django-mode
 	    'django-commands
 	    'django-snippets
             'ivy
             'counsel
-            'swiper))
+            'swiper
+	    'json-mode))
 
 ;; install packages if not present
 (dolist (package package-list)
   (unless (package-installed-p package) (package-install package)))
 
+
+;; install python flycheck dependencies
+(progn
+  (let*
+    ((x (shell-command-to-string "pydoc flake8")))
+  (if (string-match "no Python documentation found for 'flake8'" x)
+      (shell-command "pip install --user flake8"))))
 ;;====================================================================================================
 ;; MODES
 ;; match brackets
@@ -50,8 +61,9 @@
 
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
+(setq vc-follow-symlinks 1)
 
-
+(setq backup-directory-alist `(("." . "/tmp")))
 ;;====================================================================================================
 ;; KEYS
 (global-set-key (kbd "<f6>") 'compile)
@@ -83,12 +95,21 @@
   (save-some-buffers 1)
   (recompile))
 
-
+;;====================================================================================================
+;; HOOKS
+(add-hook 'after-init-hook 'global-company-mode)
 
 
 ;;====================================================================================================
 ;; MODE SPECIFIC ACTIONS
 ;; all programming modes
+(require 'whitespace)
+(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-style '(face lines-tail))
+
+(eval-after-load "company"
+ '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+
 (add-hook 'prog-mode-hook 'hs-minor-mode 1)
 (add-hook 'hs-minor-mode-hook '(lambda ()
                                  (define-key hs-minor-mode-map (kbd "M-]") 'hs-toggle-hiding)
@@ -97,6 +118,7 @@
 
 (add-hook 'prog-mode-hook
 	  (lambda ()
+	    (whitespace-mode)
 	    (yas-minor-mode)
 	    (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
 	    ))
@@ -104,18 +126,22 @@
 ;; python mode
 (add-hook 'python-mode-hook
           (lambda ()
-            (elpy-enable)
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-            (elpy-mode)
+            (anaconda-mode)
+            (anaconda-eldoc-mode)
+	    (flycheck-mode)
  	    ))
+
+(setq json-reformat:indent-width 1)
 
 ;;====================================================================================================
 (exec-path-from-shell-initialize)
 (exec-path-from-shell-copy-env "LD_LIBRARY_PATH")
 (exec-path-from-shell-copy-env "CUDA_HOME")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -123,7 +149,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (swiper ivy-mode django-snippets django-commands django-mode magit idomenu exec-path-from-shell elpy))))
+    (flycheck company-mode yasnippet swiper ivy-mode django-snippets django-commands django-mode magit idomenu exec-path-from-shell elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
