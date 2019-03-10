@@ -1,8 +1,0 @@
-#!/bin/bash
-
-echo "hello world";
-
-
-function hello {
-    echo
-}
