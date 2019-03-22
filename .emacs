@@ -57,13 +57,127 @@
 ;;====================================================================================================
 
 ;; disable toolbar
-(if window-system (tool-bar-mode 0))
+(if window-system (progn
+		    (tool-bar-mode 0)
+		    (desktop-save-mode 1)
+		    ))
 
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
 (setq vc-follow-symlinks 1)
 
 (setq backup-directory-alist `(("." . "/tmp")))
+(set-fringe-mode 0)
+(global-visual-line-mode 1)
+;;====================================================================================================
+;; ORG mode
+;;(org-set-local 'font-lock-global-modes (list 'not major-mode))
+(setq org-hide-emphasis-markers t)
+(defface my-face-success '((t :foreground "black" :background "green" )) nil)
+(defface my-face-warning '((t :foreground "white" :background "yellow" )) nil)
+(defface my-face-error '((t :foreground "white" :background "red" )) nil)
+
+(setq org-emphasis-alist
+   (quote
+    (("*" bold)
+     ("/" italic)
+     ("!" my-face-error)
+     ("%" my-face-success)
+     ("?" my-face-warning)
+     ("_" Underline)
+     ("=" Org-verbatim verbatim)
+     ("~" org-code verbatim)
+     ("+"
+      (:strike-through t)))))
+
+(setq org-startup-with-inline-images t)
+
+(defun my-org-screenshot ()
+  "Take a screenshot into a time stamped unique-named file in the
+same directory as the org-buffer and insert a link to this file."
+  (interactive)
+  (setq filename
+        (concat
+         (make-temp-name
+          (concat (file-name-nondirectory (buffer-file-name))
+                  "_"
+                  (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+  (call-process "import" nil nil nil filename)
+  (insert (concat "[[./" filename "]]"))
+  (org-display-inline-images))
+
+
+(eval-after-load 'org '(color-keys-org))
+(defun color-keys-org ()
+  (interactive)
+  (define-key org-mode-map (kbd "C-c M-r") '(lambda
+					      ()(interactive)
+					      (color-red "!")))
+  (define-key org-mode-map (kbd "C-c M-y") '(lambda
+					      ()(interactive)
+					      (color-red "?")))
+  (define-key org-mode-map (kbd "C-c M-g") '(lambda
+					      ()(interactive)
+					      (color-red "%")))
+  )
+
+;; add macros to the org file while opening so as to not to copy every time
+(defun add-macros-to-org ()
+  (unless (file-exists-p (buffer-file-name (current-buffer)))
+    (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='/home/krishna/Documents/bootstrap.css' />
+#+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
+#+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
+#+MACRO: g @@html:<span class='text-success'>@@$1@@html:</span>@@
+#+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@
+")))
+
+(add-hook 'org-mode-hook (lambda ()
+			  (org-toggle-pretty-entities)
+                          (add-macros-to-org)
+                          (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
+                          (flyspell-mode 1)))
+
+(defun vikas-export-org (regex c)
+  (goto-line 0)
+  (while (re-search-forward regex nil t)
+    (goto-char (match-beginning 0))
+    (delete-forward-char 1)
+    (insert (concat "{{{" c "( "))
+    (goto-char (+ (match-end 0) 5))
+    (delete-backward-char 1)
+    (insert " )}}}")
+    )
+  )
+(add-hook 'org-export-before-processing-hook
+	  (lambda (b)
+	    (vikas-export-org "![^\s].+[^\s]!" "r")
+	    (vikas-export-org "\\%[^\s].+[^\s]\\%" "g")
+	    (vikas-export-org "\\?[^\s].+[^\s]\\?" "y")))
+
+(defun color-red (c)
+  (interactive "s")
+  (save-excursion
+    (if (region-active-p)
+	(progn
+          (let ((x (region-beginning)) (y (region-end)))
+	  (goto-char x)
+          (insert c)
+          (goto-char (+ y 1))
+          (insert c)
+	  ))
+      (progn
+	(goto-char (org-beginning-of-item))
+	(search-forward "-")
+	(goto-char (+ (point) 1))
+	(insert c)
+	(goto-char (line-end-position))
+	(insert c)
+	))))
+
+(setq org-src-fontify-natively t)
+
+
+
 ;;====================================================================================================
 ;; KEYS
 (global-set-key (kbd "<f6>") 'compile)
@@ -79,7 +193,7 @@
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+;;(global-set-key (kbd "C-x C-f") 'counsel-find-file)
 (global-set-key (kbd "C-c g") 'counsel-git)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c k") 'counsel-ag)
@@ -104,6 +218,7 @@
 ;; MODE SPECIFIC ACTIONS
 ;; all programming modes
 (require 'whitespace)
+(setq show-trailing-whitespace t)
 (setq whitespace-line-column 80) ;; limit line length
 (setq whitespace-style '(face lines-tail))
 
@@ -147,6 +262,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(custom-enabled-themes (quote (misterioso)))
  '(package-selected-packages
    (quote
     (flycheck company-mode yasnippet swiper ivy-mode django-snippets django-commands django-mode magit idomenu exec-path-from-shell elpy))))
