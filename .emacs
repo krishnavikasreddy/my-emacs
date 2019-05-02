@@ -280,6 +280,3 @@ same directory as the org-buffer and insert a link to this file."
 (put 'dired-find-alternate-file 'disabled nil)
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
-(set-face-foreground 'diff-added-face "DarkGreen")
-(set-face-foreground 'diff-removed-face "DarkRed")
-(set-face-background 'diff-refine-change "LightBlue1")
