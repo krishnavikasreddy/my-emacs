@@ -1,5 +1,15 @@
 (setq inhibit-startup-message 1)
+(set-default-font "Monaco 14")
 
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
+(if (window-system) (set-frame-size (selected-frame) 200 60))
+
+(setq company-dabbrev-downcase 0)
+(setq company-idle-delay 0)
 ;;====================================================================================================
 ;; PACKAGES
 ;; add melpa to packages
@@ -15,15 +25,12 @@
 	    'org
 	    'magit
 	    'company
-            'company-anaconda
-            'anaconda-mode
-	    'django-mode
-	    'django-commands
-	    'django-snippets
             'ivy
             'counsel
             'swiper
-	    'json-mode))
+	    'json-mode
+	    'conda
+	    'elpy))
 
 ;; install packages if not present
 (dolist (package package-list)
@@ -50,6 +57,8 @@
 (ido-mode 1)
 (subword-mode 1)
 (winner-mode 1)
+(elpy-enable)
+(pyvenv-activate "~/miniconda3/envs/base3")
 (setq indent-tabs-mode nil)
 ;; ivy mode
 (setq ivy-use-virtual-buffers t)
@@ -59,7 +68,6 @@
 ;; disable toolbar
 (if window-system (progn
 		    (tool-bar-mode 0)
-		    (desktop-save-mode 1)
 		    ))
 
 ;; set the filename as buffer name
@@ -209,6 +217,13 @@ same directory as the org-buffer and insert a link to this file."
   (save-some-buffers 1)
   (recompile))
 
+(defun beautify-json ()
+  (interactive)
+  (let ((b (if mark-active (min (point) (mark)) (point-min)))
+        (e (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region b e
+     "cat > ~/.emacs.d/scripts/tmp.txt && python ~/.emacs.d/scripts/json-format.py" (current-buffer) t)))
+
 ;;====================================================================================================
 ;; HOOKS
 (add-hook 'after-init-hook 'global-company-mode)
@@ -219,11 +234,9 @@ same directory as the org-buffer and insert a link to this file."
 ;; all programming modes
 (require 'whitespace)
 (setq show-trailing-whitespace t)
-(setq whitespace-line-column 80) ;; limit line length
+(setq whitespace-line-column 120) ;; limit line length
 (setq whitespace-style '(face lines-tail))
 
-(eval-after-load "company"
- '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
 (add-hook 'prog-mode-hook 'hs-minor-mode 1)
 (add-hook 'hs-minor-mode-hook '(lambda ()
@@ -239,44 +252,32 @@ same directory as the org-buffer and insert a link to this file."
 	    ))
 
 ;; python mode
+(setq python-python-command "~/miniconda3/bin/python")
+
 (add-hook 'python-mode-hook
           (lambda ()
             (set (make-local-variable 'compile-command)
                  (concat "python " buffer-file-name))
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-            (anaconda-mode)
-            (anaconda-eldoc-mode)
 	    (flycheck-mode)
+	    (setq flycheck-pylintrc "/Users/kminnamareddy/code/venmo-platform/pylintrc")
  	    ))
 
 (setq json-reformat:indent-width 1)
 
 ;;====================================================================================================
 (exec-path-from-shell-initialize)
-(exec-path-from-shell-copy-env "LD_LIBRARY_PATH")
-(exec-path-from-shell-copy-env "CUDA_HOME")
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (misterioso)))
- '(package-selected-packages
-   (quote
-    (flycheck company-mode yasnippet swiper ivy-mode django-snippets django-commands django-mode magit idomenu exec-path-from-shell elpy))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (put 'dired-find-alternate-file 'disabled nil)
 (setq ediff-window-setup-function #'ediff-setup-windows-plain)
 (setq ediff-split-window-function #'split-window-horizontally)
+(setq ring-bell-function 'ignore)
+
+
+;; For elpy
+(setq elpy-rpc-python-command "python3")
+
+(setq flycheck-python-flake8-executable "python3")
+(setq flycheck-python-pycompile-executable "python3")
+(setq flycheck-python-pylint-executable "python3")
