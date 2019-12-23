@@ -1,5 +1,4 @@
 (setq inhibit-startup-message 1)
-(set-default-font "Monaco 14")
 
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
@@ -37,12 +36,6 @@
   (unless (package-installed-p package) (package-install package)))
 
 
-;; install python flycheck dependencies
-(progn
-  (let*
-    ((x (shell-command-to-string "pydoc flake8")))
-  (if (string-match "no Python documentation found for 'flake8'" x)
-      (shell-command "pip install --user flake8"))))
 ;;====================================================================================================
 ;; MODES
 ;; match brackets
@@ -261,7 +254,6 @@ same directory as the org-buffer and insert a link to this file."
             (setq python-indent-offset 4)
 	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 	    (flycheck-mode)
-	    (setq flycheck-pylintrc "/Users/kminnamareddy/code/venmo-platform/pylintrc")
  	    ))
 
 (setq json-reformat:indent-width 1)
@@ -281,3 +273,21 @@ same directory as the org-buffer and insert a link to this file."
 (setq flycheck-python-flake8-executable "python3")
 (setq flycheck-python-pycompile-executable "python3")
 (setq flycheck-python-pylint-executable "python3")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (dracula)))
+ '(custom-safe-themes
+   (quote
+    ("947190b4f17f78c39b0ab1ea95b1e6097cc9202d55c73a702395fc817f899393" default)))
+ '(package-selected-packages
+   (quote
+    (dracula-theme flycheck elpy conda yasnippet magit json-mode iedit idomenu exec-path-from-shell counsel company))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
