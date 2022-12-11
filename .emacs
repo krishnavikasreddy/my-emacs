@@ -1,79 +1,85 @@
-(setq inhibit-startup-message 1)
+;; PACKAGES
+;; (require 'package)
+;; (package-initialize)
+;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/")             
+;; (setq package-list (list 'org))
 
+
+;; INIT CHECKS
+(setq aspell-warning-message-linux "aspell does not seems to be installed, this may cause orgmode flycheck to fail - apt install aspell")
+(setq aspell-warning-message-macos "aspell does not seems to be installed, this may cause orgmode flycheck to fail - brew install ispell")
+
+;; aspell check
+
+(defun mac-os-pre-checks ()
+  (unless (file-exists-p "/usr/bin/aspell") (insert aspell-warning-message-macos))
+)
+
+(defun linux-os-pre-checks ()
+ (unless (file-exists-p "/usr/bin/aspell") (insert aspell-warning-message-linux))
+)
+
+
+(if (eq system-type 'darwin) 'mac-os-pre-checks)
+(if (eq system-type 'gnu/linux) 'linux-os-pre-checks)
+
+
+;; BASICS
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
-(if (window-system) (set-frame-size (selected-frame) 200 60))
 
-(setq company-dabbrev-downcase 0)
-(setq company-idle-delay 0)
-;;====================================================================================================
-;; PACKAGES
-;; add melpa to packages
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(setq show-paren-delay 0)
+(setq show-paren-style 'expression)
 
-(setq package-list
-      (list 'yasnippet
-	    'exec-path-from-shell
-	    'idomenu
-	    'iedit
-	    'org
-	    'magit
-	    'company
-            'ivy
-            'counsel
-            'swiper
-	    'json-mode
-	    'conda
-	    'elpy))
-
-;; install packages if not present
-(dolist (package package-list)
-  (unless (package-installed-p package) (package-install package)))
-
-
-;;====================================================================================================
-;; MODES
-;; match brackets
-(progn
-  (setq show-paren-delay 0)
-  (setq show-paren-style 'expression)
-  (show-paren-mode 1))
-
+(show-paren-mode 1)
 (electric-pair-mode 1)
 (auto-revert-mode 1)
 (visual-line-mode 1)
-(ido-mode 1)
 (subword-mode 1)
-(winner-mode 1)
-(elpy-enable)
-(pyvenv-activate "~/miniconda3/envs/base3")
-(setq indent-tabs-mode nil)
-;; ivy mode
-(setq ivy-use-virtual-buffers t)
-(setq enable-recursive-minibuffers t)
-;;====================================================================================================
 
-;; disable toolbar
-(if window-system (progn
-		    (tool-bar-mode 0)
-		    ))
+(setq inhibit-startup-message t)
+(setq backup-directory-alist '(("." . "/tmp/")))
+
+(global-set-key (kbd "C-c C-f") 'find-file-in-current-directory)
+(setq-default indent-tabs-mode nil)
+(define-key global-map (kbd "RET") 'newline-and-indent)
+                
+                
+            
+(if window-system (progn (tool-bar-mode 0) (set-frame-size (selected-frame) 150 40)))
+
+;; set the filename as buffer name
+(setq frame-title-format "%b")
 
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
 (setq vc-follow-symlinks 1)
 
-(setq backup-directory-alist `(("." . "/tmp")))
-(set-fringe-mode 0)
-(global-visual-line-mode 1)
-;;====================================================================================================
-;; ORG mode
-;;(org-set-local 'font-lock-global-modes (list 'not major-mode))
+
+;; DEFAULTS
+(setq-default explicit-shell-file-name "/bin/bash")
+(if (file-directory-p (expand-file-name "~/miniconda3")) (setq python-shell-interpreter (expand-file-name "~/miniconda3/bin/python")) (insert "MINICONDA NOT FOUND"))
+
+
+
+
+;;custom funcs
+(defun save-all-and-compile ()
+  (interactive)
+  (save-some-buffers 1)
+  (recompile))
+
+(global-set-key (kbd "<f6>") 'compile)
+(global-set-key [(f5)] 'save-all-and-compile)
+
+
+
+;; ORG MODE
 (setq org-hide-emphasis-markers t)
+
 (defface my-face-success '((t :foreground "black" :background "green" )) nil)
 (defface my-face-warning '((t :foreground "white" :background "yellow" )) nil)
 (defface my-face-error '((t :foreground "white" :background "red" )) nil)
@@ -94,15 +100,9 @@
 (setq org-startup-with-inline-images t)
 
 (defun my-org-screenshot ()
-  "Take a screenshot into a time stamped unique-named file in the
-same directory as the org-buffer and insert a link to this file."
+  "Take a screenshot into a time stamped unique-named file in the same directory as the org-buffer and insert a link to this file."
   (interactive)
-  (setq filename
-        (concat
-         (make-temp-name
-          (concat (file-name-nondirectory (buffer-file-name))
-                  "_"
-                  (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+  (setq filename (concat (make-temp-name (concat (file-name-nondirectory (buffer-file-name)) "_" (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
   (call-process "import" nil nil nil filename)
   (insert (concat "[[./" filename "]]"))
   (org-display-inline-images))
@@ -111,26 +111,21 @@ same directory as the org-buffer and insert a link to this file."
 (eval-after-load 'org '(color-keys-org))
 (defun color-keys-org ()
   (interactive)
-  (define-key org-mode-map (kbd "C-c M-r") '(lambda
-					      ()(interactive)
-					      (color-red "!")))
-  (define-key org-mode-map (kbd "C-c M-y") '(lambda
-					      ()(interactive)
-					      (color-red "?")))
-  (define-key org-mode-map (kbd "C-c M-g") '(lambda
-					      ()(interactive)
-					      (color-red "%")))
+  (define-key org-mode-map (kbd "C-c M-r") '(lambda ()(interactive)(color-line "!")))
+  (define-key org-mode-map (kbd "C-c M-y") '(lambda ()(interactive) (color-line "?")))
+  (define-key org-mode-map (kbd "C-c M-g") '(lambda ()(interactive) (color-line "%")))
   )
 
 ;; add macros to the org file while opening so as to not to copy every time
-(defun add-macros-to-org ()
-  (unless (file-exists-p (buffer-file-name (current-buffer)))
-    (insert "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='/home/krishna/Documents/bootstrap.css' />
+(setq ORG-MACROS-INIT
+"#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css' crossorigin='anonymous'/>
 #+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
 #+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
 #+MACRO: g @@html:<span class='text-success'>@@$1@@html:</span>@@
-#+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@
-")))
+#+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@"
+) 
+
+(defun add-macros-to-org () (unless (file-exists-p (buffer-file-name (current-buffer))) (insert ORG-MACROS-INIT)))
 
 (add-hook 'org-mode-hook (lambda ()
 			  (org-toggle-pretty-entities)
@@ -138,7 +133,7 @@ same directory as the org-buffer and insert a link to this file."
                           (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
                           (flyspell-mode 1)))
 
-(defun vikas-export-org (regex c)
+(defun hook-export-org (regex c)
   (goto-line 0)
   (while (re-search-forward regex nil t)
     (goto-char (match-beginning 0))
@@ -149,13 +144,14 @@ same directory as the org-buffer and insert a link to this file."
     (insert " )}}}")
     )
   )
+
 (add-hook 'org-export-before-processing-hook
 	  (lambda (b)
-	    (vikas-export-org "![^\s].+[^\s]!" "r")
-	    (vikas-export-org "\\%[^\s].+[^\s]\\%" "g")
-	    (vikas-export-org "\\?[^\s].+[^\s]\\?" "y")))
+	    (hook-export-org "![^\s].+[^\s]!" "r")
+	    (hook-export-org "\\%[^\s].+[^\s]\\%" "g")
+	    (hook-export-org "\\?[^\s].+[^\s]\\?" "y")))
 
-(defun color-red (c)
+(defun color-line (c)
   (interactive "s")
   (save-excursion
     (if (region-active-p)
@@ -179,115 +175,22 @@ same directory as the org-buffer and insert a link to this file."
 
 
 
-;;====================================================================================================
-;; KEYS
-(global-set-key (kbd "<f6>") 'compile)
-(global-set-key [(f5)] 'save-all-and-compile)
-(global-set-key (kbd "C-c C-f") 'find-file-in-current-directory)
-;; auto indent after ret key
-(define-key global-map (kbd "RET") 'newline-and-indent)
-
-;; these are a fix for elpy bugs
-(define-key global-map (kbd "C-c o") 'iedit-mode)
-(global-set-key (kbd "C-x g") 'magit-status)
-
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-;;(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(global-set-key (kbd "C-c j") 'counsel-git-grep)
-(global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
-
-;;====================================================================================================
-;; FUNCTIONS
-;; save and compile
-(defun save-all-and-compile ()
-  (interactive)
-  (save-some-buffers 1)
-  (recompile))
-
-(defun beautify-json ()
-  (interactive)
-  (let ((b (if mark-active (min (point) (mark)) (point-min)))
-        (e (if mark-active (max (point) (mark)) (point-max))))
-    (shell-command-on-region b e
-     "cat > ~/.emacs.d/scripts/tmp.txt && python ~/.emacs.d/scripts/json-format.py" (current-buffer) t)))
-
-;;====================================================================================================
-;; HOOKS
-(add-hook 'after-init-hook 'global-company-mode)
-
-
-;;====================================================================================================
-;; MODE SPECIFIC ACTIONS
-;; all programming modes
-(require 'whitespace)
-(setq show-trailing-whitespace t)
-(setq whitespace-line-column 120) ;; limit line length
-(setq whitespace-style '(face lines-tail))
-
-
-(add-hook 'prog-mode-hook 'hs-minor-mode 1)
-(add-hook 'hs-minor-mode-hook '(lambda ()
-                                 (define-key hs-minor-mode-map (kbd "M-]") 'hs-toggle-hiding)
-                                 (define-key hs-minor-mode-map (kbd "M-[") 'hs-toggle-hiding)
-                                 ))
-
-(add-hook 'prog-mode-hook
-	  (lambda ()
-	    (whitespace-mode)
-	    (yas-minor-mode)
-	    (define-key yas-minor-mode-map (kbd "C-c k") 'yas-expand)
-	    ))
-
-;; python mode
-(setq python-python-command "~/miniconda3/bin/python")
-
-(add-hook 'python-mode-hook
-          (lambda ()
-            (set (make-local-variable 'compile-command)
-                 (concat "python " buffer-file-name))
-            (setq python-indent-offset 4)
-	    (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-	    (flycheck-mode)
- 	    ))
-
-(setq json-reformat:indent-width 1)
-
-;;====================================================================================================
-(exec-path-from-shell-initialize)
-
-(put 'dired-find-alternate-file 'disabled nil)
-(setq ediff-window-setup-function #'ediff-setup-windows-plain)
-(setq ediff-split-window-function #'split-window-horizontally)
-(setq ring-bell-function 'ignore)
-
-
-;; For elpy
-(setq elpy-rpc-python-command "python3")
-
-(setq flycheck-python-flake8-executable "python3")
-(setq flycheck-python-pycompile-executable "python3")
-(setq flycheck-python-pylint-executable "python3")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (dracula)))
- '(custom-safe-themes
-   (quote
-    ("947190b4f17f78c39b0ab1ea95b1e6097cc9202d55c73a702395fc817f899393" default)))
- '(package-selected-packages
-   (quote
-    (dracula-theme flycheck elpy conda yasnippet magit json-mode iedit idomenu exec-path-from-shell counsel company))))
+ '(ansi-color-faces-vector
+                [default default default italic underline success warning error])
+ '(ansi-color-names-vector
+                ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
+ '(custom-enabled-themes '(wheatgrass))
+ '(ispell-dictionary nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
