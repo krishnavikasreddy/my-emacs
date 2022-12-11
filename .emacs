@@ -44,19 +44,17 @@
 (setq backup-directory-alist '(("." . "/tmp/")))
 
 (global-set-key (kbd "C-c C-f") 'find-file-in-current-directory)
-(setq-default indent-tabs-mode nil)
 (define-key global-map (kbd "RET") 'newline-and-indent)
-                
+
+(setq-default indent-tabs-mode nil)                                                                                                                                                          
+(setq-default tab-width 2)
                 
             
 (if window-system (progn (tool-bar-mode 0) (set-frame-size (selected-frame) 150 40)))
-
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
-
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
-(setq vc-follow-symlinks 1)
 
 
 ;; DEFAULTS
