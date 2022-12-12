@@ -13,11 +13,11 @@
 
 (defun mac-os-pre-checks ()
   (unless (file-exists-p "/usr/bin/aspell") (insert aspell-warning-message-macos))
-)
+  )
 
 (defun linux-os-pre-checks ()
- (unless (file-exists-p "/usr/bin/aspell") (insert aspell-warning-message-linux))
-)
+  (unless (file-exists-p "/usr/bin/aspell") (insert aspell-warning-message-linux))
+  )
 
 
 (if (eq system-type 'darwin) 'mac-os-pre-checks)
@@ -47,8 +47,8 @@
 
 (setq-default indent-tabs-mode nil)                                                                                                                                                          
 (setq-default tab-width 2)
-                
-            
+
+
 (if window-system (progn (tool-bar-mode 0) (set-frame-size (selected-frame) 150 40)))
 ;; set the filename as buffer name
 (setq frame-title-format "%b")
@@ -82,17 +82,17 @@
 (defface my-face-error '((t :foreground "white" :background "red" )) nil)
 
 (setq org-emphasis-alist
-   (quote
-    (("*" bold)
-     ("/" italic)
-     ("!" my-face-error)
-     ("%" my-face-success)
-     ("?" my-face-warning)
-     ("_" Underline)
-     ("=" Org-verbatim verbatim)
-     ("~" org-code verbatim)
-     ("+"
-      (:strike-through t)))))
+      (quote
+       (("*" bold)
+        ("/" italic)
+        ("!" my-face-error)
+        ("%" my-face-success)
+        ("?" my-face-warning)
+        ("_" Underline)
+        ("=" Org-verbatim verbatim)
+        ("~" org-code verbatim)
+        ("+"
+         (:strike-through t)))))
 
 (setq org-startup-with-inline-images t)
 
@@ -115,20 +115,20 @@
 
 ;; add macros to the org file while opening so as to not to copy every time
 (defvar ORG-MACROS-INIT
-"#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css' crossorigin='anonymous'/>
+  "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css' crossorigin='anonymous'/>
 #+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
 #+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
 #+MACRO: g @@html:<span class='text-success'>@@$1@@html:</span>@@
 #+MACRO: y @@html:<span class='text-warning'>@@$1@@html:</span>@@"
-) 
+  ) 
 
 (defun add-macros-to-org () (unless (file-exists-p (buffer-file-name (current-buffer))) (insert ORG-MACROS-INIT)))
 
 (add-hook 'org-mode-hook (lambda ()
-			  (org-toggle-pretty-entities)
-                          (add-macros-to-org)
-                          (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
-                          (flyspell-mode 1)))
+			                     (org-toggle-pretty-entities)
+                           (add-macros-to-org)
+                           (define-key org-mode-map (kbd "M-p") 'my-org-screenshot)
+                           (flyspell-mode 1)))
 
 (defun hook-export-org (regex c)
   (goto-line 0)
@@ -143,30 +143,30 @@
   )
 
 (add-hook 'org-export-before-processing-hook
-	  (lambda (b)
-	    (hook-export-org "![^\s].+[^\s]!" "r")
-	    (hook-export-org "\\%[^\s].+[^\s]\\%" "g")
-	    (hook-export-org "\\?[^\s].+[^\s]\\?" "y")))
+	        (lambda (b)
+	          (hook-export-org "![^\s].+[^\s]!" "r")
+	          (hook-export-org "\\%[^\s].+[^\s]\\%" "g")
+	          (hook-export-org "\\?[^\s].+[^\s]\\?" "y")))
 
 (defun color-line (c)
   (interactive "s")
   (save-excursion
     (if (region-active-p)
-	(progn
+	      (progn
           (let ((x (region-beginning)) (y (region-end)))
-	  (goto-char x)
-          (insert c)
-          (goto-char (+ y 1))
-          (insert c)
-	  ))
+	          (goto-char x)
+            (insert c)
+            (goto-char (+ y 1))
+            (insert c)
+	          ))
       (progn
-	(goto-char (org-beginning-of-item))
-	(search-forward "-")
-	(goto-char (+ (point) 1))
-	(insert c)
-	(goto-char (line-end-position))
-	(insert c)
-	))))
+	      (goto-char (org-beginning-of-item))
+	      (search-forward "-")
+	      (goto-char (+ (point) 1))
+	      (insert c)
+	      (goto-char (line-end-position))
+	      (insert c)
+	      ))))
 
 (setq org-src-fontify-natively t)
 
@@ -178,9 +178,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
-                [default default default italic underline success warning error])
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector
-                ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
+   ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
  '(custom-enabled-themes '(wheatgrass))
  '(ispell-dictionary nil))
 
