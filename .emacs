@@ -6,8 +6,8 @@
 
 
 ;; INIT CHECKS
-(setq aspell-warning-message-linux "aspell does not seems to be installed, this may cause orgmode flycheck to fail - apt install aspell")
-(setq aspell-warning-message-macos "aspell does not seems to be installed, this may cause orgmode flycheck to fail - brew install ispell")
+(defvar aspell-warning-message-linux "aspell does not seems to be installed, this may cause orgmode flycheck to fail - apt install aspell")
+(defvar aspell-warning-message-macos "aspell does not seems to be installed, this may cause orgmode flycheck to fail - brew install ispell")
 
 ;; aspell check
 
@@ -29,7 +29,6 @@
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
-
 
 (setq show-paren-delay 0)
 (setq show-paren-style 'expression)
@@ -115,7 +114,7 @@
   )
 
 ;; add macros to the org file while opening so as to not to copy every time
-(setq ORG-MACROS-INIT
+(defvar ORG-MACROS-INIT
 "#+HTML_HEAD: <link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css' crossorigin='anonymous'/>
 #+HTML_HEAD_EXTRA: <style>body{width:800px;margin:auto!important;line-height:1.5em;} </style>
 #+MACRO: r @@html:<span class='text-danger'>@@$1@@html:</span>@@
